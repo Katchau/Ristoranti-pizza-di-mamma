@@ -1,9 +1,10 @@
 <?php
 
-        function getRestaurants($db){
+        function getRestaurants(){
+            global $db;
 
             $rdb=$db->prepare('SELECT * FROM Restaurant');
-            $rdb=execute();
+            $rdb->execute();
 
             $restaurants=$rdb->fetchAll();
 

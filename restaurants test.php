@@ -10,7 +10,7 @@
         <header>
            <div id="header">
             <h1>Restaurant Guide</h1>
-                <h2><a href="">Login</a></h2>
+                <h2><a href="login.php">Login</a></h2>
                 <h2><a href="">Register</a></h2>
            </div>
         </header>
@@ -19,18 +19,6 @@
 				<h2> Che cosa meravigliosa </h2>
 				<div id="best_choices">
 					<table>
-						<tr>
-                            <td>
-                                <p>
-                                    Ristoranti 1, mui belissimo
-                                </p>
-                            </td>
-                            <td>
-                                <p>
-                                    Ristoranti 2, una bosta
-                                </p>
-                            </td>
-                        </tr>
 						<?php
                             include_once("actions/connection.php");
 			                include_once("actions/restaurant.php");

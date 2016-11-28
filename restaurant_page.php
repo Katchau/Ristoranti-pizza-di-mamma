@@ -20,7 +20,7 @@
 					include_once("actions/connection.php");
 					include_once("actions/restaurant.php");
 
-					$result = getRestaurant();
+					$result = getRestaurantById();
 					
 					echo '<h1>' . $result['name'] . '</h1>';
 					echo 'mancata una descrizione del ristorante';
@@ -29,7 +29,7 @@
 					echo '<p> Apertura: ' . $result['schedule'] . '</p>';
 					echo '<p> Valutazione: ' . $result['score'] . '</p>';
 					
-					$reviews = getReviews();
+					$reviews = getReviewsById();
 					
 					echo 'Recensionis di ristorante';
 					

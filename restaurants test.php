@@ -31,8 +31,12 @@
 									echo '</tr> <tr>';
 									$paragraph = 0;
 								}
-								$ref = "restaurant_page.php?id=" . $row['id'];
-                                echo '<td> <a href=' . $ref . '>' . $row['name'] . '</a> </td>';
+								$ref = "restaurant_page.php";
+                                //echo '<td> <a href=' . $ref . '>' . $row['name'] . '</a> </td>';
+								echo '<td > <form method="post" action=' . $ref . '>';
+								echo '<button type="submit" value="' . $row['id'] . '" name="id">';
+								echo $row['name'] . '</ button>';
+								echo '</form> </td>';
 								$paragraph = $paragraph + 1;
                             }
 							echo '</tr>';

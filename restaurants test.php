@@ -31,7 +31,8 @@
 									echo '</tr> <tr>';
 									$paragraph = 0;
 								}
-                                echo '<td> <p>' . $row['name'] . '</p> </td>';
+								$ref = "restaurant_page.php?id=" . $row['id'];
+                                echo '<td> <a href=' . $ref . '>' . $row['name'] . '</a> </td>';
 								$paragraph = $paragraph + 1;
                             }
 							echo '</tr>';

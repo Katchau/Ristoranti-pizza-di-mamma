@@ -11,10 +11,22 @@
             return $restaurants;
 
         }
+	    function getRestaurant(){
+			global $db;
 
-        function getReviews($db){
+			$rdb = $db->prepare('SELECT * FROM Restaurant WHERE id = :id');
+			$rdb->bindParam(':id', $_GET['id'], PDO::PARAM_INT);
+			$rdb->execute();
+			$result = $rdb->fetch();
 
-            $rdb=$db->prepare('SELECT * FROM Review');
+			return $result;
+		}
+		
+        function getReviews(){
+			global $db;
+			
+            $rdb=$db->prepare('SELECT * FROM Review WHERE id_restaurant = :id');
+			$rdb->bindParam(':id', $_GET['id'], PDO::PARAM_INT);
             $rdb->execute();
 
             $reviews=$rdb->fetchAll();

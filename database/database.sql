@@ -20,7 +20,7 @@ CREATE TABLE Restaurant(
         adress VARCHAR,
         contacts VARCHAR,
         schedule VARCHAR,
-        score INTEGER
+        score REAL
 );
 
 INSERT INTO Restaurant VALUES(NULL,'Zé do Pipo','Rua do FCP','123456789','10h-00h',0);
@@ -31,10 +31,32 @@ DROP TABLE IF EXISTS Review;
 CREATE TABLE Review(
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         text VARCHAR,
-        score INTEGER,
+        score REAL,
         id_restaurant INTEGER REFERENCES Restaurant,
         id_user INTEGER REFERENCES User
 );
+
+CREATE TRIGGER ScoreInsert
+AFTER INSERT ON Review
+FOR EACH ROW
+BEGIN
+UPDATE Restaurant
+SET score = NEW.score
+WHERE score = 0 AND id IN (SELECT Restaurant.id FROM Restaurant 
+						WHERE (Restaurant.id = NEW.id_restaurant)
+						);
+END;
+
+CREATE TRIGGER ScoreUpdate
+AFTER INSERT ON Review
+FOR EACH ROW
+BEGIN
+UPDATE Restaurant
+SET score = ( NEW.score + score) / 2
+WHERE score <> 0 AND id IN (SELECT Restaurant.id FROM Restaurant 
+						WHERE (Restaurant.id = NEW.id_restaurant)
+						);
+END;
 
 INSERT INTO Review VALUES(NULL,'orem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et volutpat enim. Quisque placerat orci eu quam eleifend facilisis. Ut finibus id eros feugiat sodales. ' ||
                     'Cras rhoncus imperdiet tempus. Mauris a accumsan dui, in pretium elit. Ut ultrices nulla at mauris egestas, vel eleifend nisl mattis. Vivamus in erat vel lacus aliquam facil' ||

@@ -1,5 +1,7 @@
 <?php
 
+include_once('connection.php');
+
         function getRestaurants(){
             global $db;
 
@@ -33,39 +35,5 @@
 
 			return $result;
 		}
-		
-        function getReviews(){
-			global $db;
-			
-            $rdb=$db->prepare('SELECT * FROM Review WHERE id_restaurant = :id');
-			$rdb->bindParam(':id', $_GET['id'], PDO::PARAM_INT);
-            $rdb->execute();
-
-            $reviews=$rdb->fetchAll();
-
-            return $reviews;
-        }
-		
-		function getReviewsById(){
-			global $db;
-			
-            $rdb=$db->prepare('SELECT * FROM Review WHERE id_restaurant = :id');
-			$rdb->bindParam(':id', $_POST['id'], PDO::PARAM_INT);
-            $rdb->execute();
-
-            $reviews=$rdb->fetchAll();
-
-            return $reviews;
-        }
-		
-        function getUsers($db){
-
-            $rdb = $db->prepare('SELECT * FROM User');
-            $rdb->execute();
-
-            $reviews = $rdb->fetchAll();
-
-            return $reviews;
-        }
 
 ?>

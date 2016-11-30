@@ -17,8 +17,8 @@
 		<div id="main">
 			<section id = "rest">
 				<?php
-					include_once("actions/connection.php");
 					include_once("actions/restaurant.php");
+                    include_once("actions/review.php");
 
 					$result = getRestaurantById();
 					
@@ -36,6 +36,15 @@
 					foreach($reviews as $rev){
 						echo '<p>' . $rev['text'] . ' nota assegnata' . $rev['score'] . '</p>';
 					}
+
+					$restaurant_id=$_POST['id'];
+
+                echo '<form id="form" method="post" action="actions/make_review.php">';
+                echo '<input type="text" name="criticReview" value="Critics" height="100px" width="100px" required/>';
+                echo '<input type="number" name="score" value="4" min="1" max="5" step="1"/>';
+                echo '<button type="submit" value="'.$restaurant_id.'" name="restaurant_id">Finish</button>';
+                echo '</form>';
+
 				?>				
 			</section>
 		</div>

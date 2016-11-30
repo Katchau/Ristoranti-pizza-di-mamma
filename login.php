@@ -3,15 +3,6 @@
           <title>Login</title>
           <meta charset="utf-8">
           <link rel="stylesheet" href="">
-          <?php
-            try{
-               $db = new PDO('sqlite:database/database.db');
-            }
-            catch(PDOException $e) {
-                die($e->getMessage());
-            }
-          ?>
-      </head>
       <body>
         <form method="post">
           <h1>Login</h1>
@@ -28,6 +19,8 @@
           <input type="submit" name="submit" value="Iniciar Sessão">
         </form>
           <?php
+          include_once('actions/connection.php');
+
               if (isset($_POST['submit'])) {
               $email = $_POST['email'];
               $password = $_POST['password'];

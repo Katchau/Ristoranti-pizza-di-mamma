@@ -9,6 +9,6 @@
            <div id="header">
             <h1>Restaurant Guide</h1>
                 <h2><a href="login.php">Login</a></h2>
-                <h2><a href="">Register</a></h2>
+                <h2><a href="register_page.php">Register</a></h2>
            </div>
         </header>

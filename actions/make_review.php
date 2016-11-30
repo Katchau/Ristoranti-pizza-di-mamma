@@ -6,20 +6,18 @@ $review_critic=$_POST['criticReview'];
 $score=$_POST['score'];
 $id_restaurant=$_POST['restaurant_id'];
 
-echo 'OLA';
-
-echo $_POST['restaurant_id'];
-
 if($review_critic && $score)
 {
     if(strlen($review_critic)<20)
     {
+        include_once('restaurant_page');
         echo 'To short. Please give a bigger critic.';
         return;
     }
 
     if($score<1 || $score>5)
     {
+        include_once('restaurant_page');
         echo 'Invalid score to the restaurants. Select a new score.';
         return;
     }
@@ -29,6 +27,7 @@ if($review_critic && $score)
         echo 'Review made.';
     }
     else{
+        include_once('restaurant_page');
         echo 'The user already made a review to this restaurant.';
         return;
     }

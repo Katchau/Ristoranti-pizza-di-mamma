@@ -22,4 +22,13 @@ function newUser($firstName,$lastName,$password,$email){
     return $insertUser->errorCode();
 }
 
+function getPassword($email, $password){
+  global $db;
+
+  $stmt = $db->prepare('SELECT password FROM User WHERE email = ?');
+  $stmt->execute(array($email));
+  $result = $stmt->fetch();
+  return $result[0];
+}
+
 ?>

@@ -11,27 +11,26 @@ $email=$_POST['email'];
 
 if($firstName && $lastName && $password && $passwordConfirmed && $email){
 
-    if(strlen($password)<8)
-    {
-        echo 'Password is to short. Please choose a new one.';
+    if(strlen($password)<8){
+        include_once('register_page.php');
+        echo 'Password is too short. Please choose a new one.';
         return;
     }
 
-    if($password!==$passwordConfirmed)
-    {
+    if($password!==$passwordConfirmed){
+        include_once('register_page.php');
         echo 'Password confirmation does not match.';
         return;
     }
 
-    if(newUser($firstName,$lastName,$password,$email)==0)
-    {
+    if(newUser($firstName,$lastName,$password,$email)==0){
         echo 'Welcome.';
     }
     else {
+        include_once('register_page.php');
         echo 'Invalid account. Email already exists.';
         return;
     }
-
 }
 
 ?>

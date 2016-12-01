@@ -14,7 +14,7 @@
                 <?php
                     echo $email;
                 ?>
-                <a href="../index.php"> Logout </a>
+                <a href="index.php"> Logout </a>
             </p>
            </div>
         </header>

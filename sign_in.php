@@ -1,6 +1,6 @@
 <?php
-  include_once('connection.php');
-  include_once('user.php');
+  include_once('actions/connection.php');
+  include_once('actions/user.php');
 
   $email=$_POST['email'];
   $password=$_POST['password'];

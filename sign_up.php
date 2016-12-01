@@ -1,6 +1,6 @@
 <?php
 
-include_once('user.php');
+include_once('actions/user.php');
 //session_start(); Necessário para quando implementado o login do utilizador
 
 $firstName=$_POST['firstName'];

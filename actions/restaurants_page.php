@@ -17,7 +17,7 @@
               echo '</tr> <tr>';
               $paragraph = 0;
             }
-            $ref = "restaurant_page.php";
+            $ref = "actions/restaurant_page.php";
             echo '<td > <form method="post" action=' . $ref . '>';
             echo '<button type="submit" value="' . $row['id'] . '" name="id">';
             echo $row['name'] . '</ button>';

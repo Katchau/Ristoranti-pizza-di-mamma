@@ -1,3 +1,3 @@
 <?php
-    include_once('actions/unlogged_page.php');
+    include_once('unlogged_page.php');
 ?>

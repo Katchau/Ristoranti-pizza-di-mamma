@@ -24,7 +24,7 @@ if($firstName && $lastName && $password && $passwordConfirmed && $email){
     }
 
     if(newUser($firstName,$lastName,$password,$email)==0){
-        echo 'Welcome.';
+        include_once('logged_page.php');
     }
     else {
         include_once('register_page.php');

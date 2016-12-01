@@ -1,32 +1,43 @@
-/*
-function loadDruggs(cocaine){
-	for(var i = 0; i < products.length; i++)
-		cocaine.append('<option value="'+products[i]+'">'+products[i] +'</option>');
-}
 
-function addDruggs(){
-	var drugg = $("body .line").first().clone();
-	$("body input[type = button]").before(drugg);
-}
-*/
-function loadFrontPageRestaurants(table){
-    $.ajax({
+function getRestaurants(value){
+	var url = "actions/searchFuncs.php?nameR=" + value;
+	$.ajax({
         type: "get",
-        url: "/actions/return test"
-    }).done(function() {
-        window.alert("caragi");
-    }).fail(function() {
-        window.alert("rekt");
-    });
+        url: url
+    }).done(function(data) {
+		var unparsed = JSON.parse(data);
+		var span = $("#txtHint");
+		if(typeof unparsed === "string") {
+				$("li").remove();
+				span.before('<p><li>'+ unparsed +'</li></p>');
+		}
+		else{
+			for(var i = 0; i < unparsed.length; i+=2){
+				$("li").remove();
+				
+				$url = "actions/restaurant_page.php";
+				span.before('<p><li><button type="submit" value="' + unparsed[i+1] + '" name="id" formaction="'+ $url + '">'
+				+ unparsed[i] +'</li></p>');
+			}
+		}
 
+    }).fail(function() {
+        window.alert("Couldn't reach Server :(");
+    });
 }
+
+function searchRestaurant(evento){
+	var search = evento.data.x;
+	var currValue = search.val();
+	var pressedKey = evento.key;
+	var nextValue = currValue + "" + pressedKey;
+	getRestaurants(nextValue);
+}
+
+
 function loadDocument(){
-	var body = $("body #main #best_choices");
-	var table = body.find("table");
-	//loadFrontPageRestaurants(table);
-/*	loadDruggs(selecti);
-	$("body input[type = button]").click(addDruggs);*/
-	//window.alert(table.html());
+	var sBar = $("#searchbar");
+	sBar.keypress({x: sBar}, searchRestaurant);
 }
 
 $(document).ready(loadDocument);

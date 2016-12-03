@@ -31,4 +31,12 @@ function getPassword($email, $password){
   return $result[0];
 }
 
+function getUserInfo($email){
+  global $db;
+
+  $stmt = $db->prepare('SELECT * FROM User WHERE email = ?');
+  $stmt->execute(array($email));
+  return $stmt->fetch();
+}
+
 ?>

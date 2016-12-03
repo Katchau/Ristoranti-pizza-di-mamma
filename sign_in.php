@@ -7,7 +7,18 @@
   $correctPass = getPassword($email, $password);
 
   if ($correctPass == $password){
-    include_once('logged_page.php.');
+
+    $userInfo = getUserInfo($email);
+
+    $nomeCompleto = $userInfo['firstName'];
+    $nomeCompleto .= " ";
+    $nomeCompleto .= $userInfo['lastName'];
+
+    $_SESSION['email'] = $email;
+    $_SESSION['name'] = $nomeCompleto;
+    $_SESSION['id'] = $userInfo['id'];
+
+    include_once('logged_page.php');
   }
   else{
     include_once('login.php');

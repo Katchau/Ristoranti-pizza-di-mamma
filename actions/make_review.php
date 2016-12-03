@@ -11,7 +11,7 @@ if($review_critic && $score)
     if(strlen($review_critic)<20)
     {
         include_once('restaurant_page');
-        echo 'To short. Please give a bigger critic.';
+        echo 'Too short. Please give a bigger critic.';
         return;
     }
 

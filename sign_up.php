@@ -24,6 +24,16 @@ if($firstName && $lastName && $password && $passwordConfirmed && $email){
     }
 
     if(newUser($firstName,$lastName,$password,$email)==0){
+      $userInfo = getUserInfo($email);
+
+      $nomeCompleto = $userInfo['firstName'];
+      $nomeCompleto .= " ";
+      $nomeCompleto .= $userInfo['lastName'];
+
+      $_SESSION['email'] = $email;
+      $_SESSION['name'] = $nomeCompleto;
+      $_SESSION['id'] = $userInfo['id'];
+
         include_once('logged_page.php');
     }
     else {

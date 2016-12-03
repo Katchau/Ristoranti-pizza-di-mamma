@@ -12,7 +12,7 @@
             <h1>Restaurant Guide</h1>
             <p>
                 <?php
-                    echo $email;
+                    echo $_SESSION['name'];
                 ?>
                 <a href="index.php"> Logout </a>
             </p>

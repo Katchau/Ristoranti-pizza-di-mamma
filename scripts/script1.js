@@ -1,6 +1,7 @@
 
 function getRestaurants(value){
-	var url = "../actions/searchFuncs.php?nameR=" + value;
+	var local_name = $("#local_rest").val();
+	var url = "../actions/searchFuncs.php?nameR=" + value + "&" + "place=" + local_name;
 	$.ajax({
         type: "get",
         url: url
@@ -12,9 +13,8 @@ function getRestaurants(value){
 				span.before('<p><li>'+ unparsed +'</li></p>');
 		}
 		else{
+			$("li").remove();
 			for(var i = 0; i < unparsed.length; i+=2){
-				$("li").remove();
-
 				$url = "../actions/restaurant_page.php";
 				span.before('<p><li><button type="submit" value="' + unparsed[i+1] + '" name="id" formaction="'+ $url + '">'
 				+ unparsed[i] +'</li></p>');
@@ -38,6 +38,7 @@ function searchRestaurant(evento){
 function loadDocument(){
 	var sBar = $("#searchbar");
 	sBar.keypress({x: sBar}, searchRestaurant);
+	var review_button = $("body #rest button");
 }
 
 $(document).ready(loadDocument);

@@ -1,29 +1,46 @@
 <?php
-	include("../actions/connection.php");
-	include("../actions/restaurant.php");
 
+	include("connection.php");
+	include("restaurant.php");
+	include("stringAlgorithms.php");
+	
 	$curName = $_GET['nameR'];
+	$curPlace = $_GET['place'];
+	$curName = strtolower($curName);
 	$rests = getRestaurants();
 	$return = "No restaurant found :(";
-
-	if($curName == "")  $return = "Type the restaurant name!";
-	else{
-		$curName = strtolower($curName);
-		$len = strlen($curName);
+	
+	function getSimilarRestaurants($curName,$curPlace,$rests,$return){
+		if($curName == "")  $return = "Type the restaurant name!";
+		$length = strlen($curName);
 		foreach($rests as $row){
-			if (stristr($curName, substr($row['name'], 0, $len))) {
-				if ($return == "No restaurant found :(") {
-					$return = array();
-					array_push($return, $row['name']);
-					array_push($return, $row['id']);
+			if($row['adress'] == $curPlace || $curPlace == "" || $curPlace == " "){
+				$aproved = false;
+				$name = strtolower($row['name']);
+				if(kmp_function($curName,$name)){
+					$aproved = true;
 				}
-				else {
-					array_push($return, $row['name']);
-					array_push($return, $row['id']);
+				else{
+					$distance = distance($row['name'],$curName);
+					if($distance < 3) $aproved = true;
+				}
+				if($aproved){
+					if ($return == "No restaurant found :(") {
+						$return = array();
+						array_push($return, $row['name']);
+						array_push($return, $row['id']);
+					} 
+					else {
+						array_push($return, $row['name']);
+						array_push($return, $row['id']);
+					}
 				}
 			}
 		}
+		return $return;
 	}
-
+	
+	$return = getSimilarRestaurants($curName,$curPlace,$rests,$return);
 	echo json_encode($return);
+
 ?>

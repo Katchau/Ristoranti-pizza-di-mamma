@@ -1,6 +1,6 @@
 <?php
   include_once("../actions/restaurant.php");
-  include_once("../actions/review.php");
+  include_once("../actions/make_review.php");
   include_once("../actions/header.php");
  ?>
 <html>
@@ -8,7 +8,12 @@
 		<div id="main">
 			<section id = "rest">
 				<?php
-
+					
+					if(isset($_POST['score'])){ // por o echo como pop up apenas ;)
+						$review = makeReview();
+						echo '<p>' . $review . '</p>';
+					}	
+					
 					$result = getRestaurantById();
 
 					echo '<h1>' . $result['name'] . '</h1>';
@@ -27,12 +32,14 @@
 					}
 
 					$restaurant_id=$_POST['id'];
-
-                echo '<form id="form" method="post" action="make_review.php">';
-                echo '<input type="text" name="criticReview" value="Critics" height="100px" width="100px" required/>';
-                echo '<input type="number" name="score" value="4" min="1" max="5" step="1"/>';
-                echo '<button type="submit" value="'.$restaurant_id.'" name="restaurant_id">Finish</button>';
-                echo '</form>';
+					
+					if(isset($_SESSION['name'])){
+						echo '<form id="form" method="post" action="restaurant_page.php">';
+						echo '<input type="text" name="criticReview" value="Critics" height="100px" width="100px" required/>';
+						echo '<input type="number" name="score" value="4" min="1" max="5" step="1"/>';
+						echo '<button type="submit" value="'.$restaurant_id.'" name="id">Finish</button>';
+						echo '</form>';
+					}
 
 				?>
 			</section>

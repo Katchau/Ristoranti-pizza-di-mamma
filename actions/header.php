@@ -8,8 +8,10 @@
     </head>
     <body>
         <header>
+          <h1>Restaurant Guide</h1>
            <div id="header">
                 <?php
+                    session_start();
                     if(isset($_SESSION['name']))
                       include_once('loggedin_header.php');
                     else

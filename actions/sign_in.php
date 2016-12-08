@@ -2,15 +2,11 @@
   include_once('../actions/connection.php');
   include_once('../actions/user.php');
 
+  $email=trim($_POST['email']);
+  $password=$_POST['password'];
+  $correctPass = getPassword($email, $password);
 
-
-  $email=$_POST['email'];
-
-  if(strlen($email) != 0){
-      $password=$_POST['password'];
-      $correctPass = getPassword($email, $password);
-
-      if ($correctPass == $password){
+  if(strlen($email) != 0 && password_verify($password, $correctPass)){
 
         session_start();
 
@@ -25,7 +21,7 @@
         $_SESSION['id'] = $userInfo['id'];
 
         header('Location: ../actions/logged_page.php');
-      }
+
   }
   else{
     include_once('../actions/login.php');

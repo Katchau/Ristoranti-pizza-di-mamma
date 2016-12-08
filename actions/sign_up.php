@@ -3,11 +3,11 @@
 include_once('../actions/user.php');
 //session_start(); Necessário para quando implementado o login do utilizador
 
-$firstName=$_POST['firstName'];
-$lastName=$_POST['lastName'];
+$firstName=trim($_POST['firstName']);
+$lastName=trim($_POST['lastName']);
 $password=$_POST['password'];
 $passwordConfirmed=$_POST['passwordConfirm'];
-$email=$_POST['email'];
+$email=trim($_POST['email']);
 
 if($firstName && $lastName && $password && $passwordConfirmed && $email){
 
@@ -17,13 +17,15 @@ if($firstName && $lastName && $password && $passwordConfirmed && $email){
         return;
     }
 
-    if($password!==$passwordConfirmed){
+    if($password!==$passwordConfirmed || strlen($password)!=strlen($passwordConfirmed)){
         include_once('../actions/register_page.php');
         echo 'Password confirmation does not match.';
         return;
     }
 
-    if(newUser($firstName,$lastName,$password,$email)==0){
+    $pass = password_hash($password, PASSWORD_DEFAULT);
+
+    if(newUser($firstName,$lastName,$pass,$email)==0){
 
       session_start();
 

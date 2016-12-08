@@ -1,6 +1,6 @@
 
 function getRestaurants(value){
-	var url = "actions/searchFuncs.php?nameR=" + value;
+	var url = "../actions/searchFuncs.php?nameR=" + value;
 	$.ajax({
         type: "get",
         url: url
@@ -14,8 +14,8 @@ function getRestaurants(value){
 		else{
 			for(var i = 0; i < unparsed.length; i+=2){
 				$("li").remove();
-				
-				$url = "actions/restaurant_page.php";
+
+				$url = "../actions/restaurant_page.php";
 				span.before('<p><li><button type="submit" value="' + unparsed[i+1] + '" name="id" formaction="'+ $url + '">'
 				+ unparsed[i] +'</li></p>');
 			}

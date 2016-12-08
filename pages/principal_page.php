@@ -19,12 +19,12 @@
 
             <div id="top-buttons">
                 <div id="login">
-                    <form action="sign_in.php" method="post">
+                    <form action="../actions/login.php" method="post">
                         <input type="submit" name="submit" value="Iniciar Sessão">
                     </form>
                 </div>
                 <div id="logon">
-                    <form action="sign_up.php" method="post">
+                    <form action="../actions/register_page.php" method="post">
                         <input type="submit" name="submit" value="Registar">
                     </form>
                 </div>

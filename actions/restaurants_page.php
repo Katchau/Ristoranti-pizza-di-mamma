@@ -6,18 +6,18 @@
     <div id="best_choices">
       <table>
         <?php
-            include_once("connection.php");
-            include_once("restaurant.php");
+            include_once("../actions/connection.php");
+            include_once("../actions/restaurant.php");
 
-                  $result = getRestaurants();
-          $paragraph = 0;
+            $result = getRestaurants();
+            $paragraph = 0;
                   foreach( $result as $row) {
             if($paragraph == 0) echo'<tr>';
             if($paragraph == 2){
               echo '</tr> <tr>';
               $paragraph = 0;
             }
-            $ref = "actions/restaurant_page.php";
+            $ref = "../actions/restaurant_page.php";
             echo '<td > <form method="post" action=' . $ref . '>';
             echo '<button type="submit" value="' . $row['id'] . '" name="id">';
             echo $row['name'] . '</ button>';

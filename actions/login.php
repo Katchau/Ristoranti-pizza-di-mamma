@@ -4,7 +4,7 @@
           <meta charset="utf-8">
           <link rel="stylesheet" href="">
       <body>
-        <form method="post" action="sign_in.php" onsubmit="return validateForm();" >
+        <form method="post" action="../actions/sign_in.php" onsubmit="return validateForm();" >
           <h1>Login</h1>
           <p>
             <label>Email:

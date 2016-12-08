@@ -1,3 +1,4 @@
 <?php
-    include_once('pages/principal_page.php');
+    include_once('action/logout.php');
+    header('Location: pages/principal_page.php');
 ?>

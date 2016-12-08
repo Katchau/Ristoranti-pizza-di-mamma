@@ -1,7 +1,7 @@
 <?php
 
 try{
-    $db = new PDO("sqlite:database/database.db","","",array(
+    $db = new PDO("sqlite:../database/database.db","","",array(
         PDO::ATTR_PERSISTENT => true
     ));
 }

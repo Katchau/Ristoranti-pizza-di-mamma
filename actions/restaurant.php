@@ -1,6 +1,6 @@
 <?php
 
-include_once('connection.php');
+include_once('../actions/connection.php');
 
         function getRestaurants(){
             global $db;
@@ -13,7 +13,7 @@ include_once('connection.php');
             return $restaurants;
 
         }
-		
+
 	    function getRestaurant(){
 			global $db;
 
@@ -24,7 +24,7 @@ include_once('connection.php');
 
 			return $result;
 		}
-		
+
 		function getRestaurantById(){
 			global $db;
 

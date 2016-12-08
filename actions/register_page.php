@@ -1,6 +1,6 @@
 <script src=""></script>
 
-<form id="form" method="post" action="sign_up.php" onsubmit="return validateForm();">
+<form id="form" method="post" action="../actions/sign_up.php" onsubmit="return validateForm();">
     <h1>Register:</h1>
     <p>
       <input id="firstName" type="text" name="firstName" placeholder="First name" required/>

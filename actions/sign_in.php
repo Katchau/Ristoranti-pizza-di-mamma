@@ -5,28 +5,32 @@
 
 
   $email=$_POST['email'];
-  $password=$_POST['password'];
-  $correctPass = getPassword($email, $password);
 
-  if ($correctPass == $password){
+  if(strlen($email) != 0){
+      $password=$_POST['password'];
+      $correctPass = getPassword($email, $password);
 
-    session_start();
+      if ($correctPass == $password){
 
-    $userInfo = getUserInfo($email);
+        session_start();
 
-    $nomeCompleto = $userInfo['firstName'];
-    $nomeCompleto .= " ";
-    $nomeCompleto .= $userInfo['lastName'];
+        $userInfo = getUserInfo($email);
 
-    $_SESSION['email'] = $email;
-    $_SESSION['name'] = $nomeCompleto;
-    $_SESSION['id'] = $userInfo['id'];
+        $nomeCompleto = $userInfo['firstName'];
+        $nomeCompleto .= " ";
+        $nomeCompleto .= $userInfo['lastName'];
 
-    header('Location: ../actions/logged_page.php');
+        $_SESSION['email'] = $email;
+        $_SESSION['name'] = $nomeCompleto;
+        $_SESSION['id'] = $userInfo['id'];
+
+        header('Location: ../actions/logged_page.php');
+      }
   }
   else{
     include_once('../actions/login.php');
     echo "User or Password incorrect";
   }
+
 
 ?>

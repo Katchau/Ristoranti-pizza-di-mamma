@@ -1,6 +1,6 @@
 <?php
 
-include_once('../actions/connection.php');
+include_once('connection.php');
 
 function getUsers(){
     global $db;
@@ -22,7 +22,7 @@ function newUser($firstName,$lastName,$password,$email){
     return $insertUser->errorCode();
 }
 
-function getPassword($email, $password){
+function getPassword($email){
   global $db;
 
   $stmt = $db->prepare('SELECT password FROM User WHERE email = ?');

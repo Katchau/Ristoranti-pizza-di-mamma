@@ -6,8 +6,7 @@
     <div id="best_choices">
       <table>
         <?php
-            include_once("../actions/connection.php");
-            include_once("../actions/restaurant.php");
+            include_once("../database/actions/restaurant.php");
 
             $result = getRestaurants();
             $paragraph = 0;

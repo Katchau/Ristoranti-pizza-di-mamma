@@ -51,21 +51,21 @@
                     if(isset($_SESSION['name']))
                     {
                         echo '<div id="user-name">' . $_SESSION['name'] . '</div>' ;
-
                     }
                     else{
                         echo '<div id="init_session">';
                         echo '<input type="submit" name="submit" value="Iniciar Sessão">';
                         echo '</div>';
                     }
-
                     ?>
                 </div>
                 <div id="logon">
                     <?php
                     if(isset($_SESSION['name']))
                     {
-
+                        echo '<form id="form" method="post" action="../actions/sign_out.php">';
+                        echo '<input type="submit" value="Sair">';
+                        echo '</form>';
                     }
                     else {
                         echo '<div id="register">';

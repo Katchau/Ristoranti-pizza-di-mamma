@@ -1,10 +1,10 @@
 <?php
   include_once('../actions/connection.php');
-  include_once('../actions/user.php');
+  include_once('../database/actions/user.php');
 
-  $email=trim($_POST['email']);
-  $password=$_POST['password'];
-  $correctPass = getPassword($email, $password);
+  $email=trim($_POST['Email']);
+  $password=$_POST['Password'];
+  $correctPass = getPassword($email);
 
   if(strlen($email) != 0 && password_verify($password, $correctPass)){
 

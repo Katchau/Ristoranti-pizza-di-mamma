@@ -79,6 +79,11 @@ body{
     color: white;
 }
 
+#top-bar-elements #user-name {
+    padding-right: 15px;
+    font-size: 24px;
+}
+
 #middle img{
     width: 100%;
     height: 80%;

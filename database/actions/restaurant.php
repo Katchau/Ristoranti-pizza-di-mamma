@@ -1,6 +1,6 @@
 <?php
 
-include_once('../actions/connection.php');
+include_once('connection.php');
 
         function getRestaurants(){
             global $db;

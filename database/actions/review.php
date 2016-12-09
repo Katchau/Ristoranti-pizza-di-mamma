@@ -30,8 +30,8 @@ function insertReview($critic_review,$score,$id_restaurant,$id_user){
 
     global $db;
 
-    $insertReview=$db->prepare('INSERT INTO Review VALUES(NULL,?,?,?,?)');
-    $insertReview->execute([$critic_review,$score,$id_restaurant,$id_user]);
+    $insertReview=$db->prepare('INSERT INTO Review VALUES(NULL,?,?,?,?,?)');
+    $insertReview->execute([$critic_review,$score,$id_restaurant,$id_user,null]);
 
     return $insertReview->errorCode();
 

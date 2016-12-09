@@ -12,13 +12,11 @@ $email=trim($_POST['email']);
 if($firstName && $lastName && $password && $passwordConfirmed && $email){
 
     if(strlen($password)<8){
-        include_once('../actions/register_page.php');
         echo 'Password is too short. Please choose a new one.';
         return;
     }
 
     if($password!==$passwordConfirmed || strlen($password)!=strlen($passwordConfirmed)){
-        include_once('../actions/register_page.php');
         echo 'Password confirmation does not match.';
         return;
     }
@@ -39,10 +37,9 @@ if($firstName && $lastName && $password && $passwordConfirmed && $email){
       $_SESSION['name'] = $nomeCompleto;
       $_SESSION['id'] = $userInfo['id'];
 
-      header('Location: ../actions/logged_page.php');
+      header('Location: ../pages/principal.php');
     }
     else {
-        include_once('../actions/register_page.php');
         echo 'Invalid account. Email already exists.';
         return;
     }

@@ -1,0 +1,53 @@
+#middle img{
+    width: 100%;
+    height: 80%;
+}
+
+#middle-elements{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -40%;
+    height: 200px;
+}
+
+#middle-elements #search-bar img{
+    height: 80%;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 30px;
+}
+
+#middle-elements input[type=text]{
+    border: 3px solid #84714F;
+    height: 50px;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+#middle-elements #search-bar #searchLocal{
+    background-image: url('../res/localIcon.png');
+    background-size: 30px 30px;
+    background-position: 5px;
+    background-repeat: no-repeat;
+    width: 180px;
+    padding-left: 40px;
+}
+#middle-elements #search-bar #searchRestaurant{
+    background-image: url('../res/foodIcon.png');
+    background-size: 30px 30px;
+    background-position: 5px;
+    background-repeat: no-repeat;
+    width: 400px;
+    padding-left: 40px;
+}
+
+#middle-elements input[type=submit]{
+    border: 3px solid #84714F;
+    height: 55px;
+    width: 55px;
+    background-image: url('../res/searchIcon.png');
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+}

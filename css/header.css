@@ -1,5 +1,6 @@
 body{
     font-family: 'Lobster',sans-serif;
+    overflow-x: hidden;
 }
 
 #top-bar{
@@ -84,59 +85,54 @@ body{
     font-size: 24px;
 }
 
-#middle img{
-    width: 100%;
-    height: 80%;
+
+
+#top-bar-elements #search{
+    width: 50%;
+    display: inline-block;
 }
 
-#middle-elements{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: -40%;
-    height: 200px;
+
+#top-bar-elements #search form{
+    margin-top: 25px;
+    padding-left: 25%;
+    width: 60%;
 }
 
-#middle-elements #search-bar img{
-    height: 80%;
-    width: 80%;
-    margin-left: 10%;
-    margin-bottom: 30px;
-}
-
-#middle-elements input[type=text]{
+#top-bar-elements #search input[type=text]{
+    background-color: white;
     border: 3px solid #84714F;
-    height: 50px;
     border-radius: 4px;
-    font-size: 20px;
+    height: 30px;
+    min-width: 100px;
+    font-family: 'Lobster', sans-serif;
+    color: #84714F;
 }
 
-#middle-elements #search-bar #searchLocal{
-    background-image: url('../res/localIcon.png');
-    background-size: 30px 30px;
-    background-position: 5px;
-    background-repeat: no-repeat;
-    width: 180px;
-    padding-left: 40px;
-}
-#middle-elements #search-bar #searchRestaurant{
-    background-image: url('../res/foodIcon.png');
-    background-size: 30px 30px;
-    background-position: 5px;
-    background-repeat: no-repeat;
-    width: 400px;
-    padding-left: 40px;
+#top-bar-elements #search #searchLocal {
+    width: 20%;
 }
 
-#middle-elements input[type=submit]{
+#top-bar-elements #search #searchRestaurant {
+    width: 40%;
+}
+
+#top-bar-elements #search input[type=submit]{
+    background-color: #84714F;
     border: 3px solid #84714F;
-    height: 55px;
-    width: 55px;
-    background-image: url('../res/searchIcon.png');
-    background-size: 50px 50px;
-    background-repeat: no-repeat;
     border-radius: 4px;
+    height: 36px;
+    width: 15%;
+    min-width: 80px;
+    font-family: 'Lobster', sans-serif;
+    color: white;
 }
+
+#top-bar-elements #search input[type=submit]:hover{
+    background-color: white;
+    color: #84714F;
+}
+
 
 .overlayLogon{
     position: absolute;
@@ -195,6 +191,11 @@ body{
     font-family: 'Lobster', sans-serif;
 }
 
+#overlay-logon input[type=submit]:hover {
+    background-color: white;
+    color: #5a3a31;
+}
+
 .overlayLogin{
     position: absolute;
     top: 0;
@@ -250,4 +251,9 @@ body{
     color: #e2f1af;
     background-color: #5a3a31;
     font-family: 'Lobster', sans-serif;
+}
+
+#overlay-login input[type=submit]:hover {
+    background-color: white;
+    color: #5a3a31;
 }

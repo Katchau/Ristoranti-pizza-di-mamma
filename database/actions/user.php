@@ -16,8 +16,8 @@ function getUsers(){
 function newUser($firstName,$lastName,$password,$email){
     global $db;
 
-    $insertUser=$db->prepare('INSERT INTO User VALUES(NULL,?,?,?,?)');
-    $insertUser->execute([$firstName,$lastName,$password,$email]);
+    $insertUser=$db->prepare('INSERT INTO User VALUES(NULL,?,?,?,?,?)');
+    $insertUser->execute([$firstName,$lastName,$password,$email,null]);
 
     return $insertUser->errorCode();
 }

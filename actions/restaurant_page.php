@@ -1,7 +1,7 @@
 <?php
   include_once("../database/actions/restaurant.php");
   include_once("../actions/make_review.php");
-  include_once("../actions/header.php");
+  include_once("../pages/header.php");
  ?>
 <html>
     <body>

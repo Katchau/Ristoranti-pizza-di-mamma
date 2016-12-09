@@ -20,12 +20,11 @@
         $_SESSION['name'] = $nomeCompleto;
         $_SESSION['id'] = $userInfo['id'];
 
-        header('Location: ../actions/logged_page.php');
+        header('Location: ../pages/principal_page.php');
 
   }
   else{
-    include_once('../actions/login.php');
-    echo "User or Password incorrect";
+    
   }
 
 

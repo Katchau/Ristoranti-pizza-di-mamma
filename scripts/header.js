@@ -2,6 +2,8 @@ function overlayPage(){
 
     $("#register").click(showOverlayLogon);
 
+    $('.overlayLogon').hide();
+
     $('.overlayLogon').click(function (event) {
         if (event.target === event.delegateTarget) {
             $('.overlayLogon').hide();
@@ -10,6 +12,8 @@ function overlayPage(){
     });
 
     $("#init_session").click(showOverlayLogin);
+
+    $('.overlayLogin').hide();
 
     $('.overlayLogin').click(function (event) {
         if (event.target === event.delegateTarget) {

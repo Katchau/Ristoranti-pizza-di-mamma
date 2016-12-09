@@ -1,4 +1,3 @@
 <?php
-    include_once('action/sign_out.php');
-    header('Location: pages/principal_page.php');
+    header('Location: pages/user_profile_page.php');
 ?>

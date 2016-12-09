@@ -9,7 +9,6 @@ body{
     top: 0;
     width: 100%;
     z-index: 10;
-    min-width: 750px;
     box-shadow: 0px 6px 10px -7px #5a3a31;
 }
 
@@ -25,6 +24,7 @@ body{
 
 #top-bar-elements * {
     display: inline-block;
+    color: #84714F;
 }
 
 #top-bar-elements #login{
@@ -61,6 +61,24 @@ body{
     color: white;
 }
 
+
+#top-bar-elements input[type=button]{
+    background-color: white;
+    border: 3px solid #84714F;
+    border-radius: 4px;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    height: 40px;
+    width: 120px;
+    font-family: 'Lobster', sans-serif;
+    color: #84714F;
+}
+
+#top-bar-elements #top-buttons input[type=button]:hover{
+    background-color: #84714F;
+    color: white;
+}
+
 #middle img{
     width: 100%;
     height: 80%;
@@ -81,7 +99,7 @@ body{
     margin-bottom: 30px;
 }
 
-input[type=text]{
+#middle-elements input[type=text]{
     border: 3px solid #84714F;
     height: 50px;
     border-radius: 4px;
@@ -113,4 +131,118 @@ input[type=text]{
     background-size: 50px 50px;
     background-repeat: no-repeat;
     border-radius: 4px;
+}
+
+.overlayLogon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+}
+
+#overlay-logon{
+    width: 550px;
+    height: 750px;
+    line-height: 150px;
+    margin-top: 20%;
+    background-color: #E3D888;
+    border-radius: 5px;
+    z-index: 11;
+}
+
+#overlay-logon #register-box{
+    text-align: center;
+    color: #5a3a31;
+    text-shadow: 2px 2px #e2f1af;
+    font-size: 25px;
+}
+
+#overlay-logon input{
+    border: 3px solid #84714F;
+    height: 25px;
+    border-radius: 3px;
+    font-size: 18px;
+    padding-top: 2px;
+    margin: 0.2em;
+    margin-bottom: 0.8em;
+    display: block;
+    margin-left: 140px;
+}
+
+#overlay-logon input[type=submit]{
+    border: 3px solid #5a3a31;
+    height: 50px;
+    width: 180px;
+    border-radius: 3px;
+    font-size: 25px;
+    padding-bottom: 4px;
+    margin: 0.2em;
+    margin-top: 2em;
+    display: block;
+    margin-left: 175px;
+    color: #e2f1af;
+    background-color: #5a3a31;
+    font-family: 'Lobster', sans-serif;
+}
+
+.overlayLogin{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+}
+
+#overlay-login{
+    width: 550px;
+    height: 600px;
+    line-height: 150px;
+    margin-top: 20%;
+    background-color: #E3D888;
+    border-radius: 5px;
+    z-index: 11;
+}
+
+#overlay-login #register-box{
+    text-align: center;
+    color: #5a3a31;
+    text-shadow: 2px 2px #e2f1af;
+    font-size: 25px;
+}
+
+#overlay-login input{
+    border: 3px solid #84714F;
+    height: 25px;
+    border-radius: 3px;
+    font-size: 18px;
+    padding-top: 2px;
+    margin: 0.2em;
+    margin-bottom: 0.8em;
+    display: block;
+    margin-left: 140px;
+}
+
+#overlay-login input[type=submit]{
+    border: 3px solid #5a3a31;
+    height: 50px;
+    width: 180px;
+    border-radius: 3px;
+    font-size: 25px;
+    padding-bottom: 4px;
+    margin: 0.2em;
+    margin-top: 2em;
+    display: block;
+    margin-left: 175px;
+    color: #e2f1af;
+    background-color: #5a3a31;
+    font-family: 'Lobster', sans-serif;
 }

@@ -18,7 +18,8 @@ CREATE TABLE Restaurant(
         schedule VARCHAR,
         score FLOAT,
         numReviews INTEGER,
-        sumScores INTEGER
+        sumScores INTEGER,
+        owner_id INTEGER REFERENCES User
 );
 
 DROP TABLE IF EXISTS Review;
@@ -30,6 +31,15 @@ CREATE TABLE Review(
         id_user INTEGER REFERENCES User,
         date DATE
 );
+
+DROP TABLE IF EXISTS Replie;
+CREATE TABLE Replie(
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        text VARCHAR,
+        id_user INTEGER REFERENCES User,
+        id_rev INTEGER REFERENCES Review,
+        date DATE
+)
 
 CREATE TRIGGER ScoreUpdate
 AFTER INSERT ON Review

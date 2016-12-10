@@ -16,7 +16,7 @@
             <div id="register-box"><h1>Iniciar Sessão</h1></div>
             <form id="form" method="post" action="../actions/sign_in.php" onsubmit="return validateForm();">
                 <input id="email" type="email" name="Email" placeholder="Email" required/>
-                <input id="password" type="password" name="Password" placeholder="Paswword" required/>
+                <input id="password" type="password" name="Password" placeholder="Password" required/>
                 <input type="submit" value="Iniciar sessão"/>
                 <span id="output"></span>
             </form>
@@ -28,6 +28,7 @@
             <form id="form" method="post" action="../actions/sign_up.php" onsubmit="return validateForm();">
                 <input id="firstName" type="text" name="firstName" placeholder="First name" required/>
                 <input id="lastName" type="text" name="lastName" placeholder="Last name" required/>
+                <input id="birthday" type="date" name="birthday" placeholder="Birthday" required/>
                 <input id="password" type="password" name="password" placeholder="Password" required/>
                 <input id="passwordConfirm" type="password" name="passwordConfirm" placeholder="Repeat your Password" required/>
                 <input id="email" type="email" name="email" placeholder="Email" required/>

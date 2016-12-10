@@ -4,6 +4,7 @@ include_once('../database/actions/user.php');
 
 $firstName=trim($_POST['firstName']);
 $lastName=trim($_POST['lastName']);
+$birthday=$_POST['birthday'];
 $password=$_POST['password'];
 $passwordConfirmed=$_POST['passwordConfirm'];
 $email=trim($_POST['email']);
@@ -22,7 +23,7 @@ if($firstName && $lastName && $password && $passwordConfirmed && $email){
 
     $pass = password_hash($password, PASSWORD_DEFAULT);
 
-    if(newUser($firstName,$lastName,$pass,$email)==0){
+    if(newUser($firstName,$lastName,$birthday,$pass,$email)==0){
 
       session_start();
 

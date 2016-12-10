@@ -1,5 +1,5 @@
 <?php
-  include_once('../actions/connection.php');
+  include_once('../database/actions/connection.php');
   include_once('../database/actions/user.php');
 
   $email=trim($_POST['Email']);
@@ -24,7 +24,7 @@
 
   }
   else{
-    
+      echo "Your email or password is incorrect.";
   }
 
 

@@ -8,8 +8,6 @@ CREATE TABLE User(
         email VARCHAR UNIQUE
 );
 
-INSERT INTO User VALUES(NULL,'Bruno','Barros','2016-04-20','epa123','brunobarros@gmail.com');
-
 DROP TABLE IF EXISTS Restaurant;
 CREATE TABLE Restaurant(
         id INTEGER PRIMARY KEY AUTOINCREMENT,

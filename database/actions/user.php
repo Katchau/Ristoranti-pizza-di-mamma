@@ -13,11 +13,11 @@ function getUsers(){
     return $users;
 }
 
-function newUser($firstName,$lastName,$password,$email){
+function newUser($firstName,$lastName,$birthday,$password,$email){
     global $db;
 
     $insertUser=$db->prepare('INSERT INTO User VALUES(NULL,?,?,?,?,?)');
-    $insertUser->execute([$firstName,$lastName,$password,$email,null]);
+    $insertUser->execute([$firstName,$lastName,$birthday,$password,$email]);
 
     return $insertUser->errorCode();
 }

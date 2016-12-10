@@ -1,14 +1,12 @@
 <?php
 
 include_once('../database/actions/user.php');
-//session_start(); Necessário para quando implementado o login do utilizador
 
 $firstName=trim($_POST['firstName']);
 $lastName=trim($_POST['lastName']);
 $password=$_POST['password'];
 $passwordConfirmed=$_POST['passwordConfirm'];
 $email=trim($_POST['email']);
-$function=$_POST['function'];
 
 if($firstName && $lastName && $password && $passwordConfirmed && $email){
 
@@ -24,7 +22,7 @@ if($firstName && $lastName && $password && $passwordConfirmed && $email){
 
     $pass = password_hash($password, PASSWORD_DEFAULT);
 
-    if(newUser($firstName,$lastName,$function,$pass,$email)==0){
+    if(newUser($firstName,$lastName,$pass,$email)==0){
 
       session_start();
 
@@ -37,7 +35,6 @@ if($firstName && $lastName && $password && $passwordConfirmed && $email){
       $_SESSION['email'] = $email;
       $_SESSION['name'] = $nomeCompleto;
       $_SESSION['id'] = $userInfo['id'];
-      $_SESSION['function'] = $function;
 
       header('Location: ../pages/principal_page.php');
     }

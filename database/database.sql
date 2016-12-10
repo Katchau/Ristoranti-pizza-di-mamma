@@ -3,7 +3,6 @@ CREATE TABLE User(
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         firstName VARCHAR,
         lastName VARCHAR,
-        funtion VARCHAR,
         password VARCHAR,
         email VARCHAR UNIQUE,
         picture TEXT

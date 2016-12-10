@@ -1,11 +1,11 @@
 #middle {
     margin-top: 8%;
-    width: 75%;
+    width: 85%;
     height: 400px;
-    margin-left: 10%;
+    margin-left: 7.5%;
     display: flex;
     justify-content: center;
-    background-color: #E3D888;
+    background: radial-gradient(#e2f1af,#E3D888);
     border-radius: 6px;
 }
 
@@ -37,3 +37,60 @@
 #middle #user-info #personal-info *{
     padding-top: 5%;
 }
+
+#down-part {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 7.5%;
+    padding-left: 7.5%;
+}
+
+#down-part #restaurants{
+    height: 1000px;
+    width: 75%;
+    background: radial-gradient(#e2f1af,#E3D888);
+}
+
+#down-part #options{
+    height: 350px;
+    background: radial-gradient(#e2f1af,#E3D888);
+    border-radius: 6px;
+    width: 20%;
+    max-width: 450px;
+}
+
+#down-part #options * {
+    height: 15%;
+    width: 80%;
+    padding-left: 10%;
+    padding-bottom: 5%;
+}
+
+#down-part #options #title-options {
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+    font-size: 200%;
+    padding-bottom: 8%;
+}
+
+#down-part #options input[type=button]{
+    background-color: #84714F;
+    border: 3px solid #5a3a31;
+    border-radius: 4px;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    font-family: 'Lobster', sans-serif;
+    color: white;
+    height: 100%;
+    width: 100%;
+    padding-top: 5%;
+    font-size: 18px;
+}
+
+#down-part #options input[type=button]:hover{
+    background-color: white;
+    color: #84714F;
+}
+

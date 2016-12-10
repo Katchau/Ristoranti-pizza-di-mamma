@@ -21,3 +21,23 @@ include_once('header.php');
         </div>
     </div>
 </div>
+
+<div id="down-part">
+    <div id="restaurants">
+        Restaurants
+    </div>
+    <div id="options">
+        <div id="title-options">
+            Options
+        </div>
+        <div id="edit">
+            <input type="button" value="Editar">
+        </div>
+        <div>
+            <input type="button" value="Mudar Password">
+        </div>
+        <div>
+            <input type="button" value="Criar restaurante">
+        </div>
+    </div>
+</div>

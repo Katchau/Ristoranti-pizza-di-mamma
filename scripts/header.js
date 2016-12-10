@@ -21,7 +21,6 @@ function overlayPage(){
             event.stopPropagation();
         }
     });
-
 }
 
 function showOverlayLogon(){

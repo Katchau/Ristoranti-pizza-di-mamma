@@ -47,4 +47,15 @@ include_once('connection.php');
 			return $result;
 		}
 
+		function insertRestaurant($name,$address,$contacts,$schedule,$owner_id){
+
+			global $db;
+
+			$insertUser=$db->prepare('INSERT INTO Restaurant VALUES(NULL,?,?,?,?,?,?,?,?)');
+			$insertUser->execute([$name,$address,$contacts,$schedule,0,0,0,$owner_id]);
+
+			return $insertUser->errorCode();
+
+		}
+
 ?>

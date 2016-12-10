@@ -65,7 +65,7 @@ body{
 
 
 #top-bar-elements input[type=button]{
-    background-color: white;
+    background-color: #84714F;
     border: 3px solid #84714F;
     border-radius: 4px;
     -webkit-transition-duration: 0.2s;
@@ -73,12 +73,12 @@ body{
     height: 40px;
     width: 120px;
     font-family: 'Lobster', sans-serif;
-    color: #84714F;
+    color: white;
 }
 
 #top-bar-elements #top-buttons input[type=button]:hover{
-    background-color: #84714F;
-    color: white;
+    background-color: white;
+    color: #84714F;
 }
 
 #top-bar-elements #user-name {
@@ -195,6 +195,11 @@ body{
 #overlay-logon input[type=submit]:hover {
     background-color: white;
     color: #5a3a31;
+}
+
+#overlay-logon #output-logon {
+    display: flex;
+    justify-content: center;
 }
 
 .overlayLogin{

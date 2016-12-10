@@ -7,6 +7,7 @@
       <table>
         <?php
             include_once("../database/actions/restaurant.php");
+            include_once("../database/actions/connection.php");
 
             $result = getRestaurants();
             $paragraph = 0;

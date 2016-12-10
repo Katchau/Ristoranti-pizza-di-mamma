@@ -35,5 +35,16 @@ include_once('connection.php');
 
 			return $result;
 		}
+		
+		function getRestaurantPicturesById(){
+			global $db;
+
+			$rdb = $db->prepare('SELECT * FROM Picture WHERE id_restaurant = :id');
+			$rdb->bindParam(':id', $_POST['id'], PDO::PARAM_INT);
+			$rdb->execute();
+			$result = $rdb->fetchAll();
+
+			return $result;
+		}
 
 ?>

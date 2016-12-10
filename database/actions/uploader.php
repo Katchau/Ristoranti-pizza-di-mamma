@@ -2,15 +2,26 @@
 
 	include_once('connection.php');
 
-	function insertPicture($id_restaurant,$pic_name){
+	function insertPicture($id,$pic_name,$is_restaurant){
 		global $db;
+		$insertReview = null;
 		
-		$insertReview=$db->prepare('INSERT INTO Picture VALUES(NULL,?,?,NULL)');
-		$insertReview->execute([$pic_name,$id_restaurant]);
+		if($is_restaurant)
+			$insertReview=$db->prepare('INSERT INTO Picture VALUES(NULL,?,?,NULL)');
+		
+		else
+			$insertReview=$db->prepare('INSERT INTO Picture VALUES(NULL,?,NULL,?)');
+		
+		$insertReview->execute([$pic_name,$id]);
 		return $insertReview->errorCode();
 	}
 
-    $uploaddir = '../images/' . $_POST['id'] . '/';
+    $uploaddir = '../images/';
+	if(isset($_POST['rest_id']))
+		$uploaddir .= $_POST['rest_id'] . '/';
+	else 
+		$uploaddir .= 'users/' . $_POST['user_id'] . '/';
+	
 	if(!file_exists($uploaddir))mkdir($uploaddir, 0700);
 	$uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
 	
@@ -18,7 +29,10 @@
 	
 	if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
 		echo "Updload Successfull!.\n";
-		insertPicture($_POST['id'],$_FILES['userfile']['name']);
+		if(isset($_POST['rest_id']))
+			insertPicture($_POST['rest_id'],$_FILES['userfile']['name'],true);
+		else
+			insertPicture($_POST['user_id'],$_FILES['userfile']['name'],false);
 	} 
 	else {
 		echo "Upload failed";

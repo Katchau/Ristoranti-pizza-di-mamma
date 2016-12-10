@@ -1,6 +1,7 @@
 <?php
   include_once("../database/actions/restaurant.php");
   include_once("../actions/make_review.php");
+  include_once("../actions/uploadbar.php");
   include_once("../pages/header.php");
  ?>
 <html>
@@ -28,13 +29,7 @@
 						echo '<img src="' . $image_path . $pic['name'] . '" alt="restaurant_pics">';;
 					}
 					
-					//esta parte é para testes!!!!
-					
-					echo '<form enctype="multipart/form-data" action="../database/actions/uploader.php" method="POST">';
-					echo '<input type="file" name="userfile" accept="image/*">';
-					echo '<button type="submit" value="' . $restaurant_id . '" name="id">';
-					echo 'Upload File</button>';
-					echo '</form>';
+					upload_bar($restaurant_id,true);
 					
 					echo '<p>Restaurant info: </p>';
 					echo '<p>' . $result['description'] . '</p>';

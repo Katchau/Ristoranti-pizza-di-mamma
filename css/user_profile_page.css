@@ -1,0 +1,39 @@
+#middle {
+    margin-top: 8%;
+    width: 75%;
+    height: 400px;
+    margin-left: 10%;
+    display: flex;
+    justify-content: center;
+    background-color: #E3D888;
+    border-radius: 6px;
+}
+
+#middle #profile-img{
+    height: 300px;
+    width: 300px;
+    margin-right: 10%;
+    margin-top: 20%;
+}
+
+#middle img{
+    width: 80%;
+    height: 80%;
+    max-height: 225px;
+    max-width: 225px;
+    border-radius: 50%;
+}
+
+#middle #user-info{
+    color: #5a3a31;
+    font-family: 'Oswald', sans-serif;
+    font-size: 150%;
+}
+
+#middle #user-info #personal-info{
+    padding-top: 30%;
+}
+
+#middle #user-info #personal-info *{
+    padding-top: 5%;
+}

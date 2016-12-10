@@ -55,6 +55,8 @@
                     if(isset($_SESSION['name']))
                     {
                         echo '<div id="user-name">' . $_SESSION['name'] . '</div>' ;
+
+                        echo "NOME: " . $_SESSION['id'];
                     }
                     else{
                         echo '<div id="init_session">';

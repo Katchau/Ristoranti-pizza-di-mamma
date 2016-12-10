@@ -1,6 +1,7 @@
 body{
     font-family: 'Lobster',sans-serif;
     overflow-x: hidden;
+    background: white;
 }
 
 #top-bar{

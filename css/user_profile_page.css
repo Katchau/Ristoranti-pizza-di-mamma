@@ -94,3 +94,69 @@
     color: #84714F;
 }
 
+.overlayChangePassword{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+}
+
+#overlay-changePassword{
+    width: 550px;
+    height: 750px;
+    line-height: 150px;
+    margin-top: 20%;
+    background-color: #E3D888;
+    border-radius: 5px;
+    z-index: 11;
+}
+
+#overlay-changePassword #changePassword{
+    text-align: center;
+    color: #5a3a31;
+    text-shadow: 2px 2px #e2f1af;
+    font-size: 25px;
+}
+
+#overlay-changePassword input{
+    border: 3px solid #84714F;
+    height: 25px;
+    border-radius: 3px;
+    font-size: 18px;
+    padding-top: 2px;
+    margin: 0.2em;
+    margin-bottom: 0.8em;
+    display: block;
+    margin-left: 140px;
+}
+
+#overlay-changePassword input[type=submit]{
+    border: 3px solid #5a3a31;
+    height: 50px;
+    width: 180px;
+    border-radius: 3px;
+    font-size: 25px;
+    padding-bottom: 4px;
+    margin: 0.2em;
+    margin-top: 2em;
+    display: block;
+    margin-left: 175px;
+    color: #e2f1af;
+    background-color: #5a3a31;
+    font-family: 'Lobster', sans-serif;
+}
+
+#overlay-changePassword input[type=submit]:hover {
+    background-color: white;
+    color: #5a3a31;
+}
+
+#overlay-changePassword #output-changePassword {
+    display: flex;
+    justify-content: center;
+}

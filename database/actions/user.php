@@ -39,4 +39,11 @@ function getUserInfo($email){
   return $stmt->fetch();
 }
 
+function changeUserPassword($email,$newPassword){
+  global $db;
+
+  $stmt = $db->prepare('UPDATE user SET password = ? WHERE email = ?');
+	$stmt->execute(array($newPassword, $email));
+}
+
 ?>

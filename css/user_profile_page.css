@@ -160,3 +160,22 @@
     display: flex;
     justify-content: center;
 }
+
+#down-part #restaurants button{
+    border: 3px solid #84714F;
+    border-radius: 4px;
+    font-family: 'Lobster', sans-serif;
+    background-color: white;
+    color: #84714F;
+	margin-right: 1%;
+}
+
+#down-part #restaurants button:hover{
+	border-color:#5A3A31;
+	color: #5A3A31;
+}
+
+#down-part #restaurants button img{
+	width: 360px;
+	height: auto;
+}

@@ -69,6 +69,18 @@
 	padding-bottom: 2.5%;
 }
 
+#middle-elements #search-bar li button:hover{
+    background-color: #84714F;
+    color: white;
+	border-color:white;
+}
+
+#middle-elements #search-bar li button:active{
+    background-color: #5A3A31;
+    color: #E3D888;
+	border-color:#5A3A31;
+}
+
 #middle-elements input[type=submit]{
     border: 3px solid #84714F;
     height: 55px;

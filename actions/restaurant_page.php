@@ -25,7 +25,6 @@
 					echo '<div id="RestaurantN">';
 						echo '<h1>' . $result['name'] . '</h1>';
 					echo '</div>';
-					
 					$pictures = getRestaurantPicturesById();
 					$image_path = "../database/images/" . $restaurant_id . "/";
 					$n_pic = 0;

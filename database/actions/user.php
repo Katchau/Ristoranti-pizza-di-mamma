@@ -46,4 +46,16 @@ function changeUserPassword($email,$newPassword){
 	$stmt->execute(array($newPassword, $email));
 }
 
+function getOwnedRestaurants($id){
+	global $db;
+	
+	$rdb = $db->prepare('SELECT * FROM Restaurant WHERE owner_id = ?');
+    $rdb->execute(array($id));
+
+    $rest = $rdb->fetchAll();
+
+    return $rest;
+	
+}
+
 ?>

@@ -1,7 +1,6 @@
 <?php
 
-	include("connection.php");
-	include("restaurant.php");
+	include("../database/actions/restaurant.php");
 	include("stringAlgorithms.php");
 	
 	$curName = $_GET['nameR'];
@@ -14,7 +13,7 @@
 		if($curName == "")  $return = "Type the restaurant name!";
 		$length = strlen($curName);
 		foreach($rests as $row){
-			if($row['adress'] == $curPlace || $curPlace == "" || $curPlace == " "){
+			if($row['address'] == $curPlace || $curPlace == "" || $curPlace == " "){
 				$aproved = false;
 				$name = strtolower($row['name']);
 				if(kmp_function($curName,$name)){

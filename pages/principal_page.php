@@ -10,7 +10,8 @@
             <form action="" method="post">
                 <input id="searchLocal" type="text" name="local_search" placeholder="Pesquisar por local..."/>
                 <input id="searchRestaurant" type="text" name="restaurant_search" placeholder="Pesquisar por restaurante..."/>
-                <input type="submit" value="">
+                <ul id="txtHint">
+				</ul>
             </form>
         </div>
     </div>

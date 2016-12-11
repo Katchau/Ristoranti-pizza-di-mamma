@@ -4,11 +4,14 @@
   include_once("../actions/uploadbar.php");
   include_once("../pages/header.php");
  ?>
+<head>
+	<link rel="stylesheet" href="../css/restaurant.css">
+</head>
 <html>
     <body>
 		<div id="main">
 			<section id = "rest">
-				<embed src="../surprise/secret.mp3" >
+				<!-- <embed src="../surprise/secret.mp3" > -->
 				<?php
 					
 					$restaurant_id=$_POST['id'];
@@ -25,11 +28,21 @@
 					
 					$pictures = getRestaurantPicturesById();
 					$image_path = "../database/images/" . $restaurant_id . "/";
+					$n_pic = 0;
+					echo '<div id="images">';
 					foreach($pictures as $pic){
-						echo '<img src="' . $image_path . $pic['name'] . '" alt="restaurant_pics">';;
+						echo '<div id="img_' . $n_pic . '">';
+							echo '<img src="' . $image_path . $pic['name'] . '" alt="restaurant_pics">';
+						echo '</div>';
+						$n_pic ++;
 					}
 					
-					upload_bar($restaurant_id,true);
+					echo '</div>';
+					echo '<br>';
+					//upload_bar($restaurant_id,true);
+					
+					echo '<button id="b4Button" onClick="getDesiredPicture(this.id)">O</button>';
+					echo '<button id="nextButton" onClick="getDesiredPicture(this.id)">O</button>';
 					
 					echo '<p>Restaurant info: </p>';
 					echo '<p>' . $result['description'] . '</p>';

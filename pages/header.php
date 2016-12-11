@@ -7,6 +7,7 @@
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="../scripts/header.js"></script>
     <script src="../scripts/sign_up.js"></script>
+	<script src="../scripts/script1.js"></script>
     <link rel="stylesheet" href="../css/header.css">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Lobster" rel="stylesheet">
 </head>

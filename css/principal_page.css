@@ -42,6 +42,33 @@
     padding-left: 40px;
 }
 
+#middle-elements #search-bar{
+	list-style-type: none;
+	display: block;
+}
+
+#middle-elements #search-bar li{
+	display: inline;
+	margin-right: 5%;
+}
+
+#middle-elements #search-bar li button{
+	background-color: white;
+	color: #84714F;
+	font-weight: bold;
+	
+	border-style: solid;
+	border-color: #84714F;
+	border-radius: 4px;
+	
+	cursor: pointer;
+	
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-top: 2.5%;
+	padding-bottom: 2.5%;
+}
+
 #middle-elements input[type=submit]{
     border: 3px solid #84714F;
     height: 55px;

@@ -42,7 +42,7 @@
     <div id="top-bar">
         <div id="top-bar-elements">
             <h1>
-                Cá estámos !
+                <a href="../pages/principal_page.php">Cá estámos !</a>
             </h1>
             <div id="search">
                 <form action="" method="post">
@@ -57,8 +57,8 @@
                     if(isset($_SESSION['name']))
                     {
                         echo '<div id="user-name">';
-							echo '<a href="user_profile_page.php">'. $_SESSION['name'] .'</a>';
-						echo '</div>';
+							          echo '<a href="../pages/user_profile_page.php">'. $_SESSION['name'] .'</a>';
+						            echo '</div>';
                     }
                     else{
                         echo '<div id="init_session">';

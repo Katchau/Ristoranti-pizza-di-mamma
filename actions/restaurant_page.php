@@ -13,9 +13,9 @@
 			<section id = "rest">
 				<!-- <embed src="../surprise/secret.mp3" > -->
 				<?php
-					
+
 					$restaurant_id=$_POST['id'];
-					
+
 					if(isset($_POST['score'])){ // por o echo como pop up apenas ;)
 						$review = makeReview();
 						echo '<p>' . $review . '</p>';
@@ -35,14 +35,14 @@
 						echo '</div>';
 						$n_pic ++;
 					}
-					
+
 					echo '</div>';
 					echo '<br>';
 					//upload_bar($restaurant_id,true);
-					
+
 					echo '<button id="b4Button" onClick="getDesiredPicture(this.id)">O</button>';
 					echo '<button id="nextButton" onClick="getDesiredPicture(this.id)">O</button>';
-					
+
 					echo '<p>Restaurant info: </p>';
 					echo '<p>' . $result['description'] . '</p>';
 					echo '<p> Indirizzo: ' . $result['address'] . '</p>';
@@ -56,7 +56,7 @@
 
 					foreach($reviews as $rev){
 						echo '<form id="'.$rev.'" method="post" action="restaurant_page.php">';
-						echo '<p>' . $rev['text'] . ' nota assegnata' . $rev['score'] . '</p>';
+						echo '<h3>' . $rev['text'] . '</h3> <h3> nota assegnata' . $rev['score'] . '</h3>';
 						echo '<input type="text" name="comment" value="Comment" height="100px" width="100px" required/>';
 						echo '<button type="submit" value="'.$restaurant_id.'" name="id">Comment</button>';
 						echo '</form>';

@@ -1,8 +1,8 @@
 <?php
 include_once('header.php');
 include_once('../pages/header.php');
-include_once('../database/actions/user.php');
-include_once('../database/actions/restaurant.php');
+include_once('../actions/uploadbar.php');
+include_once('../actions/profile_pics.php');
 ?>
 
 <script src="../scripts/profile_page.js"></script>
@@ -23,9 +23,27 @@ include_once('../database/actions/restaurant.php');
     </div>
 </div>
 
+<div class="overlayChangeProfilePic" hidden="hidden">
+    <div id="overlay-changePic">
+        <div id="changePic"><h1>Mudar Imagem Perfil</h1></div>
+        <?php
+		upload_bar($_SESSION['id'], false);
+		?>
+    </div>
+</div>
+
 <div id="middle">
     <div id="profile-img">
-        <img src="../res/defaultProfilePicture.png">
+		<?php
+			$pic = get_profile_pic();
+			if($pic == null || !$pic)
+				echo '<img src="../res/defaultProfilePicture.png">';
+			else echo '<img src="' . '../database/images/users/' . $_SESSION['id'] . '/' . $pic . '">';
+			
+		?>
+		<div id="changeProfilePic">
+            <input type="button" value="Mudar Imagem">
+        </div>
     </div>
     <div id="user-info">
         <div id="personal-info">
@@ -46,30 +64,9 @@ include_once('../database/actions/restaurant.php');
 <div id="down-part">
     <div id="restaurants">
         <p>Restaurants</p>
-		
 		<?php
-			$restaurants = getOwnedRestaurants($_SESSION['id']);
-			$ref = "../actions/restaurant_page.php";
-			
-			echo '<form method="post" action=' . $ref . '>';
-			$paragraph = 0;
-			foreach($restaurants as $rest){
-				if($paragraph == 2){
-					$paragraph = 0;
-					echo '<br>';
-				}
-				echo '<button type="submit" value="' . $rest['id'] . '" name="id">';
-				echo $rest['name'];
-				echo '<br>';
-				$pic = getRestaurantPicture($rest['id']);
-				$image_path = "../database/images/" . $rest['id'] . "/";
-				echo '<img src="' . $image_path . $pic['name'] . '" alt="restaurant_pics">';
-				echo '</button>';
-				$paragraph ++;
-			}
-			echo '</form>';
-		?>
-		
+			display_restaurants();
+		?>	
     </div>
     <div id="options">
         <div id="title-options">

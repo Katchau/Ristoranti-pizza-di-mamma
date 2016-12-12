@@ -7,10 +7,9 @@
 		$insertReview = null;
 		
 		if($is_restaurant)
-			$insertReview=$db->prepare('INSERT INTO Picture VALUES(NULL,?,?,NULL)');
-		
+			$insertReview=$db->prepare('INSERT INTO Picture VALUES(NULL,?,?)');
 		else
-			$insertReview=$db->prepare('INSERT INTO Picture VALUES(NULL,?,NULL,?)');
+			$insertReview=$db->prepare('UPDATE User SET picture = ? WHERE id = ?');
 		
 		$insertReview->execute([$pic_name,$id]);
 		return $insertReview->errorCode();

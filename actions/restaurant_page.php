@@ -55,7 +55,7 @@
 					echo 'Recensionis di ristorante';
 
 					foreach($reviews as $rev){
-						echo '<form id="'.$rev.'" method="post" action="restaurant_page.php">';
+						echo '<form id="'.$rev['id'].'" method="post" action="restaurant_page.php">';
 						echo '<h3>' . $rev['text'] . '</h3> <h3> nota assegnata' . $rev['score'] . '</h3>';
 						echo '<input type="text" name="comment" value="Comment" height="100px" width="100px" required/>';
 						echo '<button type="submit" value="'.$restaurant_id.'" name="id">Comment</button>';

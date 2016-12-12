@@ -5,6 +5,7 @@ CREATE TABLE User(
         lastName VARCHAR,
         birthday DATE,
         password VARCHAR,
+		picture VARCHAR,
         email VARCHAR UNIQUE
 );
 
@@ -47,14 +48,13 @@ DROP TABLE IF EXISTS Picture;
 CREATE TABLE Picture(
 		id INTEGER PRIMARY KEY AUTOINCREMENT,
 		name VARCHAR,
-		id_restaurant INTEGER REFERENCES Restaurant,
-		id_user INTEGER REFERENCES User
+		id_restaurant INTEGER REFERENCES Restaurant
 );
 
 
-INSERT INTO Picture VALUES(NULL,'zedopipo.jpg',1, NULL);
-INSERT INTO Picture VALUES(NULL,'cafepiolho.jpg',1, NULL);
-INSERT INTO Picture VALUES(NULL,'cafepiolho.jpg',2, NULL);
+INSERT INTO Picture VALUES(NULL,'zedopipo.jpg',1);
+INSERT INTO Picture VALUES(NULL,'cafepiolho.jpg',1);
+INSERT INTO Picture VALUES(NULL,'cafepiolho.jpg',2);
 
 DROP TABLE IF EXISTS Replie;
 CREATE TABLE Replie(

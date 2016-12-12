@@ -16,7 +16,7 @@ function getUsers(){
 function newUser($firstName,$lastName,$birthday,$password,$email){
     global $db;
 
-    $insertUser=$db->prepare('INSERT INTO User VALUES(NULL,?,?,?,?,?)');
+    $insertUser=$db->prepare('INSERT INTO User VALUES(NULL,?,?,?,?,NULL,?)');
     $insertUser->execute([$firstName,$lastName,$birthday,$password,$email]);
 
     return $insertUser->errorCode();
@@ -26,6 +26,15 @@ function getPassword($email){
   global $db;
 
   $stmt = $db->prepare('SELECT password FROM User WHERE email = ?');
+  $stmt->execute(array($email));
+  $result = $stmt->fetch();
+  return $result[0];
+}
+
+function getPicture($email){
+  global $db;
+
+  $stmt = $db->prepare('SELECT picture FROM User WHERE email = ?');
   $stmt->execute(array($email));
   $result = $stmt->fetch();
   return $result[0];

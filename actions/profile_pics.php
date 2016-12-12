@@ -10,16 +10,16 @@ function get_profile_pic(){
 
 function display_restaurants(){
 	$restaurants = getOwnedRestaurants($_SESSION['id']);
-	$ref = "../actions/restaurant_page.php";
-
-	echo '<form method="post" action=' . $ref . '>';
+	$ref = "../actions/restaurant_page.php?id=";
 	$paragraph = 0;
+	echo '<form method="get">';
 	foreach($restaurants as $rest){
 		if($paragraph == 2){
 			$paragraph = 0;
 			echo '<br>';
 		}
-		echo '<button type="submit" value="' . $rest['id'] . '" name="id">';
+		$page = $ref . $rest['id'];
+		echo '<button type="submit" value="' . $rest['id'] . '" name="id" formaction="'. $page .'">';
 		echo $rest['name'];
 		echo '<br>';
 		$pic = getRestaurantPicture($rest['id']);

@@ -51,7 +51,7 @@ include_once('connection.php');
 			global $db;
 
 			$rdb = $db->prepare('SELECT * FROM Picture WHERE id_restaurant = :id');
-			$rdb->bindParam(':id', $_POST['id'], PDO::PARAM_INT);
+			$rdb->bindParam(':id', $_GET['id'], PDO::PARAM_INT);
 			$rdb->execute();
 			$result = $rdb->fetchAll();
 

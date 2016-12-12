@@ -16,14 +16,14 @@
 				<!-- <embed src="../surprise/secret.mp3" > -->
 				<?php
 
-					$restaurant_id=$_POST['id'];
-
+					$restaurant_id=$_GET['id'];
+					
 					if(isset($_POST['score'])){ // por o echo como pop up apenas ;)
 						$review = makeReview();
 						echo '<p>' . $review . '</p>';
 					}
 
-					$result = getRestaurantById();
+					$result = getRestaurant();
 					echo '<div id="RestaurantN">';
 						echo '<h1>' . $result['name'] . '</h1>';
 					echo '</div>';
@@ -57,29 +57,28 @@
 					echo 'Recensionis di ristorante';
 
 					foreach($reviews as $rev){
-
-            $comments = get_comments($rev['id']);
-
-						echo '<form id="'.$rev['id'].'" method="post" action="restaurant_page.php">';
+						$comments = get_comments($rev['id']);
+						echo '<form id="'.$rev['id'].'" method="post" action="restaurant_page.php?id=' . $restaurant_id . '">';
 						echo '<h3>' . $rev['text'] . '</h3> <h3> nota assegnata' . $rev['score'] . '</h3>';
+						echo '</form>';
+						
+						foreach ($comments as $comment) {
+							echo '<h4>' . $comment['text'] . '</h4>';
+						}
 
-            foreach ($comments as $comment) {
-              echo '<h4>' . $comment['text'] . '</h4>';
-            }
-
-            if(isset($_SESSION['name'])){
-              echo '<form id="form" method="post" action="restaurant_page.php">';
-						  echo '<input type="text" name="commentText" placeholder="Comment" height="100px" width="100px" required/>';
-						  echo '<button type="submit" value="'.$rev['id'].'" name="commentSubmission">Comment</button>';
-						  echo '</form>';
-            }
+						if(isset($_SESSION['name'])){
+							echo '<form id="form" method="post" action="restaurant_page.php?id=' . $restaurant_id . '">';
+							echo '<input type="text" name="commentText" placeholder="Comment" height="100px" width="100px" required/>';
+							echo '<button type="submit" value="'.$rev['id'].'" name="commentSubmission">Comment</button>';
+							echo '</form>';
+						}
 					}
 
 					if(isset($_SESSION['name'])){
-						echo '<form id="form" method="post" action="restaurant_page.php">';
+						echo '<form id="form" method="post" action="restaurant_page.php?id=' . $restaurant_id . '">';
 						echo '<input type="text" name="criticReview" placeholder="Critics" height="100px" width="100px" required/>';
 						echo '<input type="number" name="score" value="4" min="1" max="5" step="1"/>';
-						echo '<button type="submit" value="'.$restaurant_id.'" name="id">Finish</button>';
+						echo '<button type="submit">Finish</button>';
 						echo '</form>';
 					}
 

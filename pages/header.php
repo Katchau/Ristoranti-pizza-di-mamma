@@ -57,8 +57,8 @@
                     if(isset($_SESSION['name']))
                     {
                         echo '<div id="user-name">';
-							          echo '<a href="../pages/user_profile_page.php">'. $_SESSION['name'] .'</a>';
-						            echo '</div>';
+                        echo '<a href="../pages/user_profile_page.php">'. $_SESSION['name'] .'</a>';
+                        echo '</div>';
                     }
                     else{
                         echo '<div id="init_session">';

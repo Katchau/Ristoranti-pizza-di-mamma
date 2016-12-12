@@ -9,8 +9,9 @@ $address;
 $contacts;
 $schedule;
 $owner_id;
+$type;
 
-if($restaurantName && $address && $contacts && $schedule && $owner_id)
+if($restaurantName && $address && $contacts && $schedule && $owner_id && $type)
 {
 
     if(strlen($restaurantName)<4)
@@ -23,7 +24,7 @@ if($restaurantName && $address && $contacts && $schedule && $owner_id)
         echo 'Not a possible contact.';
     }
 
-    if(insertRestaurant($restaurantName,$address,$contacts,$schedule,$owner_id)==0)
+    if(insertRestaurant($restaurantName,$address,$contacts,$schedule,$owner_id,$type)==0)
     {
         header('Location: ../pages/user_profile_page.php');
     }

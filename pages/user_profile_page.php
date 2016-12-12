@@ -34,13 +34,15 @@ include_once('../actions/profile_pics.php');
 
 <div id="middle">
     <div id="profile-img">
-		<?php
-			$pic = get_profile_pic();
-			if($pic == null || !$pic)
-				echo '<img src="../res/defaultProfilePicture.png">';
-			else echo '<img src="' . '../database/images/users/' . $_SESSION['id'] . '/' . $pic . '">';
-			
-		?>
+        <div id="img-and-button">
+            <?php
+            $pic = get_profile_pic();
+            if($pic == null || !$pic)
+                echo '<img src="../res/defaultProfilePicture.png">';
+            else echo '<img src="' . '../database/images/users/' . $_SESSION['id'] . '/' . $pic . '">';
+
+            ?>
+        </div>
 		<div id="changeProfilePic">
             <input type="button" value="Mudar Imagem">
         </div>
@@ -56,6 +58,13 @@ include_once('../actions/profile_pics.php');
                 <?php
 					echo $_SESSION['email'];
 				?>
+            </div>
+            <div id="birthday-date">
+                <?php
+                $userInfo=getUserInfo($_SESSION['email']);
+
+                echo $userInfo['birthday'];
+                ?>
             </div>
         </div>
     </div>
@@ -73,7 +82,7 @@ include_once('../actions/profile_pics.php');
             Options
         </div>
         <div id="edit">
-            <input type="button" value="Editar">
+            <input type="button" value="Editar perfil">
         </div>
         <div id="changeUserPassword">
             <input type="button" value="Mudar Password">

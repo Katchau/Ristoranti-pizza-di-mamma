@@ -58,12 +58,12 @@ include_once('connection.php');
 			return $result;
 		}
 
-		function insertRestaurant($name,$address,$contacts,$schedule,$owner_id){
+		function insertRestaurant($name,$address,$contacts,$schedule,$owner_id,$type){
 
 			global $db;
 
-			$insertUser=$db->prepare('INSERT INTO Restaurant VALUES(NULL,?,?,?,?,?,?,?,?)');
-			$insertUser->execute([$name,$address,$contacts,$schedule,0,0,0,$owner_id]);
+			$insertUser=$db->prepare('INSERT INTO Restaurant VALUES(NULL,?,?,?,?,?,?,?,?,?)');
+			$insertUser->execute([$name,$address,$contacts,$schedule,0,0,0,$owner_id,$type]);
 
 			return $insertUser->errorCode();
 

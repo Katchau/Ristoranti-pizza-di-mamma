@@ -55,9 +55,9 @@
                 <a href="../pages/principal_page.php">Cá estámos !</a>
             </h1>
             <div id="search">
-                <form action="" method="post">
-                    <input id="searchLocal" type="text" name="local_search" placeholder="Pesquisar por local..."/>
-                    <input id="searchRestaurant" type="text" name="restaurant_search" placeholder="Pesquisar por restaurante..."/>
+                <form action="search_page.php" method="get">
+                    <input id="searchLocal" type="text" name="local" placeholder="Pesquisar por local..."/>
+                    <input id="searchRestaurant" type="text" name="restaurant" placeholder="Pesquisar por restaurante..."/>
                     <input type="submit" value="Pesquisar">
                 </form>
             </div>

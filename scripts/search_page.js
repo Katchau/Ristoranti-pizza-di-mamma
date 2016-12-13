@@ -17,8 +17,8 @@ function getImage(span4, id_r, address, schedule, score){
 }
 function checkValue(value){
 	var name = "#side_bar #checkbox_filter #rating ";
-	if(!($(name + "#b5").is(":checked")) && !($(name + "#b5").is(":checked")) && !($(name + "#b5").is(":checked"))
-		&& !($(name + "#b5").is(":checked")) && !($(name + "#b5").is(":checked"))) return true; //todo alterar este comboio para uma coisa mais piquena
+	if(!($(name + "#b5").is(":checked")) && !($(name + "#b4").is(":checked")) && !($(name + "#b3").is(":checked"))
+		&& !($(name + "#b2").is(":checked")) && !($(name + "#b1").is(":checked"))) return true; //todo alterar este comboio para uma coisa mais piquena
 	if(($(name + "#b5").is(":checked")) && value <= 5 && value > 4) return true;
 	if(($(name + "#b4").is(":checked")) && value <= 4 && value > 3) return true;
 	if(($(name + "#b3").is(":checked")) && value <= 3 && value > 2) return true;

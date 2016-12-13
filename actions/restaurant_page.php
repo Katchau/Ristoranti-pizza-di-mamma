@@ -17,11 +17,15 @@
 				<?php
 
 					$restaurant_id=$_GET['id'];
-					
+
 					if(isset($_POST['score'])){ // por o echo como pop up apenas ;)
 						$review = makeReview();
 						echo '<p>' . $review . '</p>';
 					}
+
+          if(isset($_POST['commentSubmission'])){
+            $comment = make_comment();
+          }
 
 					$result = getRestaurant();
 					echo '<div id="RestaurantN">';
@@ -52,16 +56,16 @@
 					echo '<p> Apertura: ' . $result['schedule'] . '</p>';
 					echo '<p> Valutazione: ' . $result['score'] . '</p>';
 
-					$reviews = getReviewsById();
+					$reviews = getReviews();
 
 					echo 'Recensionis di ristorante';
 
 					foreach($reviews as $rev){
 						$comments = get_comments($rev['id']);
 						echo '<form id="'.$rev['id'].'" method="post" action="restaurant_page.php?id=' . $restaurant_id . '">';
-						echo '<h3>' . $rev['text'] . '</h3> <h3> nota assegnata' . $rev['score'] . '</h3>';
+						echo '<h3>' . $rev['text'] . '</h3> <h3> nota assegnata: ' . $rev['score'] . '</h3>';
 						echo '</form>';
-						
+
 						foreach ($comments as $comment) {
 							echo '<h4>' . $comment['text'] . '</h4>';
 						}
@@ -82,9 +86,7 @@
 						echo '</form>';
 					}
 
-          if(isset($_POST['commentSubmission'])){
-            $comment = make_comment();
-          }
+
 				?>
 			</section>
 		</div>

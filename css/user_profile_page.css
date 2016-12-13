@@ -132,6 +132,54 @@
     justify-content: center;
 }
 
+.overlayChangeName{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+}
+
+.overlayChangeEmail{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+}
+
+.overlayChangeBirthday{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+}
+
+.overlayEditProfile{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+}
+
 .overlayChangeProfilePic{
     position: absolute;
     top: 0;
@@ -164,6 +212,46 @@
     z-index: 11;
 }
 
+#overlay-changeName{
+    width: 550px;
+    height: 750px;
+    line-height: 150px;
+    margin-top: 20%;
+    background-color: #E3D888;
+    border-radius: 5px;
+    z-index: 11;
+}
+
+#overlay-changeEmail{
+    width: 550px;
+    height: 750px;
+    line-height: 150px;
+    margin-top: 20%;
+    background-color: #E3D888;
+    border-radius: 5px;
+    z-index: 11;
+}
+
+#overlay-changeBirthday{
+    width: 550px;
+    height: 750px;
+    line-height: 150px;
+    margin-top: 20%;
+    background-color: #E3D888;
+    border-radius: 5px;
+    z-index: 11;
+}
+
+#overlay-EditProfile{
+    width: 550px;
+    height: 750px;
+    line-height: 150px;
+    margin-top: 20%;
+    background-color: #E3D888;
+    border-radius: 5px;
+    z-index: 11;
+}
+
 #overlay-changePassword #changePassword{
     text-align: center;
     color: #5a3a31;
@@ -171,7 +259,71 @@
     font-size: 25px;
 }
 
+#overlay-changeName #changeName{
+    text-align: center;
+    color: #5a3a31;
+    text-shadow: 2px 2px #e2f1af;
+    font-size: 25px;
+}
+
+#overlay-changeEmail #changeEmail{
+    text-align: center;
+    color: #5a3a31;
+    text-shadow: 2px 2px #e2f1af;
+    font-size: 25px;
+}
+
+#overlay-changeBirthday #changeBirthday{
+    text-align: center;
+    color: #5a3a31;
+    text-shadow: 2px 2px #e2f1af;
+    font-size: 25px;
+}
+
+#overlay-EditProfile #editProfile{
+    text-align: center;
+    color: #5a3a31;
+    text-shadow: 2px 2px #e2f1af;
+    font-size: 25px;
+}
+
 #overlay-changePassword input{
+    border: 3px solid #84714F;
+    height: 25px;
+    border-radius: 3px;
+    font-size: 18px;
+    padding-top: 2px;
+    margin: 0.2em;
+    margin-bottom: 0.8em;
+    display: block;
+    margin-left: 140px;
+}
+
+#overlay-changeName input{
+    border: 3px solid #84714F;
+    height: 25px;
+    border-radius: 3px;
+    font-size: 18px;
+    padding-top: 2px;
+    margin: 0.2em;
+    margin-bottom: 0.8em;
+    display: block;
+    margin-left: 140px;
+}
+
+#overlay-changeEmail input{
+    border: 3px solid #84714F;
+    height: 25px;
+    border-radius: 3px;
+    font-size: 18px;
+    padding-top: 2px;
+    margin: 0.2em;
+    margin-bottom: 0.8em;
+    display: block;
+    margin-left: 140px;
+}
+
+#overlay-changeBirthday input{
     border: 3px solid #84714F;
     height: 25px;
     border-radius: 3px;
@@ -199,12 +351,112 @@
     font-family: 'Lobster', sans-serif;
 }
 
+#overlay-changeName input[type=submit]{
+    border: 3px solid #5a3a31;
+    height: 50px;
+    width: 180px;
+    border-radius: 3px;
+    font-size: 25px;
+    padding-bottom: 4px;
+    margin: 0.2em;
+    margin-top: 2em;
+    display: block;
+    margin-left: 175px;
+    color: #e2f1af;
+    background-color: #5a3a31;
+    font-family: 'Lobster', sans-serif;
+}
+
+#overlay-changeEmail input[type=submit]{
+    border: 3px solid #5a3a31;
+    height: 50px;
+    width: 180px;
+    border-radius: 3px;
+    font-size: 25px;
+    padding-bottom: 4px;
+    margin: 0.2em;
+    margin-top: 2em;
+    display: block;
+    margin-left: 175px;
+    color: #e2f1af;
+    background-color: #5a3a31;
+    font-family: 'Lobster', sans-serif;
+}
+
+#overlay-changeBirthday input[type=submit]{
+    border: 3px solid #5a3a31;
+    height: 50px;
+    width: 180px;
+    border-radius: 3px;
+    font-size: 25px;
+    padding-bottom: 4px;
+    margin: 0.2em;
+    margin-top: 2em;
+    display: block;
+    margin-left: 175px;
+    color: #e2f1af;
+    background-color: #5a3a31;
+    font-family: 'Lobster', sans-serif;
+}
+
+#overlay-EditProfile input[type=button]{
+    border: 3px solid #5a3a31;
+    height: 50px;
+    width: 180px;
+    border-radius: 3px;
+    font-size: 25px;
+    padding-bottom: 4px;
+    margin: 0.2em;
+    margin-top: 2em;
+    display: block;
+    margin-left: 175px;
+    color: #e2f1af;
+    background-color: #5a3a31;
+    font-family: 'Lobster', sans-serif;
+}
+
+
 #overlay-changePassword input[type=submit]:hover {
     background-color: white;
     color: #5a3a31;
 }
 
+#overlay-changeName input[type=submit]:hover {
+    background-color: white;
+    color: #5a3a31;
+}
+
+#overlay-changeEmail input[type=submit]:hover {
+    background-color: white;
+    color: #5a3a31;
+}
+
+#overlay-changeBirthday input[type=submit]:hover {
+    background-color: white;
+    color: #5a3a31;
+}
+
+#overlay-EditProfile input[type=button]:hover {
+    background-color: white;
+    color: #5a3a31;
+}
+
 #overlay-changePassword #output-changePassword {
+    display: flex;
+    justify-content: center;
+}
+
+#overlay-changeName #output-changeName {
+    display: flex;
+    justify-content: center;
+}
+
+#overlay-changeEmail #output-changeEmail {
+    display: flex;
+    justify-content: center;
+}
+
+#overlay-changeBirthday #output-changeBirthday {
     display: flex;
     justify-content: center;
 }

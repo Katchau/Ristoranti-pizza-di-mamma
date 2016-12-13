@@ -48,6 +48,18 @@ function getUserInfo($email){
   return $stmt->fetch();
 }
 
+function getOwnedRestaurants($id){
+	global $db;
+
+	$rdb = $db->prepare('SELECT * FROM Restaurant WHERE owner_id = ?');
+    $rdb->execute(array($id));
+
+    $rest = $rdb->fetchAll();
+
+    return $rest;
+
+}
+
 function changeUserPassword($email,$newPassword){
   global $db;
 
@@ -55,16 +67,27 @@ function changeUserPassword($email,$newPassword){
 	$stmt->execute(array($newPassword, $email));
 }
 
-function getOwnedRestaurants($id){
-	global $db;
-	
-	$rdb = $db->prepare('SELECT * FROM Restaurant WHERE owner_id = ?');
-    $rdb->execute(array($id));
+function changeUserName($email,$first_name,$last_name){
+  global $db;
 
-    $rest = $rdb->fetchAll();
+  $stmt1 = $db->prepare('UPDATE user SET firstName = ? WHERE email = ?');
+	$stmt1->execute(array($first_name, $email));
+  $stmt2 = $db->prepare('UPDATE user SET lastName = ? WHERE email = ?');
+	$stmt2->execute(array($last_name, $email));
+}
 
-    return $rest;
-	
+function changeUserEmail($email,$newEmail){
+  global $db;
+
+  $stmt = $db->prepare('UPDATE user SET email = ? WHERE email = ?');
+	$stmt->execute(array($newEmail, $email));
+}
+
+function changeUserBirthday($email,$birthday){
+  global $db;
+
+  $stmt = $db->prepare('UPDATE user SET birthday = ? WHERE email = ?');
+	$stmt->execute(array($birthday, $email));
 }
 
 ?>

@@ -10,6 +10,25 @@ include_once('../actions/profile_pics.php');
 <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 <link rel="stylesheet" href="../css/header.css">
 
+<div class="overlayEditProfile" hidden="hidden">
+    <div id="overlay-EditProfile">
+        <div id="editProfile"><h1>Editar Perfil</h1>
+          <div id="changeUserName">
+              <input type="button" value="Mudar Nome">
+          </div>
+          <div id="changeUserEmail">
+              <input type="button" value="Mudar Email">
+          </div>
+          <div id="changeUserBirthday">
+              <input type="button" value="Mudar Data Nascimento">
+          </div>
+          <div id="changeUserPassword">
+              <input type="button" value="Mudar Password">
+          </div>
+        </div>
+    </div>
+</div>
+
 <div class="overlayChangePassword" hidden="hidden">
     <div id="overlay-changePassword">
         <div id="changePassword"><h1>Mudar Password</h1></div>
@@ -19,6 +38,40 @@ include_once('../actions/profile_pics.php');
            <input id="new_password_confirm" type="password" name="new_password_confirm" placeholder="Repeat your new Password" required/>
            <input type="submit" value="Confirmar"/>
            <span id="output-changePassword"></span>
+        </form>
+    </div>
+</div>
+
+<div class="overlayChangeName" hidden="hidden">
+    <div id="overlay-changeName">
+        <div id="changeName"><h1>Mudar Nome</h1></div>
+        <form id="form" method="post" action="../actions/change_name.php" onsubmit="return changeName();">
+           <input id="first_name" type="text" name="first_name" placeholder="Nome Próprio" required/>
+           <input id="last_name" type="text" name="last_name" placeholder="Apelido" required/>
+           <input type="submit" value="Confirmar"/>
+           <span id="output-changeName"></span>
+        </form>
+    </div>
+</div>
+
+<div class="overlayChangeEmail" hidden="hidden">
+    <div id="overlay-changeEmail">
+        <div id="changeEmail"><h1>Mudar E-mail</h1></div>
+        <form id="form" method="post" action="../actions/change_email.php" onsubmit="return changeEmail();">
+           <input id="novo_email" type="text" name="novo_email" placeholder="Email" required/>
+           <input type="submit" value="Confirmar"/>
+           <span id="output-changeEmail"></span>
+        </form>
+    </div>
+</div>
+
+<div class="overlayChangeBirthday" hidden="hidden">
+    <div id="overlay-changeBirthday">
+        <div id="changeBirthday"><h1>Mudar Data de Nascimento</h1></div>
+        <form id="form" method="post" action="../actions/change_birthday.php" onsubmit="return changeBirthday();">
+           <input id="birthday" type="date" name="birthday" placeholder="Data de Nascimento" required/>
+           <input type="submit" value="Confirmar"/>
+           <span id="output-changeBirthday"></span>
         </form>
     </div>
 </div>
@@ -75,7 +128,7 @@ include_once('../actions/profile_pics.php');
         <p>Restaurants</p>
 		<?php
 			display_restaurants();
-		?>	
+		?>
     </div>
     <div id="options">
         <div id="title-options">
@@ -83,9 +136,6 @@ include_once('../actions/profile_pics.php');
         </div>
         <div id="edit">
             <input type="button" value="Editar perfil">
-        </div>
-        <div id="changeUserPassword">
-            <input type="button" value="Mudar Password">
         </div>
         <div>
             <input type="button" value="Criar restaurante">

@@ -1,0 +1,118 @@
+#main #space {
+	height: 100px;
+}
+
+#main #RestaurantN {
+	width: 85%;
+	height: 80%;
+	margin-left: 7.5%;
+	display: flex;
+	justify-content: center;
+	background: radial-gradient(#e2f1af,#E3D888);
+	border-radius: 6px;
+	color: #5A3A31;
+}
+
+#main #images-space {
+	height: 80%;
+	margin-top: 2%;
+	display: flex;
+	justify-content: space-between;
+	height: 60%;
+}
+
+#main #images {
+	width: 80%;
+	height: 60%;
+	margin-top: 2%;
+	display: flex;
+	justify-content: center;
+}
+
+#main #images * {
+
+}
+
+#main #images div{
+	display: none;
+}
+
+#main #images #img_0{
+	margin-top: 2%;
+	width: 100%;
+	display: block;
+}
+
+#main img{
+	max-height: 650px;
+	width: 100%;
+}
+
+#main button{
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 8em;
+	height: 50px;
+	width: 100px;
+	background-color: white;
+	color: #5A3A31;
+	border: 3px solid #5a3a31;
+	border-radius: 4px;
+	font-size: 30px;
+}
+
+#main button:hover{
+	background-color: #5A3A31;
+	border-color: #5a3a31;
+	color: #E3D888;
+}
+
+#main #restaurant-info{
+	margin-top: 2%;
+	width: 85%;
+	height: 80%;
+	margin-left: 7.5%;
+	background: radial-gradient(#e2f1af,#E3D888);
+	border-radius: 6px;
+}
+
+#main #restaurant-info #title-info {
+	display: flex;
+	justify-content: center;
+	font-size: 30px;
+	color: #5A3A31;
+	margin-bottom: -2%;
+}
+
+#main #restaurant-info #principal-info {
+	font-family: 'Bree Serif', serif;
+	padding-left: 10px;
+	font-size: 16px;
+	padding-bottom: 2px;
+}
+
+#main #map {
+	margin-top: 2%;
+	width: 85%;
+	height: 80%;
+	margin-left: 7.5%;
+	background: radial-gradient(#e2f1af,#E3D888);
+	border-radius: 6px;
+}
+
+#main #reviews{
+	margin-top: 2%;
+	width: 85%;
+	height: 80%;
+	margin-left: 7.5%;
+	background: radial-gradient(#e2f1af,#E3D888);
+	border-radius: 6px;
+}
+
+#main #reviews #title-reviews {
+	display: flex;
+	justify-content: center;
+	font-size: 30px;
+	color: #5A3A31;
+	margin-bottom: -2%;
+}

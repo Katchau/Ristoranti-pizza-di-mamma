@@ -101,22 +101,6 @@ include_once('../actions/profile_pics.php');
     </div>
 </div>
 
-<!--<div class="overlayCreateRestaurant" hidden="hidden">
-    <div id="overlay-createRestaurant">
-        <div id="createRestaurant"><h1>Criar restaurante</h1></div>
-        <form id="form" method="post" action="../actions/create_restaurant.php">
-            <input id="restaurant-name" type="text" name="name" placeholder="Nome do restaurante" required/>
-            <input id="restaurant-description" type="text" name="description" placeholder="Descrição do restaurante" required/>
-            <input id="restaurant-address" type="text" name="address" placeholder="Endereço" required/>
-            <input id="restaurant-contacts" type="text" name="contacts" placeholder="Contacto" required/>
-            <input id="restaurant-schedule" type="text" name="schedule" placeholder="Horário" required/>
-            <input id="restaurant-type" type="text" name="type" placeholder="Tipo de restaurante" required/>
-            <input type="submit" value="Confirmar"/>
-            <span id="output-creatRestaurant"></span>
-        </form>
-    </div>
-</div>-->
-
 <div id="middle">
     <div id="profile-img">
         <div id="img-and-button">
@@ -157,7 +141,9 @@ include_once('../actions/profile_pics.php');
 
 <div id="down-part">
     <div id="restaurants">
-        <p>Restaurants</p>
+        <div id="place-restaurants">
+            <p>Restaurants</p>
+        </div>
 		<?php
 			display_restaurants();
 		?>

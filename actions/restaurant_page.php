@@ -6,13 +6,9 @@
   include_once("../actions/uploadbar.php");
   include_once("../pages/header.php");
  ?>
-<head>
-	<link rel="stylesheet" href="../css/restaurant.css">
-</head>
-<html>
-    <body>
+<link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+<link rel="stylesheet" href="../css/restaurant_page.css">
 		<div id="main">
-			<section id = "rest">
 				<!-- <embed src="../surprise/secret.mp3" > -->
 				<?php
 
@@ -28,12 +24,17 @@
           }
 
 					$result = getRestaurant();
+					echo '<div id="space">';
+					echo '</div>';
 					echo '<div id="RestaurantN">';
 						echo '<h1>' . $result['name'] . '</h1>';
 					echo '</div>';
 					$pictures = getRestaurantPicturesById();
 					$image_path = "../database/images/" . $restaurant_id . "/";
 					$n_pic = 0;
+
+					echo '<div id="images-space">';
+				    echo '<button id="b4Button" onClick="getDesiredPicture(this.id)">-</button>';
 					echo '<div id="images">';
 					foreach($pictures as $pic){
 						echo '<div id="img_' . $n_pic . '">';
@@ -43,22 +44,34 @@
 					}
 
 					echo '</div>';
-					echo '<br>';
+				    echo '<button id="nextButton" onClick="getDesiredPicture(this.id)">+</button>';
+					echo '</div>';
 					//upload_bar($restaurant_id,true);
 
-					echo '<button id="b4Button" onClick="getDesiredPicture(this.id)">O</button>';
-					echo '<button id="nextButton" onClick="getDesiredPicture(this.id)">O</button>';
-
-					echo '<p>Restaurant info: </p>';
+					echo '<div id="restaurant-info">';
+				    echo '<div id="title-info">';
+				    echo '<p>Informação do Restaurante</p>';
+					echo '</div>';
+					echo '<div id="principal-info">';
 					echo '<p>' . $result['description'] . '</p>';
-					echo '<p> Indirizzo: ' . $result['address'] . '</p>';
-					echo '<p> Contattis: ' . $result['contacts'] . '</p>';
-					echo '<p> Apertura: ' . $result['schedule'] . '</p>';
-					echo '<p> Valutazione: ' . $result['score'] . '</p>';
+					echo '<p> Endereço: ' . $result['address'] . '</p>';
+					echo '<p> Contactos: ' . $result['contacts'] . '</p>';
+					echo '<p> Horário: ' . $result['schedule'] . '</p>';
+					echo '<p> Cotação: ' . $result['score'] . '</p>';
+					echo '</div>';
+					echo '</div>';
+
+				echo '<iframe id="map" frameborder="0"
+            src="https://www.google.com/maps/embed/v1/place?q=<?=' . $result['address'] . '?>&key=AIzaSyCdqMmRf8c1f_yTgtjt7zT_5tdO5UOPka4"
+allowfullscreen></iframe>';
 
 					$reviews = getReviews();
 
-					echo 'Recensionis di ristorante';
+					echo '<div id="reviews">';
+
+				echo '<div id="title-reviews">';
+				echo '<p>Críticas</p>';
+				echo '</div>';
 
 					foreach($reviews as $rev){
 						$comments = get_comments($rev['id']);
@@ -86,10 +99,7 @@
 						echo '</form>';
 					}
 
+					echo '</div>';
 
 				?>
-			</section>
 		</div>
-		<footer>
-		</footer>
-	</body>

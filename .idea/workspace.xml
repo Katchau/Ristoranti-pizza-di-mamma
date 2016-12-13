@@ -2,21 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0befb14-7e67-4aaa-a168-91e5522e51f4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/database.db" afterPath="$PROJECT_DIR$/database/database.db" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/date.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/css/restaurant.css" afterPath="$PROJECT_DIR$/css/restaurant_page.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/actions/change_password.php" afterPath="$PROJECT_DIR$/actions/change_password.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/actions/create_restaurant.php" afterPath="$PROJECT_DIR$/actions/create_restaurant.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/actions/make_review.php" afterPath="$PROJECT_DIR$/actions/make_review.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/actions/reviews_comments.php" afterPath="$PROJECT_DIR$/actions/reviews_comments.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/actions/searchFuncs.php" afterPath="$PROJECT_DIR$/actions/searchFuncs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/actions/sign_in.php" afterPath="$PROJECT_DIR$/actions/sign_in.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/actions/sign_up.php" afterPath="$PROJECT_DIR$/actions/sign_up.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/actions/profile_pics.php" afterPath="$PROJECT_DIR$/actions/profile_pics.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/actions/restaurant_page.php" afterPath="$PROJECT_DIR$/actions/restaurant_page.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/user_profile_page.css" afterPath="$PROJECT_DIR$/css/user_profile_page.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/actions/restaurant.php" afterPath="$PROJECT_DIR$/database/actions/restaurant.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/actions/user.php" afterPath="$PROJECT_DIR$/database/actions/user.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/header.php" afterPath="$PROJECT_DIR$/pages/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/database.sql" afterPath="$PROJECT_DIR$/database/database.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/user_profile_page.php" afterPath="$PROJECT_DIR$/pages/user_profile_page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/profile_page.js" afterPath="$PROJECT_DIR$/scripts/profile_page.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/sign_up.js" afterPath="$PROJECT_DIR$/scripts/sign_up.js" />
     </list>
     <ignored path="Ristoranti-pizza-di-mamma.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,14 +39,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="user_profile_page.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pages/user_profile_page.php">
+      <file leaf-file-name="restaurant_page.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/actions/restaurant_page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="25" column="53" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
-              <folding>
-                <marker date="1481651533348" expanded="true" signature="4920:4945" ph="..." />
-              </folding>
+            <state relative-caret-position="546">
+              <caret line="65" column="27" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="restaurant_page.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/restaurant_page.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="708">
+              <caret line="116" column="23" selection-start-line="116" selection-start-column="23" selection-end-line="116" selection-end-column="23" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -65,7 +67,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/accessDB/connection.php" />
         <option value="$PROJECT_DIR$/accessDB/database.php" />
         <option value="$PROJECT_DIR$/accessDB/restaurant.php" />
         <option value="$PROJECT_DIR$/restaurants test.php" />
@@ -88,20 +89,15 @@
         <option value="$PROJECT_DIR$/pages/footer.php" />
         <option value="$PROJECT_DIR$/pages/principal_page.php" />
         <option value="$PROJECT_DIR$/actions/sign_out.php" />
-        <option value="$PROJECT_DIR$/actions/restaurant_page.php" />
         <option value="$PROJECT_DIR$/actions/header.php" />
         <option value="$PROJECT_DIR$/actions/unlogged_page.php" />
         <option value="$PROJECT_DIR$/actions/register_page.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/database/actions/review.php" />
         <option value="$PROJECT_DIR$/scripts/header.js" />
-        <option value="$PROJECT_DIR$/scripts/sign_up.js" />
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/css/principal_page.css" />
-        <option value="$PROJECT_DIR$/database/database.sql" />
-        <option value="$PROJECT_DIR$/css/header.css" />
         <option value="$PROJECT_DIR$/database/actions/user.php" />
-        <option value="$PROJECT_DIR$/pages/header.php" />
         <option value="$PROJECT_DIR$/actions/sign_in.php" />
         <option value="$PROJECT_DIR$/actions/sign_up.php" />
         <option value="$PROJECT_DIR$/actions/reviews_comments.php" />
@@ -109,11 +105,19 @@
         <option value="$PROJECT_DIR$/actions/change_password.php" />
         <option value="$PROJECT_DIR$/actions/searchFuncs.php" />
         <option value="$PROJECT_DIR$/scripts/profile_page.js" />
-        <option value="$PROJECT_DIR$/database/actions/restaurant.php" />
-        <option value="$PROJECT_DIR$/css/user_profile_page.css" />
         <option value="$PROJECT_DIR$/actions/create_restaurant.php" />
         <option value="$PROJECT_DIR$/actions/create_restaurant1.php" />
+        <option value="$PROJECT_DIR$/scripts/sign_up.js" />
+        <option value="$PROJECT_DIR$/scripts/date.js" />
+        <option value="$PROJECT_DIR$/css/header.css" />
+        <option value="$PROJECT_DIR$/pages/header.php" />
         <option value="$PROJECT_DIR$/pages/user_profile_page.php" />
+        <option value="$PROJECT_DIR$/database/database.sql" />
+        <option value="$PROJECT_DIR$/database/actions/restaurant.php" />
+        <option value="$PROJECT_DIR$/actions/profile_pics.php" />
+        <option value="$PROJECT_DIR$/css/user_profile_page.css" />
+        <option value="$PROJECT_DIR$/actions/restaurant_page.php" />
+        <option value="$PROJECT_DIR$/css/restaurant_page.css" />
       </list>
     </option>
   </component>
@@ -125,9 +129,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="24" />
-    <option name="width" value="1920" />
-    <option name="height" value="1056" />
+    <option name="x" value="961" />
+    <option name="y" value="52" />
+    <option name="width" value="958" />
+    <option name="height" value="1027" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -154,6 +159,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -182,14 +188,27 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="actions" />
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Ristoranti-pizza-di-mamma" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Ristoranti-pizza-di-mamma" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -199,13 +218,13 @@
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/actions" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/actions" />
       <recent name="$PROJECT_DIR$/pages" />
       <recent name="$PROJECT_DIR$/database/actions" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/actions" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.user_profile_page.php">
@@ -298,22 +317,23 @@
       <workItem from="1481386742909" duration="15516000" />
       <workItem from="1481411015093" duration="638000" />
       <workItem from="1481565747431" duration="14424000" />
-      <workItem from="1481650594310" duration="967000" />
+      <workItem from="1481650594310" duration="3193000" />
+      <workItem from="1481655008091" duration="2216000" />
+      <workItem from="1481657237485" duration="9494000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127755000" />
+    <option name="totallyTimeSpent" value="141691000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1920" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="961" y="52" width="958" height="1027" extended-state="4" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12708333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25365344" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28848115" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -325,6 +345,7 @@
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32008156" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28848115" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -347,26 +368,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/initial_page.jpg" />
-    <entry file="file://$PROJECT_DIR$/res/searchIcon.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/localIcon.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/actions/connection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/actions/loggedin_header.php" />
-    <entry file="file://$PROJECT_DIR$/actions/logged_page.php" />
     <entry file="file://$PROJECT_DIR$/actions/loggedout_header.php" />
     <entry file="file://$PROJECT_DIR$/pages/footer.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -403,20 +404,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/sign_up.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/principal_page.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -432,11 +419,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/images/1/cafepiolho.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/images/1/dat trouble.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -446,10 +428,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1481410932633" expanded="true" signature="118:157" ph="SELECT * FRO... Replie" />
-            <marker date="1481410932633" expanded="true" signature="402:441" ph="INSERT INTO Replie... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -457,10 +435,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1481564931027" expanded="true" signature="189:225" ph="INSERT INTO Picture... " />
-            <marker date="1481564931027" expanded="true" signature="267:307" ph="UPDATE User " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -473,26 +447,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/uploadbar.css" />
-    <entry file="file://$PROJECT_DIR$/css/header.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="247" column="10" selection-start-line="247" selection-start-column="10" selection-end-line="247" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/actions/user.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="814">
           <caret line="70" column="52" selection-start-line="70" selection-start-column="52" selection-end-line="70" selection-end-column="52" />
-          <folding>
-            <marker date="1481582537014" expanded="true" signature="103:121" ph="SELECT * FRO... User" />
-            <marker date="1481582537014" expanded="true" signature="315:359" ph="INSERT INTO User... " />
-            <marker date="1481582537014" expanded="true" signature="550:591" ph="SELECT passw... User" />
-            <marker date="1481582537014" expanded="true" signature="748:788" ph="SELECT pictu... User" />
-            <marker date="1481582537014" expanded="true" signature="946:980" ph="SELECT * FRO... User" />
-            <marker date="1481582537014" expanded="true" signature="1134:1178" ph="UPDATE user " />
-            <marker date="1481582537014" expanded="true" signature="1303:1346" ph="SELECT * FRO... Restaurant" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -500,7 +459,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -508,13 +466,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="56" selection-start-line="2" selection-start-column="56" selection-end-line="2" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="69" column="70" selection-start-line="69" selection-start-column="70" selection-end-line="69" selection-end-column="70" />
         </state>
       </provider>
     </entry>
@@ -538,15 +489,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/actions/profile_pics.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -554,7 +496,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -562,7 +503,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -570,7 +510,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="48" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -578,66 +517,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/actions/restaurant_page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18">
-          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/script1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="7" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/profile_page.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="60" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/restaurant.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/database.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/actions/restaurant.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="64" column="92" selection-start-line="64" selection-start-column="92" selection-end-line="64" selection-end-column="92" />
-          <folding>
-            <marker date="1481587532790" expanded="true" signature="131:155" ph="SELECT * FRO... Restaurant" />
-            <marker date="1481587532790" expanded="true" signature="349:388" ph="SELECT * FRO... Restaurant" />
-            <marker date="1481587532790" expanded="true" signature="593:632" ph="SELECT * FRO... Restaurant" />
-            <marker date="1481587532790" expanded="true" signature="846:893" ph="SELECT * FRO... Picture" />
-            <marker date="1481587532790" expanded="true" signature="1100:1147" ph="SELECT * FRO... Picture" />
-            <marker date="1481587532790" expanded="true" signature="1423:1478" ph="INSERT INTO Restaurant... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/user_profile_page.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="769">
-          <caret line="338" column="19" selection-start-line="338" selection-start-column="19" selection-end-line="338" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -645,7 +524,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -653,18 +531,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/actions/create_restaurant1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/actions/create_restaurant1.php" />
     <entry file="file://$PROJECT_DIR$/actions/sign_in.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -673,13 +543,155 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/sign_up.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="67" selection-start-line="14" selection-start-column="67" selection-end-line="14" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/profile_page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-734">
+          <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/date.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="46" column="55" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actions/change_birthday.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actions/change_email.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/header.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="256" column="23" selection-start-line="248" selection-start-column="4" selection-end-line="256" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/database.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/images/1/cafepiolho.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/images/1/zedopipo.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/images/3/albufa.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/images/users/1/11354181_10204602128676324_366478832_n.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/actions/restaurant.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="44" column="36" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
+          <folding>
+            <marker date="1481658305890" expanded="true" signature="131:155" ph="SELECT * FRO... Restaurant" />
+            <marker date="1481658305890" expanded="true" signature="349:388" ph="SELECT * FRO... Restaurant" />
+            <marker date="1481658305890" expanded="true" signature="593:632" ph="SELECT * FRO... Restaurant" />
+            <marker date="1481658305890" expanded="true" signature="846:893" ph="SELECT * FRO... Picture" />
+            <marker date="1481658305890" expanded="true" signature="1100:1147" ph="SELECT * FRO... Picture" />
+            <marker date="1481658305890" expanded="true" signature="1423:1478" ph="INSERT INTO Restaurant... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actions/profile_pics.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="34" column="2" selection-start-line="34" selection-start-column="2" selection-end-line="34" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/user_profile_page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="25" column="53" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
-          <folding>
-            <marker date="1481651533348" expanded="true" signature="4920:4945" ph="..." />
-          </folding>
+        <state relative-caret-position="319">
+          <caret line="139" column="6" selection-start-line="139" selection-start-column="6" selection-end-line="139" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/script1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="7" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/user_profile_page.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="47" column="38" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actions/restaurant_page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="65" column="27" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/restaurant_page.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="708">
+          <caret line="116" column="23" selection-start-line="116" selection-start-column="23" selection-end-line="116" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -65,10 +65,40 @@
     padding-left: 7.5%;
 }
 
-#down-part #restaurants{
-    width: 75%;
+#down-part #restaurants {
+    width: 80%;
+}
+
+#down-part #restaurants #place-restaurants{
     display: flex;
     justify-content: center;
+}
+
+#down-part #restaurants button{
+    border: 3px solid #84714F;
+    height: 80%;
+    border-radius: 3px;
+    font-size: 18px;
+    padding-top: 2px;
+    margin: 0.2em;
+    margin-bottom: 0.8em;
+    display: block;
+}
+
+#down-part #restaurants button:hover{
+    border-color:#5A3A31;
+    color: #5A3A31;
+}
+
+#down-part #restaurants button img{
+    width: 360px;
+    height: 300px;
+}
+
+#down-part #restaurants form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 #down-part #restaurants p{
@@ -459,25 +489,6 @@
 #overlay-changeBirthday #output-changeBirthday {
     display: flex;
     justify-content: center;
-}
-
-#down-part #restaurants button{
-    border: 3px solid #84714F;
-    border-radius: 4px;
-    font-family: 'Lobster', sans-serif;
-    background-color: white;
-    color: #84714F;
-	margin-right: 1%;
-}
-
-#down-part #restaurants button:hover{
-	border-color:#5A3A31;
-	color: #5A3A31;
-}
-
-#down-part #restaurants button img{
-	width: 360px;
-	height: auto;
 }
 
 #overlay-changePic{

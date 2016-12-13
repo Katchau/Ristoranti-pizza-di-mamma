@@ -12,7 +12,7 @@ function verifySignUp() {
     var password = $('#password-logon').val();
 
     if (password.length < 8) {
-        output.html('Password tem de ter pelos menos 8 caracteres.'+password.length);
+        output.html('Password tem de ter pelos menos 8 caracteres.');
         return false;
     }
 

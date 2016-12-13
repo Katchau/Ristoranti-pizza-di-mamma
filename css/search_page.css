@@ -1,0 +1,48 @@
+body{
+}
+
+/* #down-part { */
+	/* position: absolute; */
+	/* top: 25%; */
+    /* justify-content: space-between; */
+    /* padding-right: 7.5%; */
+    /* padding-left: 34%; */
+
+/* } */
+
+/* #down-part #restaurants{ */
+    /* height: 100px; */
+    /* width: 75%; */
+/* } */
+
+/* #side_bar { */
+    /* margin-top: 15%; */
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* padding-left: 7.5%; */
+/* } */
+
+/* #side_bar #checkbox_filter{ */
+    /* background: radial-gradient(#e2f1af,#E3D888); */
+/* } */
+
+#down-part #restaurants .restaurants button{
+    border: 3px solid #84714F;
+    border-radius: 4px;
+    font-family: 'Lobster', sans-serif;
+    background-color: white;
+    color: #84714F;
+	margin-right: 1%;
+}
+
+#down-part #restaurants .restaurants button:hover{
+	border-color:#5A3A31;
+	color: #5A3A31;
+}
+
+#down-part #restaurants .restaurants button img{
+	width: 210px;
+	height: auto;
+	float: right;
+	
+}

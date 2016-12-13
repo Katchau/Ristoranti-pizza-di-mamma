@@ -14,6 +14,7 @@
 	}
 	
 	function kmp_function($pattern, $text){
+		if($text == "" || $pattern == "") return 0;
 		$num=0;
 		$m=strlen($pattern);
 		$prefix = array();
@@ -36,6 +37,7 @@
 	}
 	
 	function distance($pattern, $text){
+		if($text == "") return 0;
 		$n=strlen($text);
 		$d= array();
 		$old = 0;

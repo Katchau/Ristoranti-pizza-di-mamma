@@ -11,10 +11,13 @@
     $nomeCompleto .= " ";
     $nomeCompleto .= $last_name;
 
-    changeUserName($_SESSION['email'],$first_name,$last_name);
+    if (changeUserName($_SESSION['email'],$first_name,$last_name) == 1){
+      $_SESSION['name'] = $nomeCompleto;
+      header('Location: ../pages/user_profile_page.php');
+    }
+    else{
+      echo 'Something went wrong trying to change your name';
+    }
 
-    $_SESSION['name'] = $nomeCompleto;
-
-    header('Location: ../pages/user_profile_page.php');
 
  ?>

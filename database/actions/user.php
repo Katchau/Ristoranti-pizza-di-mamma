@@ -64,30 +64,33 @@ function changeUserPassword($email,$newPassword){
   global $db;
 
   $stmt = $db->prepare('UPDATE user SET password = ? WHERE email = ?');
-	$stmt->execute(array($newPassword, $email));
+	return $stmt->execute(array($newPassword, $email));
 }
 
 function changeUserName($email,$first_name,$last_name){
   global $db;
 
   $stmt1 = $db->prepare('UPDATE user SET firstName = ? WHERE email = ?');
-	$stmt1->execute(array($first_name, $email));
-  $stmt2 = $db->prepare('UPDATE user SET lastName = ? WHERE email = ?');
-	$stmt2->execute(array($last_name, $email));
+	if ($stmt1->execute(array($first_name, $email))== 1){
+    $stmt2 = $db->prepare('UPDATE user SET lastName = ? WHERE email = ?');
+	  return $stmt2->execute(array($last_name, $email));
+  } else {
+    return 0;
+  }
 }
 
 function changeUserEmail($email,$newEmail){
   global $db;
 
   $stmt = $db->prepare('UPDATE user SET email = ? WHERE email = ?');
-	$stmt->execute(array($newEmail, $email));
+	return $stmt->execute(array($newEmail, $email));
 }
 
 function changeUserBirthday($email,$birthday){
   global $db;
 
   $stmt = $db->prepare('UPDATE user SET birthday = ? WHERE email = ?');
-	$stmt->execute(array($birthday, $email));
+	return $stmt->execute(array($birthday, $email));
 }
 
 function generateSessionToken(){

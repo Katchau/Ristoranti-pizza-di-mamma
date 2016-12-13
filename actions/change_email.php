@@ -6,9 +6,12 @@
 
     $newEmail=$_POST['novo_email'];
 
-    changeUserEmail($_SESSION['email'],$newEmail);
+    if (changeUserEmail($_SESSION['email'],$newEmail) == 1){
+      $_SESSION['email'] = $newEmail;
+      header('Location: ../pages/user_profile_page.php');
+    }
+    else{
+      echo 'Something went wrong trying to change your email';
+    }
 
-    $_SESSION['email'] = $newEmail;
-
-    header('Location: ../pages/user_profile_page.php');
  ?>

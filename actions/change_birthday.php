@@ -6,7 +6,12 @@
 
     $birthday=$_POST['birthday'];
 
-    changeUserBirthday($_SESSION['email'],$birthday);
+    if(changeUserBirthday($_SESSION['email'],$birthday) == 1){
+      header('Location: ../pages/user_profile_page.php');
+    }
+    else{
+      echo 'Something went wrong trying to change your birthday date';
+    }
 
-    header('Location: ../pages/user_profile_page.php');
+
  ?>

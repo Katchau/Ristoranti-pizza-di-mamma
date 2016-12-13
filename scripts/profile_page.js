@@ -64,6 +64,18 @@ function overlayPage(){
           event.stopPropagation();
       }
   });
+
+    $("#create-restaurant").click(showOverlayCreatRestaurant);
+
+    $('.overlayCreateRestaurant').hide();
+
+    $('.overlayCreateRestaurant').click(function (event) {
+        if (event.target === event.delegateTarget) {
+            $('.overlayCreateRestaurant').hide();
+            event.stopPropagation();
+        }
+    });
+
 }
 
 function showOverlayEditProfile(){
@@ -88,6 +100,10 @@ function showOverlayChangeProfilePic(){
 
 function showOverlayChangePassword(){
   $('.overlayChangePassword').show();
+}
+
+function showOverlayCreatRestaurant() {
+    $('.overlayCreateRestaurant').show();
 }
 
 $(document).ready(overlayPage);

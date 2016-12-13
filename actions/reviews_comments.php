@@ -3,9 +3,9 @@
     include_once('../database/actions/review.php');
 
     function make_comment(){
-      $comment=$_POST['commentText'];
+      $comment=htmlspecialchars($_POST['commentText']);
       $id_user=$_SESSION['id'];
-      $id_rev=$_POST['commentSubmission'];
+      $id_rev=htmlspecialchars($_POST['commentSubmission']);
 
       if(!isset($_SESSION)){
         return 'Must be logged in to comment.';

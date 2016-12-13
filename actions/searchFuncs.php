@@ -3,8 +3,8 @@
 	include("../database/actions/restaurant.php");
 	include("stringAlgorithms.php");
 	
-	$curName = $_GET['nameR'];
-	$curPlace = $_GET['place'];
+	$curName = htmlspecialchars($_GET['nameR']);
+	$curPlace = htmlspecialchars($_GET['place']);
 	$curName = strtolower($curName);
 	$rests = getRestaurants();
 	$return = "No restaurant found :(";

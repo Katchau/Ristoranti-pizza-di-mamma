@@ -3,9 +3,9 @@
 include_once('../database/actions/review.php');
 
 function makeReview(){
-	$review_critic=$_POST['criticReview'];
-	$score=$_POST['score'];
-	$id_restaurant=$_POST['id'];
+	$review_critic=htmlspecialchars($_POST['criticReview']);
+	$score=htmlspecialchars($_POST['score']);
+	$id_restaurant=htmlspecialchars($_POST['id']);
 
 	if($review_critic && $score)
 	{

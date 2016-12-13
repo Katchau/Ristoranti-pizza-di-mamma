@@ -2,8 +2,13 @@
   include_once('../database/actions/connection.php');
   include_once('../database/actions/user.php');
 
-  $email=trim($_POST['Email']);
-  $password=$_POST['Password'];
+if($_SESSION['token-login']!=$_POST['token-login'])
+{
+    echo "ERROR PAGE.";
+}
+
+  $email=htmlspecialchars(trim($_POST['Email']));
+  $password=htmlspecialchars($_POST['Password']);
   $correctPass = getPassword($email);
 
   if(strlen($email) != 0 && password_verify($password, $correctPass)){
@@ -24,7 +29,8 @@
 
   }
   else{
-      echo "Your email or password is incorrect.";
+      header('Location: ' . $_SERVER['HTTP_REFERER']);
+      die();
   }
 
 

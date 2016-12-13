@@ -4,7 +4,7 @@
     include_once('../database/actions/connection.php');
     include_once('../database/actions/user.php');
 
-    $actual_password=$_POST['password'];
+    $actual_password=htmlspecialchars($_POST['password']);
     $correctPass=getPassword($_SESSION['email']);
 
     if(password_verify($actual_password, $correctPass)){

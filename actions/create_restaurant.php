@@ -4,12 +4,18 @@ session_start();
 
 include_once('../database/actions/restaurant.php');
 
-$restaurantName;
-$address;
-$contacts;
-$schedule;
-$owner_id;
-$type;
+$restaurantName=$_POST['restaurant-name'];
+$description=$_POST['restaurant-description'];
+$address=$_POST['restaurant-address'];
+$contacts=$_POST['restaurant-contacts'];
+$schedule=$_POST['restaurant-schedule'];
+$owner_id=$_SESSION['id'];
+$type=$_POST['restaurant-type'];
+
+echo 'AQUI';
+
+echo 'NOME RESTAURANTE: '.$_POST['restaurant-name'];
+echo $description;
 
 if($restaurantName && $address && $contacts && $schedule && $owner_id && $type)
 {
@@ -24,9 +30,12 @@ if($restaurantName && $address && $contacts && $schedule && $owner_id && $type)
         echo 'Not a possible contact.';
     }
 
-    if(insertRestaurant($restaurantName,$address,$contacts,$schedule,$owner_id,$type)==0)
+    if(insertRestaurant($restaurantName,$description,$address,$contacts,$schedule,$owner_id,$type)==0)
     {
         header('Location: ../pages/user_profile_page.php');
+    }
+    else {
+        echo 'falhou insert';
     }
 }
 

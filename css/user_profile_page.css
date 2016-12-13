@@ -203,8 +203,8 @@
 }
 
 #overlay-changePassword{
-    width: 550px;
-    height: 750px;
+    width: 450px;
+    height: 600px;
     line-height: 150px;
     margin-top: 20%;
     background-color: #E3D888;
@@ -296,7 +296,7 @@
     margin: 0.2em;
     margin-bottom: 0.8em;
     display: block;
-    margin-left: 140px;
+    margin-left: 18%;
 }
 
 #overlay-changeName input{
@@ -345,7 +345,7 @@
     margin: 0.2em;
     margin-top: 2em;
     display: block;
-    margin-left: 175px;
+    margin-left: 30%;
     color: #e2f1af;
     background-color: #5a3a31;
     font-family: 'Lobster', sans-serif;
@@ -478,4 +478,115 @@
 #down-part #restaurants button img{
 	width: 360px;
 	height: auto;
+}
+
+#overlay-changePic{
+    width: 450px;
+    height: 600px;
+    line-height: 150px;
+    margin-top: 20%;
+    background-color: #E3D888;
+    border-radius: 5px;
+    z-index: 11;
+}
+
+#overlay-changePic #changePic{
+    display: flex;
+    justify-content: center;
+    font-size: 180%;
+    color: #5A3A31;
+}
+
+#overlay-changePic input{
+    border: 3px solid #84714F;
+    height: 25px;
+    border-radius: 3px;
+    font-size: 18px;
+    padding-top: 2px;
+    margin: 0.2em;
+    margin-bottom: 0.8em;
+    display: block;
+    margin-left: 10%;
+}
+
+#overlay-changePic button[type=submit]{
+    font-family: 'Lobster', sans-serif;
+    background-color: #84714F;
+    border: 3px solid #5A3A31;
+    color: white;
+    height: 40px;
+    border-radius: 3px;
+    font-size: 18px;
+    padding-top: 2px;
+    margin: 0.2em;
+    margin-top: 2em;
+    display: block;
+    margin-left: 35%;
+}
+
+.overlayCreateRestaurant{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+}
+
+#overlay-createRestaurant {
+    width: 600px;
+    height: 1000px;
+    line-height: 150px;
+    margin-top: 20%;
+    background-color: #E3D888;
+    border-radius: 5px;
+    z-index: 11;
+}
+
+#overlay-createRestaurant #createRestaurant{
+    font-size: 150%;
+    display: flex;
+    justify-content: center;
+    color: #5A3A31;
+}
+
+#overlay-createRestaurant input{
+    border: 3px solid #84714F;
+    height: 25px;
+    border-radius: 3px;
+    font-size: 18px;
+    padding-top: 2px;
+    margin: 0.2em;
+    margin-bottom: 0.8em;
+    display: block;
+    margin-left: 10%;
+    width: 80%;
+}
+
+#overlay-createRestaurant #restaurant-description{
+    height: 300px;
+}
+
+#overlay-createRestaurant input[type=submit]{
+    border: 3px solid #5a3a31;
+    height: 50px;
+    width: 180px;
+    border-radius: 3px;
+    font-size: 25px;
+    padding-bottom: 4px;
+    margin: 0.2em;
+    margin-top: 2em;
+    display: block;
+    margin-left: 35%;
+    color: #e2f1af;
+    background-color: #5a3a31;
+    font-family: 'Lobster', sans-serif;
+}
+
+#overlay-createRestaurant input[type=submit]:hover {
+    background-color: white;
+    color: #5a3a31;
 }

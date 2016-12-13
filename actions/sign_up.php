@@ -2,12 +2,17 @@
 
 include_once('../database/actions/user.php');
 
-$firstName=trim($_POST['firstName']);
-$lastName=trim($_POST['lastName']);
-$birthday=$_POST['birthday'];
-$password=$_POST['password'];
-$passwordConfirmed=$_POST['passwordConfirm'];
-$email=trim($_POST['email']);
+if($_SESSION['token-login']!=$_POST['token-login'])
+{
+    echo "ERROR PAGE.";
+}
+
+$firstName=htmlspecialchars(trim($_POST['firstName']));
+$lastName=htmlspecialchars(trim($_POST['lastName']));
+$birthday=htmlspecialchars($_POST['birthday']);
+$password=htmlspecialchars($_POST['password']);
+$passwordConfirmed=htmlspecialchars($_POST['passwordConfirm']);
+$email=htmlspecialchars(trim($_POST['email']));
 
 if($firstName && $lastName && $password && $passwordConfirmed && $email){
 
@@ -40,8 +45,8 @@ if($firstName && $lastName && $password && $passwordConfirmed && $email){
       header('Location: ../pages/principal_page.php');
     }
     else {
-        echo 'Invalid account. Email already exists.';
-        return;
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
+        die();
     }
 }
 

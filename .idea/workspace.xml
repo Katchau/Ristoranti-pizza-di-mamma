@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0befb14-7e67-4aaa-a168-91e5522e51f4" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/database.db" afterPath="$PROJECT_DIR$/database/database.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/webServers.xml" afterPath="$PROJECT_DIR$/.idea/webServers.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/actions/sign_in.php" afterPath="$PROJECT_DIR$/actions/sign_in.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/actions/sign_out.php" afterPath="$PROJECT_DIR$/actions/sign_out.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/actions/sign_up.php" afterPath="$PROJECT_DIR$/actions/sign_up.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/header.php" afterPath="$PROJECT_DIR$/pages/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/sign.js" afterPath="$PROJECT_DIR$/scripts/sign.js" />
     </list>
     <ignored path="Ristoranti-pizza-di-mamma.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,46 +37,18 @@
     <favorites_list name="Ristoranti-pizza-di-mamma" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="sign.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/scripts/sign.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="756">
-                  <caret line="42" column="35" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="sign_up.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/actions/sign_up.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="273">
-                  <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="sign_in.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/actions/sign_in.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="107">
-                  <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="sign.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scripts/sign.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="756">
+              <caret line="42" column="77" selection-start-line="42" selection-start-column="77" selection-end-line="42" selection-end-column="77" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -92,7 +67,6 @@
         <option value="$PROJECT_DIR$/actions/logout.php" />
         <option value="$PROJECT_DIR$/actions/restaurants_page.php" />
         <option value="$PROJECT_DIR$/css/index.css" />
-        <option value="$PROJECT_DIR$/actions/sign_out.php" />
         <option value="$PROJECT_DIR$/actions/header.php" />
         <option value="$PROJECT_DIR$/actions/unlogged_page.php" />
         <option value="$PROJECT_DIR$/actions/register_page.php" />
@@ -128,9 +102,10 @@
         <option value="$PROJECT_DIR$/actions/change_name.php" />
         <option value="$PROJECT_DIR$/actions/change_email.php" />
         <option value="$PROJECT_DIR$/actions/change_birthday.php" />
+        <option value="$PROJECT_DIR$/actions/sign_in.php" />
+        <option value="$PROJECT_DIR$/actions/sign_out.php" />
         <option value="$PROJECT_DIR$/pages/header.php" />
         <option value="$PROJECT_DIR$/scripts/sign.js" />
-        <option value="$PROJECT_DIR$/actions/sign_in.php" />
         <option value="$PROJECT_DIR$/actions/sign_up.php" />
       </list>
     </option>
@@ -143,10 +118,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1" />
-    <option name="y" value="52" />
-    <option name="width" value="958" />
-    <option name="height" value="1027" />
+    <option name="y" value="24" />
+    <option name="width" value="1920" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -173,6 +147,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -221,8 +197,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -338,35 +312,36 @@
       <workItem from="1481721071063" duration="5023000" />
       <workItem from="1481738848989" duration="7153000" />
       <workItem from="1481750251762" duration="1588000" />
+      <workItem from="1481755987015" duration="2770000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157360000" />
+    <option name="totallyTimeSpent" value="160130000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="52" width="958" height="1027" extended-state="4" />
-    <editor active="true" />
+    <frame x="0" y="24" width="1920" height="1056" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31210855" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32878152" sideWeight="0.50835073" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31906217" sideWeight="0.50417536" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32878152" sideWeight="0.49164927" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983193" sideWeight="0.49582464" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983193" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32878152" sideWeight="0.49164927" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28848115" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -504,20 +479,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
-          <folding>
-            <marker date="1481725519713" expanded="true" signature="103:121" ph="SELECT * FRO... User" />
-            <marker date="1481725519713" expanded="true" signature="315:359" ph="INSERT INTO User... " />
-            <marker date="1481725519713" expanded="true" signature="550:591" ph="SELECT passw... User" />
-            <marker date="1481725519713" expanded="true" signature="748:788" ph="SELECT pictu... User" />
-            <marker date="1481725519713" expanded="true" signature="946:980" ph="SELECT * FRO... User" />
-            <marker date="1481725519713" expanded="true" signature="1119:1150" ph="SELECT * FRO... User" />
-            <marker date="1481725519713" expanded="true" signature="1287:1330" ph="SELECT * FRO... Restaurant" />
-            <marker date="1481725519713" expanded="true" signature="1508:1552" ph="UPDATE user " />
-            <marker date="1481725519713" expanded="true" signature="1708:1753" ph="UPDATE user " />
-            <marker date="1481725519713" expanded="true" signature="1839:1883" ph="UPDATE user " />
-            <marker date="1481725519713" expanded="true" signature="2056:2097" ph="UPDATE user " />
-            <marker date="1481725519713" expanded="true" signature="2240:2284" ph="UPDATE user " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -587,14 +549,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/actions/sign_out.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/actions/searchFuncs.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -659,14 +613,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/actions/change_password.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/actions/change_name.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -691,14 +637,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/actions/echo_picture.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/header.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -707,33 +645,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/script1.js">
+    <entry file="file://$PROJECT_DIR$/scripts/script1.js" />
+    <entry file="file://$PROJECT_DIR$/actions/echo_picture.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/header.php">
+    <entry file="file://$PROJECT_DIR$/actions/change_password.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="23" column="63" selection-start-line="23" selection-start-column="63" selection-end-line="23" selection-end-column="63" />
+        <state relative-caret-position="190">
+          <caret line="21" column="61" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actions/sign_out.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/actions/sign_in.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="414">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="40" column="61" selection-start-line="40" selection-start-column="61" selection-end-line="40" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/actions/sign_up.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+        <state relative-caret-position="630">
+          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -741,13 +697,13 @@
     <entry file="file://$PROJECT_DIR$/scripts/sign.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="756">
-          <caret line="42" column="35" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
+          <caret line="42" column="77" selection-start-line="42" selection-start-column="77" selection-end-line="42" selection-end-column="77" />
           <folding />
         </state>
       </provider>
     </entry>
   </component>
   <component name="webServersAuthStorage">
-    <data>AAAAsN4WfN5DO1b01Ev/Yg/nlFCfDLbjzjQXQ6om1bTLFV5rznsz1HwMwCR6CetBRKFUjGot5/M9wUvy+ZzOG8wG/DXv3ouD6mpFVrzJN23hdibT7IUhFXX3IG+1aIoZKDoJa77VVxBDE1rLMCRwDdQBdIStlm2sL8Bl5lzwuo4yoC3E5HI9MdVLxPu/3nc+nENAiKU6YB5O9Ts3WlTu85v7Pg0h0xS4Fr7brr4jv4+BJiqUE+D9TX32kDfiMr4cCCxahA==</data>
+    <data>AAAAsMsZGqdcMqpKo9EybnLOFPKtj0JnUyKb4cJ5pblgzPiCfXT5YxeXg8Kvgu7T9JaTUHwxle/73VFefPecqD+8KmZiSkarFiMFlQNCdOTDg6Di8cEh5d4y6Wq5T9qmFMIWg06HYe3moXAXmORU7EOWCs9skbZCy0IOvIUXb7bF7K2RMXpaFGtMqOuu+thYvwBtOhV4ha9M+A5LwkQn9ZQzlLcc/EeegMK77+jA0UNNxv6jpX5Qq3SXcD/OdRvpJwJ//Q==</data>
   </component>
 </project>

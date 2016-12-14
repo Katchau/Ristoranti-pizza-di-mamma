@@ -16,16 +16,6 @@ $email=htmlspecialchars(trim($_POST['email']));
 
 if($firstName && $lastName && $password && $passwordConfirmed && $email){
 
-    if(strlen($password)<8){
-        echo json_encode(0);
-        return;
-    }
-
-    if($password!==$passwordConfirmed || strlen($password)!=strlen($passwordConfirmed)){
-        echo json_encode(0);
-        return;
-    }
-
     $pass = password_hash($password, PASSWORD_DEFAULT);
 
     if(newUser($firstName,$lastName,$birthday,$pass,$email)==0){
@@ -44,7 +34,6 @@ if($firstName && $lastName && $password && $passwordConfirmed && $email){
 
         echo json_encode(1);
 
-      //header('Location: ../pages/principal_page.php');
     }
     else {
         echo json_encode(0);

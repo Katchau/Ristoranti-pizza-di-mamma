@@ -1,29 +1,51 @@
 function verifySignUp() {
 
-    var output = $('#output-logon');
-    var firstName = $('#firstName').val();
-    var lastName= $('#lastName').val();
+    var FirstName = $('#overlay-logon #firstName').val();
+    var LastName= $('#overlay-logon #lastName').val();
+    var Birthday= $('#overlay-logon #birthday').val();
+    var Password=$('#overlay-logon #password-logon').val();
+    var PasswordConfirm=$('#overlay-logon #passwordConfirm-logon').val();
+    var Email=$('#overlay-logon #email-logon').val();
+    var output = $('#overlay-logon #output-logon');
 
-    if (firstName.length==0 || lastName.length==0) {
+    window.alert(FirstName+LastName+Birthday+Password+PasswordConfirm+Email);
+
+    if (FirstName.length==0 || LastName.length==0) {
         output.html('Primeiro e último nome necessários.');
         return false;
     }
 
-    var password = $('#password-logon').val();
-
-    if (password.length < 8) {
+    if (Password.length < 8) {
         output.html('Password tem de ter pelos menos 8 caracteres.');
         return false;
     }
 
-    var passwordRepeat = $('#passwordConfirm-logon').val();
-
-    if (password !== passwordRepeat) {
+    if (Password !== PasswordConfirm) {
         output.html('Password de confirmação diferente da password indicada.');
         return false;
     }
 
-    return true;
+    $.ajax({
+        type: "post",
+        url: "../actions/sign_up.php",
+        data: { firstName : FirstName, lastName : LastName , birthday : Birthday , password : Password , passwordConfirm : PasswordConfirm , email : Email }
+    }).done(function(data) {
+
+        var value=JSON.parse(data);
+
+        if(value==1) {
+            $('#overlay-logon form').removeAttr('onsubmit');
+            $('#overlay-logon form').submit();
+        }
+
+        if(value==0)
+        {
+            output.html('Email existente. Por favor indique um email novo.');
+        }
+
+    });
+
+    return false;
 
 }
 

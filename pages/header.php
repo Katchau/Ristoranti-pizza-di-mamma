@@ -37,7 +37,7 @@
             $_SESSION['token-login']= generateSessionToken();
             ?>
             <div id="register-box"><h1>Registar</h1></div>
-            <form id="form" method="post" action="../actions/sign_up.php" onsubmit="return verifySignUp();">
+            <form id="form" method="post" onsubmit="return verifySignUp();">
                 <input id="firstName" type="text" name="firstName" placeholder="First name" required/>
                 <input id="lastName" type="text" name="lastName" placeholder="Last name" required/>
                 <input id="birthday" type="date" name="birthday" placeholder="Birthday" required/>

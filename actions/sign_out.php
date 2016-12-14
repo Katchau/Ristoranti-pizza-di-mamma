@@ -6,6 +6,6 @@ if(isset($_SESSION['name'])){
     session_destroy();
 }
 
-include_once('../pages/principal_page.php');
+header('Location: ../pages/principal_page.php');
 
  ?>

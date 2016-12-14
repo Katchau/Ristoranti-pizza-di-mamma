@@ -34,16 +34,16 @@ include_once('../database/actions/restaurant.php');
 					<?php echo '<img src="'. getRestaurantFilters("pastelaria") . '">'; ?> 
 				</button>
 				<br>
-				<button type="button" name="drink" onclick="changeType(drink)">
-					<?php echo '<img src="'. getRestaurantFilters("drink") . '">'; ?> 
+				<button type="button" name="drinks" onclick="changeType(drinks)">
+					<?php echo '<img src="'. getRestaurantFilters("drinks") . '">'; ?> 
 				</button>
 				<br>
-				<button type="button" name="fast-food" onclick="changeType(fast-food)">
-					<?php echo '<img src="'. getRestaurantFilters("fast-food") . '">'; ?> 
+				<button type="button" name="fastfood" onclick="changeType(fastfood)">
+					<?php echo '<img src="'. getRestaurantFilters("fastfood") . '">'; ?> 
 				</button>
 				<br>
-				<button type="button" name="refeicao" onclick="changeType(refeicao)">
-					<?php echo '<img src="'. getRestaurantFilters("refeicao") . '">'; ?> 
+				<button type="button" name="gourmet" onclick="changeType(gourmet)">
+					<?php echo '<img src="'. getRestaurantFilters("gourmet") . '">'; ?> 
 				</button>
 			</form>
  		</div>

@@ -48,6 +48,14 @@ function getUserInfo($email){
   return $stmt->fetch();
 }
 
+function getUserInfoById($id){
+    global $db;
+
+    $stmt = $db->prepare('SELECT * FROM User WHERE id = ?');
+    $stmt->execute(array($id));
+    return $stmt->fetch();
+}
+
 function getOwnedRestaurants($id){
 	global $db;
 

@@ -183,30 +183,58 @@ allowfullscreen></iframe>';
 				echo '<p>Críticas</p>';
 				echo '</div>';
 
+                if(isset($_SESSION['name'])){
+                    echo '<div id="make-review">';
+                    echo '<form id="form" method="post" action="restaurant_page.php?id=' . $restaurant_id . '">';
+                    echo '<div id="text-review">';
+                    echo '<input type="text" name="criticReview" placeholder="Critics" height="100px" width="100px" required/>';
+                    echo '</div>';
+                    echo '<div id="buttons-review">';
+                    echo '<input type="number" name="score" value="4" min="1" max="5" step="1"/>';
+                    echo '<button type="submit">Finish</button>';
+                    echo '</div>';
+                    echo '</form>';
+                    echo '</div>';
+                }
+
 					foreach($reviews as $rev){
+
 						$comments = get_comments($rev['id']);
+
+                        $reviewerInfo=getUserInfoById($rev['id_user']);
+
+                        echo '<div id="review">';
+
+                        echo '<div id="user-review">';
+                        $pic = get_profile_pic();
+                        echo '<div id="img-reviewer">';
+                        if($pic == null || !$pic)
+                            echo '<img src="../res/defaultProfilePicture.png">';
+                        else echo '<img src="' . '../database/images/users/' . $reviewerInfo['id'] . '/' . $pic . '">';
+                        echo '</div>';
+
+                        echo '<div id="reviewer-name">' . $reviewerInfo["firstName"] . " ". $reviewerInfo["lastName"] .'</div>';
+                        echo '</div>';
+
+                        echo '<div id="critic">';
 						echo '<form id="'.$rev['id'].'" method="post" action="restaurant_page.php?id=' . $restaurant_id . '">';
-						echo '<h3>' . $rev['text'] . '</h3> <h3> nota assegnata: ' . $rev['score'] . '</h3>';
+						echo '<div id="critic-text">' . $rev['text'] . '</div> <div id="critic-value"> Cotação: ' . $rev['score'] . '</div>';
 						echo '</form>';
+                        echo '</div>';
 
-						foreach ($comments as $comment) {
+						/*foreach ($comments as $comment) {
 							echo '<h4>' . $comment['text'] . '</h4>';
-						}
+						}*/
 
-						if(isset($_SESSION['name'])){
+						if(isset($_SESSION['name'])){ //Jonas corrigir para pop-up os comentarios
+                            echo '<div id="comment-critic">';
 							echo '<form id="form" method="post" action="restaurant_page.php?id=' . $restaurant_id . '">';
-							echo '<input type="text" name="commentText" placeholder="Comment" height="100px" width="100px" required/>';
 							echo '<button type="submit" value="'.$rev['id'].'" name="commentSubmission">Comment</button>';
 							echo '</form>';
+                            echo '</div>';
 						}
-					}
 
-					if(isset($_SESSION['name'])){
-						echo '<form id="form" method="post" action="restaurant_page.php?id=' . $restaurant_id . '">';
-						echo '<input type="text" name="criticReview" placeholder="Critics" height="100px" width="100px" required/>';
-						echo '<input type="number" name="score" value="4" min="1" max="5" step="1"/>';
-						echo '<button type="submit">Finish</button>';
-						echo '</form>';
+						echo '</div>';
 					}
 
 					echo '</div>';

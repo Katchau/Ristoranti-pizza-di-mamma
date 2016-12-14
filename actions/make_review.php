@@ -11,14 +11,14 @@ function makeReview(){
 	{
 		if(strlen($review_critic)<20)
 		{
-			include_once('../actions/restaurant_page.php');
+			include_once('../pages/restaurant_page.php');
 			return 'Too short. Please give a bigger critic.';
 
 		}
 
 		if($score<1 || $score>5)
 		{
-			include_once('../actions/restaurant_page.php');
+			include_once('../pages/restaurant_page.php');
 			return 'Invalid score to the restaurants. Select a new score.';
 		}
 
@@ -27,7 +27,7 @@ function makeReview(){
 			return 'Review made.';
 		}
 		else{
-			include_once('../actions/restaurant_page.php');
+			include_once('../pages/restaurant_page.php');
 			return 'The user already made a review to this restaurant.';
 		}
 	}

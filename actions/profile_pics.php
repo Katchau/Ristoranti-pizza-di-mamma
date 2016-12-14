@@ -10,7 +10,7 @@ function get_profile_pic(){
 
 function display_restaurants(){
 	$restaurants = getOwnedRestaurants($_SESSION['id']);
-	$ref = "../actions/restaurant_page.php?id=";
+	$ref = "../pages/restaurant_page.php?id=";
 	echo '<form method="get">';
 	foreach($restaurants as $rest){
 		$page = $ref . $rest['id'];

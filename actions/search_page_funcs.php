@@ -18,7 +18,7 @@
 	}
 	
 	function displayImage($rest,$id,$morada,$horario,$score){
-		$url = "../actions/restaurant_page.php?id=" . $id;
+		$url = "../pages/restaurant_page.php?id=" . $id;
 		echo '<div class="restaurants">';
 		echo '<form method="get">';
 		echo '<button type="submit" value="'. $id .'" name="id" formaction="'. $url . '">' ;

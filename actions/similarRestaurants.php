@@ -2,13 +2,14 @@
 
 	include("stringAlgorithms.php");
 	
-	function pushArray($return, $name, $id, $has_v, $value, $address, $schedule){
+	function pushArray($return, $name, $id, $has_v, $value, $address, $schedule, $type){
 		if($has_v){
 			array_push($return, $name);
 			array_push($return, $id);
 			array_push($return, $value);
 			array_push($return, $address);
 			array_push($return, $schedule);
+			array_push($return, $type);
 		}
 		else{
 			array_push($return, $name);
@@ -34,10 +35,10 @@
 				if($aproved){
 					if ($return == "No restaurant found :(") {
 						$return = array();
-						$return = pushArray($return, $row['name'], $row['id'], $value, $row['score'],$row['address'],$row['schedule']);
+						$return = pushArray($return, $row['name'], $row['id'], $value, $row['score'],$row['address'],$row['schedule'],$row['type']);
 					} 
 					else {
-						$return = pushArray($return, $row['name'], $row['id'], $value, $row['score'],$row['address'],$row['schedule']);
+						$return = pushArray($return, $row['name'], $row['id'], $value, $row['score'],$row['address'],$row['schedule'],$row['type']);
 					}
 				}
 			}

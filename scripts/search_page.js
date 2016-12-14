@@ -1,4 +1,6 @@
 
+var type = "";
+
 function getImage(span4, id_r, address, schedule, score){
 	$.ajax({
 		type: "get",
@@ -36,8 +38,8 @@ function getRestaurants(value){
 		var unparsed = JSON.parse(data);
 		var span = $("body #down-part #restaurants");
 		if(typeof unparsed === "string") return;
-		for(var i = 0; i < unparsed.length; i+=5){
-			if(checkValue(unparsed[i+2])){
+		for(var i = 0; i < unparsed.length; i+=6){
+			if(checkValue(unparsed[i+2]) && (type == "" || type == checkValue(unparsed[i+5]))){
 				$url = "../actions/restaurant_page.php?id=" + unparsed[i+1];
 			
 				span.append('<div class="restaurants" id =' + unparsed[i+1] + ' >');
@@ -74,10 +76,15 @@ function searchRestaurant(evento){
 	getRestaurants(nextValue);
 }
 
+function changeType(botao){
+	type = (botao == type) ? "" : botao;
+}
+
 function loadDocument(){
 	var sBar = $("#top-bar #top-bar-elements #search #searchRestaurant");
 	sBar.keypress({x: sBar}, searchRestaurant);
 	$("#side_bar #checkbox_filter #rating input").click({x: sBar}, searchRestaurant);
+	$("#side_bar #types button").click({x: sBar}, searchRestaurant);
 }
 
 $(document).ready(loadDocument);

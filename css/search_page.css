@@ -26,6 +26,15 @@ body{
     /* background: radial-gradient(#e2f1af,#E3D888); */
 /* } */
 
+#side_bar #types button{
+	
+}
+
+#side_bar #types button img{
+	width: 50px;
+	height: auto;
+}
+
 #down-part #restaurants .restaurants button{
     border: 3px solid #84714F;
     border-radius: 4px;

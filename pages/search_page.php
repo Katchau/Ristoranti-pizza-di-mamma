@@ -25,6 +25,30 @@ include_once('../database/actions/restaurant.php');
 						<input type="checkbox" name="rating" id="b1" value="1">0-1<br>
 					</form>
 				</div>
+				<div id="types">
+					<p> Filtros de Tipo </p>
+					<form action="">
+						<button type="button" name="cafe" onclick="changeType(cafe)">
+							<?php echo '<img src="'. getRestaurantFilters("cafe") . '">'; ?> 
+						</button>
+						<br>
+						<button type="button" name="pastelaria" onclick="changeType(pastelaria)">
+							<?php echo '<img src="'. getRestaurantFilters("pastelaria") . '">'; ?> 
+						</button>
+						<br>
+						<button type="button" name="drink" onclick="changeType(drink)">
+							<?php echo '<img src="'. getRestaurantFilters("drink") . '">'; ?> 
+						</button>
+						<br>
+						<button type="button" name="fast-food" onclick="changeType(fast-food)">
+							<?php echo '<img src="'. getRestaurantFilters("fast-food") . '">'; ?> 
+						</button>
+						<br>
+						<button type="button" name="refeicao" onclick="changeType(refeicao)">
+							<?php echo '<img src="'. getRestaurantFilters("refeicao") . '">'; ?> 
+						</button>
+					</form>
+ 				</div>
 			</div>
 		</td>
 		

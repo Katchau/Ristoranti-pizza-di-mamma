@@ -73,7 +73,25 @@ body{
     background-color: #84714F;
     color: white;
 }
+#top-bar-elements #top-buttons #login #user-name button{
+    color: #5a3a31;
+    background-color: #E3D888;
+	border-style: none;
+	border-color: #E3D888;
+	cursor: pointer;
+    font-family: 'Lobster', sans-serif;
+	margin-right: 10px;
+	font-size: 24px;
+	
+}
 
+#top-bar-elements #top-buttons #login #user-name img{
+    border-radius: 50%;
+	margin: 0px;
+	padding: 0px;
+	width: 30px;
+    color: white;
+}
 
 #top-bar-elements input[type=button]{
     background-color: #84714F;

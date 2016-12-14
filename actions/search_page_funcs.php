@@ -1,6 +1,5 @@
 <?php
 	include_once('similarRestaurants.php');
-	include("../database/actions/restaurant.php");
 	
 	function filterRestaurants($rest_name, $local){
 		$restaurant = ($rest_name != null && $rest_name != "" && $rest_name != " ") ? $rest_name : $_GET['restaurant'];
@@ -12,6 +11,10 @@
 		$restaurant = strtolower($restaurant);
 		$restaurants_found = getSimilarRestaurants($restaurant,$home,$restaurants,$return,true);
 		return $restaurants_found;
+	}
+	
+	function getRestaurantFilters($type){
+		return "../res/" . $type . ".png"; //tem de ser png para manter transparencia (eu gosto de transparencia)
 	}
 	
 	function displayImage($rest,$id,$morada,$horario,$score){
@@ -32,7 +35,7 @@
 	
 	function displaySearch($rests){
 		$size = sizeof($rests);
-		for($i = 0; $i < $size; $i+=5 ){
+		for($i = 0; $i < $size; $i+=6 ){
 			displayImage($rests[$i],$rests[$i+1],$rests[$i+3],$rests[$i+4],$rests[$i+2]);
 		}
 	}

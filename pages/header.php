@@ -65,9 +65,16 @@
                 <div id="login">
                     <?php
                     if(isset($_SESSION['name']))
-                    {
+                    {	
+						include('../actions/profile_pics.php');
                         echo '<div id="user-name">';
-                        echo '<a href="../pages/user_profile_page.php">'. $_SESSION['name'] .'</a>';
+                        //echo '<a href="../pages/user_profile_page.php?id="'. $_SESSION['id'] .'">'. $_SESSION['name'] .'</a>';
+						echo '<form method="get">';
+						echo '<button type="submit" value="' . $_SESSION['id'] . '" name="id" formaction="../pages/user_profile_page.php">';
+						$pic = get_profile_pic();
+						if($pic == null || !$pic) echo $_SESSION['name'] . '</button>';
+						else echo $_SESSION['name'] . '<img src="' . '../database/images/users/' . $_SESSION['id'] . '/' . $pic . '"> </button>';
+						echo '</form>';
                         echo '</div>';
                     }
                     else{

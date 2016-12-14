@@ -91,3 +91,45 @@
     background-repeat: no-repeat;
     border-radius: 4px;
 }
+
+#middle #quick-search {
+    margin-top: 80%;
+    margin-bottom: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#middle #quick-search input[type=submit]{
+    height: 150px;
+    width: 150px;
+    margin-left: 3%;
+    margin-right: 3%;
+    border-radius: 50%;
+    background-size: 150px 150px;
+    background-repeat: no-repeat;
+}
+
+#middle #quick-search #fast-food {
+    background-image: url('../res/fastFood.png');
+}
+
+#middle #quick-search #cafe {
+    background-image: url('../res/cafe.png');
+}
+
+#middle #quick-search #pastelaria {
+    background-image: url('../res/pastelaria.png');
+}
+
+#middle #quick-search #beber {
+    background-image: url('../res/beberCopo.png');
+}
+
+#middle #quick-search #gourmet {
+    background-image: url('../res/gourmet.png');
+}
+
+#middle #quick-search input[type=submit]:hover{
+    border: 4px solid #5A3A31;
+}

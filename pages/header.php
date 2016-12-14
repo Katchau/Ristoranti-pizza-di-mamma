@@ -9,6 +9,7 @@
     <script src="../scripts/sign_up.js"></script>
 	<script src="../scripts/script1.js"></script>
     <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Lobster" rel="stylesheet">
 </head>
 <body>

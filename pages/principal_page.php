@@ -15,6 +15,13 @@
             </form>
         </div>
     </div>
+    <div id="quick-search">
+        <input id="fast-food" type="submit" value="" name="quick"/>
+        <input id="pastelaria" type="submit" value="" name="quick"/>
+        <input id="cafe" type="submit" value="" name="quick"/>
+        <input id="gourmet" type="submit" value="" name="quick"/>
+        <input id="beber" type="submit" value="" name="quick"/>
+    </div>
 </div>
 
 <?php include_once('footer.php'); ?>

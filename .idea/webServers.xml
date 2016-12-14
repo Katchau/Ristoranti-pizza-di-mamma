@@ -2,8 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="5fd27a5c-012d-4ae5-aadc-c962252cc91c" name="gnomo" url="http://gnomo.fe.up.pt">
-        <fileTransfer host="gnomo.fe.up.pt" port="21" rootFolder="/usr/users2/mieic2014/up201406458">
+      <webServer id="5fd27a5c-012d-4ae5-aadc-c962252cc91c" name="gnomo" url="http://gnomo.fe.up.pt/">
+        <fileTransfer host="gnomo.fe.up.pt" port="21" rootFolder="/usr/users2/mieic2014/up201406458/public_html">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>

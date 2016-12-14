@@ -27,9 +27,6 @@ if($_SESSION['token-login']!=$_POST['token-login'])
 
       echo json_encode(1);
 
-      //header('Location: ../pages/principal_page.php');
-
-
   }
   else{
       echo json_encode(0);

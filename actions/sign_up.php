@@ -17,12 +17,12 @@ $email=htmlspecialchars(trim($_POST['email']));
 if($firstName && $lastName && $password && $passwordConfirmed && $email){
 
     if(strlen($password)<8){
-        echo 'Password is too short. Please choose a new one.';
+        echo json_encode(0);
         return;
     }
 
     if($password!==$passwordConfirmed || strlen($password)!=strlen($passwordConfirmed)){
-        echo 'Password confirmation does not match.';
+        echo json_encode(0);
         return;
     }
 
@@ -42,11 +42,12 @@ if($firstName && $lastName && $password && $passwordConfirmed && $email){
       $_SESSION['name'] = $nomeCompleto;
       $_SESSION['id'] = $userInfo['id'];
 
-      header('Location: ../pages/principal_page.php');
+        echo json_encode(1);
+
+      //header('Location: ../pages/principal_page.php');
     }
     else {
-        header('Location: ' . $_SERVER['HTTP_REFERER']);
-        die();
+        echo json_encode(0);
     }
 }
 

@@ -136,4 +136,11 @@ include_once('connection.php');
       return $stmt->execute(array($type, $id));
     }
 
+    function deleteRestaurant($id){
+      global $db;
+
+      $rdb = $db->prepare('DELETE FROM Restaurant WHERE id = ?');
+			return $rdb->execute(array($id));
+    }
+
 ?>

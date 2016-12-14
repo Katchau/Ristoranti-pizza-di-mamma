@@ -233,8 +233,8 @@
 }
 
 #overlay-changePassword{
-    width: 450px;
-    height: 600px;
+    width: 550px;
+    height: 750px;
     line-height: 150px;
     margin-top: 20%;
     background-color: #E3D888;
@@ -286,35 +286,35 @@
     text-align: center;
     color: #5a3a31;
     text-shadow: 2px 2px #e2f1af;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 #overlay-changeName #changeName{
     text-align: center;
     color: #5a3a31;
     text-shadow: 2px 2px #e2f1af;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 #overlay-changeEmail #changeEmail{
     text-align: center;
     color: #5a3a31;
     text-shadow: 2px 2px #e2f1af;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 #overlay-changeBirthday #changeBirthday{
     text-align: center;
     color: #5a3a31;
     text-shadow: 2px 2px #e2f1af;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 #overlay-EditProfile #editProfile{
     text-align: center;
     color: #5a3a31;
     text-shadow: 2px 2px #e2f1af;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 #overlay-changePassword input{
@@ -370,7 +370,7 @@
     height: 50px;
     width: 180px;
     border-radius: 3px;
-    font-size: 25px;
+    font-size: 20px;
     padding-bottom: 4px;
     margin: 0.2em;
     margin-top: 2em;
@@ -386,7 +386,7 @@
     height: 50px;
     width: 180px;
     border-radius: 3px;
-    font-size: 25px;
+    font-size: 10px;
     padding-bottom: 4px;
     margin: 0.2em;
     margin-top: 2em;
@@ -402,7 +402,7 @@
     height: 50px;
     width: 180px;
     border-radius: 3px;
-    font-size: 25px;
+    font-size: 20px;
     padding-bottom: 4px;
     margin: 0.2em;
     margin-top: 2em;
@@ -418,7 +418,7 @@
     height: 50px;
     width: 180px;
     border-radius: 3px;
-    font-size: 25px;
+    font-size: 20px;
     padding-bottom: 4px;
     margin: 0.2em;
     margin-top: 2em;
@@ -434,7 +434,7 @@
     height: 50px;
     width: 180px;
     border-radius: 3px;
-    font-size: 25px;
+    font-size: 16px;
     padding-bottom: 4px;
     margin: 0.2em;
     margin-top: 2em;

@@ -10,6 +10,17 @@ function overlayPage(){
       }
   });
 
+  $("#delete").click(showOverlayDeleteRestaurant);
+
+  $('.overlayDeleteRestaurant').hide();
+
+  $('.overlayDeleteRestaurant').click(function (event) {
+      if (event.target === event.delegateTarget) {
+          $('.overlayDeleteRestaurant').hide();
+          event.stopPropagation();
+      }
+  });
+
   $("#changeRestaurantName").click(showOverlayChangeName);
 
   $('.overlayChangeName').hide();
@@ -106,6 +117,10 @@ function showOverlayChangeType(){
 function showOverlayChangeSchedule(){
     $('.overlayEditRestaurant').hide();
     $('.overlayChangeSchedule').show();
+}
+
+function showOverlayDeleteRestaurant(){
+    $('.overlayDeleteRestaurant').show();
 }
 
 function showOverlayEditRestaurant() {

@@ -154,10 +154,7 @@ include_once('../actions/profile_pics.php');
             Options
         </div>
         <div id="edit">
-            <input type="button" value="Editar">
-        </div>
-        <div id="changeUserPassword">
-            <input type="button" value="Mudar Password">
+            <input type="button" value="Editar Perfil">
         </div>
         <div id="create-restaurant">
             <input type="button" value="Criar restaurante">

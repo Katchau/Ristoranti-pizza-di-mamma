@@ -5,10 +5,11 @@
   include_once("../actions/make_review.php");
   include_once("../actions/uploadbar.php");
   include_once("../pages/header.php");
- ?>
- <script src="../scripts/restaurant_page.js"></script>
+?>
+<script src="../scripts/restaurant_page.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
 <link rel="stylesheet" href="../css/restaurant_page.css">
+
 
 
 <div class="overlayEditRestaurant" hidden="hidden">
@@ -36,11 +37,32 @@
     </div>
 </div>
 
+<div class="overlayDeleteRestaurant" hidden="hidden">
+    <div id="overlay-deleteRestaurant">
+        <div id="deleteRestaurant"><h1>Pretende eliminar o seu restaurante?</h1>
+          <div id="confirm">
+            <?php
+            echo '<form id="form" method="post" action="change_restaurant/delete_restaurant.php?id=' . $_GET['id'] . '" onsubmit="">';
+              ?>
+              <input type="submit" value="Sim">
+            </form>
+          </div>
+          <div id="cancel">
+            <?php
+            echo '<form id="form" method="post"  action="restaurant_page.php?id=' . $_GET['id'] . '"  onsubmit="">';
+              ?>
+              <input type="submit" value="Não">
+            </form>
+          </div>
+        </div>
+    </div>
+</div>
+
 <div class="overlayChangeName" hidden="hidden">
     <div id="overlay-changeName">
         <div id="changeName"><h1>Mudar Nome</h1></div>
         <?php
-        echo '<form id="form" method="post" action="../actions/change_restaurant/change_name.php?id=' . $_GET['id'] . '" onsubmit="return changePassword();">';
+        echo '<form  method="post" action="../actions/change_restaurant/change_name.php?id=' . $_GET['id'] . '" onsubmit="return changePassword();">';
         ?>
            <input id="restaurantName" type="text" name="restaurantName" placeholder="Nome Restaurante" required/>
            <input type="submit" value="Confirmar"/>
@@ -122,15 +144,15 @@
 						echo '<p>' . $review . '</p>';
 					}
 
-          if(isset($_POST['commentSubmission'])){
-            $comment = make_comment();
-          }
+					if(isset($_POST['commentSubmission'])){
+					$comment = make_comment();
+					}
 
 					$result = getRestaurant();
 					echo '<div id="space">';
 					echo '</div>';
 					echo '<div id="RestaurantN">';
-						echo '<h1>' . $result['name'] . '</h1>';
+					echo '<h1>' . $result['name'] . '</h1>';
 					echo '</div>';
 					$pictures = getRestaurantPicturesById();
 					$image_path = "../database/images/" . $restaurant_id . "/";
@@ -149,13 +171,20 @@
 					echo '</div>';
 				    echo '<button id="nextButton" onClick="getDesiredPicture(this.id)">+</button>';
 					echo '</div>';
-					//upload_bar($restaurant_id,true);
-
-          if (isRestaurantOwner($_SESSION['email'])){
-            echo '<div id="edit">';
-            echo '<input type="button" value="Editar Restaurante">';
-            echo '</div>';
-          }
+					
+					
+					if(isset($_SESSION['email'])){
+						if (isRestaurantOwner($_SESSION['email'])){
+							echo '<div id="buttons">';
+							echo '<div id="edit">';
+							echo '<input type="button" value="Editar Restaurante">';
+							echo '</div>';
+							echo '<div id="delete">';
+							echo '<input type="button" value="Apagar Restaurante">';
+							echo '</div>';
+							echo '</div>';
+						}
+					}
 
 					echo '<div id="restaurant-info">';
 				    echo '<div id="title-info">';
@@ -164,7 +193,7 @@
 					echo '<div id="principal-info">';
 					echo '<p>' . $result['description'] . '</p>';
 					echo '<p> Endereço: ' . $result['address'] . '</p>';
-          echo '<p> Cidade: ' . $result['city'] . '</p>';
+					echo '<p> Cidade: ' . $result['city'] . '</p>';
 					echo '<p> Contactos: ' . $result['contacts'] . '</p>';
 					echo '<p> Horário: ' . $result['schedule'] . '</p>';
 					echo '<p> Cotação: ' . $result['score'] . '</p>';
@@ -172,16 +201,16 @@
 					echo '</div>';
 
 				echo '<iframe id="map" frameborder="0"
-            src="https://www.google.com/maps/embed/v1/place?q=<?=' . $result['address'] . '?>&key=AIzaSyCdqMmRf8c1f_yTgtjt7zT_5tdO5UOPka4"
-allowfullscreen></iframe>';
+						src="https://www.google.com/maps/embed/v1/place?q=<?=' . $result['address'] . '?>&key=AIzaSyCdqMmRf8c1f_yTgtjt7zT_5tdO5UOPka4"
+						allowfullscreen></iframe>';
 
 					$reviews = getReviews();
 
 					echo '<div id="reviews">';
 
-				echo '<div id="title-reviews">';
-				echo '<p>Críticas</p>';
-				echo '</div>';
+					echo '<div id="title-reviews">';
+					echo '<p>Críticas</p>';
+					echo '</div>';
 
                 if(isset($_SESSION['name'])){
                     echo '<div id="make-review">';

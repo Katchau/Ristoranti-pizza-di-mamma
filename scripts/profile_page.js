@@ -83,14 +83,17 @@ function showOverlayEditProfile(){
 }
 
 function showOverlayChangeName(){
+  $('.overlayEditProfile').hide();
   $('.overlayChangeName').show();
 }
 
 function showOverlayChangeEmail(){
+  $('.overlayEditProfile').hide();
   $('.overlayChangeEmail').show();
 }
 
 function showOverlayChangeBirthday(){
+  $('.overlayEditProfile').hide();
   $('.overlayChangeBirthday').show();
 }
 
@@ -99,6 +102,7 @@ function showOverlayChangeProfilePic(){
 }
 
 function showOverlayChangePassword(){
+  $('.overlayEditProfile').hide();
   $('.overlayChangePassword').show();
 }
 

@@ -92,6 +92,7 @@ include_once('../actions/profile_pics.php');
             <input id="restaurant-name" type="text" name="restaurant-name" placeholder="Nome do restaurante" required/>
             <input id="restaurant-description" type="text" name="restaurant-description" placeholder="Descrição do restaurante" required/>
             <input id="restaurant-address" type="text" name="restaurant-address" placeholder="Endereço" required/>
+            <input id="restaurant-city" type="text" name="restaurant-city" placeholder="Cidade" required/>
             <input id="restaurant-contacts" type="text" name="restaurant-contacts" placeholder="Contacto" required/>
             <input id="restaurant-schedule" type="text" name="restaurant-schedule" placeholder="Horário" required/>
             <input id="restaurant-type" type="text" name="restaurant-type" placeholder="Tipo de restaurante" required/>

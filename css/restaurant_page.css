@@ -116,3 +116,500 @@
 	color: #5A3A31;
 	margin-bottom: -2%;
 }
+
+#main button{
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 8em;
+	height: 50px;
+	width: 100px;
+	background-color: white;
+	color: #5A3A31;
+	border: 3px solid #5a3a31;
+	border-radius: 4px;
+	font-size: 30px;
+}
+
+#main button:hover{
+	background-color: #5A3A31;
+	border-color: #5a3a31;
+	color: #E3D888;
+}
+
+#main #edit{
+	display: flex;
+	justify-content: center;
+}
+
+#main #edit input[type=button]{
+	border: 3px solid #5a3a31;
+	height: 50px;
+	width: 180px;
+	border-radius: 3px;
+	font-size: 20px;
+	padding-bottom: 4px;
+	margin: 0.2em;
+	margin-top: 2em;
+	display: block;
+	color: #e2f1af;
+	background-color: #5a3a31;
+	font-family: 'Lobster', sans-serif;
+}
+
+
+#main #edit input[type=button]:hover{
+    background-color: white;
+    color: #5a3a31;
+}
+
+.overlayEditRestaurant{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+}
+
+#overlay-EditRestaurant{
+    width: 550px;
+    height: 850px;
+    line-height: 150px;
+    margin-top: 20%;
+    background-color: #E3D888;
+    border-radius: 5px;
+    z-index: 11;
+}
+
+#overlay-EditRestaurant #editRestaurant{
+    text-align: center;
+    color: #5a3a31;
+    text-shadow: 2px 2px #e2f1af;
+    font-size: 20px;
+}
+
+#overlay-EditRestaurant input[type=button]{
+    border: 3px solid #5a3a31;
+    height: 50px;
+    width: 180px;
+    border-radius: 3px;
+    font-size: 25px;
+    padding-bottom: 4px;
+    margin: 0.2em;
+    margin-top: 2em;
+    display: block;
+    margin-left: 175px;
+    color: #e2f1af;
+    background-color: #5a3a31;
+    font-family: 'Lobster', sans-serif;
+}
+
+#overlay-EditRestaurant input[type=button]:hover {
+    background-color: white;
+    color: #5a3a31;
+}
+
+.overlayChangeName{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+}
+
+#overlay-changeName{
+    width: 550px;
+    height: 500px;
+    line-height: 150px;
+    margin-top: 20%;
+    background-color: #E3D888;
+    border-radius: 5px;
+    z-index: 11;
+}
+
+#overlay-changeName #changeName{
+    text-align: center;
+    color: #5a3a31;
+    text-shadow: 2px 2px #e2f1af;
+    font-size: 25px;
+}
+
+#overlay-changeName input{
+    border: 3px solid #84714F;
+    height: 25px;
+    border-radius: 3px;
+    font-size: 18px;
+    padding-top: 2px;
+    margin: 0.2em;
+    margin-bottom: 0.8em;
+    display: block;
+    margin-left: 140px;
+}
+
+#overlay-changeName input[type=submit]{
+    border: 3px solid #5a3a31;
+    height: 50px;
+    width: 180px;
+    border-radius: 3px;
+    font-size: 25px;
+    padding-bottom: 4px;
+    margin: 0.2em;
+    margin-top: 2em;
+    display: block;
+    margin-left: 175px;
+    color: #e2f1af;
+    background-color: #5a3a31;
+    font-family: 'Lobster', sans-serif;
+}
+
+#overlay-changeName input[type=submit]:hover {
+    background-color: white;
+    color: #5a3a31;
+}
+
+#overlay-changeName #output-changeName {
+    display: flex;
+    justify-content: center;
+}
+
+.overlayChangeDescription{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+}
+
+#overlay-changeDescription{
+    width: 550px;
+    height: 500px;
+    line-height: 150px;
+    margin-top: 20%;
+    background-color: #E3D888;
+    border-radius: 5px;
+    z-index: 11;
+}
+
+#overlay-changeDescription #changeDescription{
+    text-align: center;
+    color: #5a3a31;
+    text-shadow: 2px 2px #e2f1af;
+    font-size: 25px;
+}
+
+#overlay-changeDescription input{
+    border: 3px solid #84714F;
+    height: 25px;
+    border-radius: 3px;
+    font-size: 18px;
+    padding-top: 2px;
+    margin: 0.2em;
+    margin-bottom: 0.8em;
+    display: block;
+    margin-left: 140px;
+}
+
+#overlay-changeDescription input[type=submit]{
+    border: 3px solid #5a3a31;
+    height: 50px;
+    width: 180px;
+    border-radius: 3px;
+    font-size: 25px;
+    padding-bottom: 4px;
+    margin: 0.2em;
+    margin-top: 2em;
+    display: block;
+    margin-left: 175px;
+    color: #e2f1af;
+    background-color: #5a3a31;
+    font-family: 'Lobster', sans-serif;
+}
+
+#overlay-changeDescription input[type=submit]:hover {
+    background-color: white;
+    color: #5a3a31;
+}
+
+#overlay-changeDescription #output-changeDescription {
+    display: flex;
+    justify-content: center;
+}
+
+.overlayChangeAdress{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+}
+
+#overlay-changeAdress{
+    width: 550px;
+    height: 500px;
+    line-height: 150px;
+    margin-top: 20%;
+    background-color: #E3D888;
+    border-radius: 5px;
+    z-index: 11;
+}
+
+#overlay-changeAdress #changeAdress{
+    text-align: center;
+    color: #5a3a31;
+    text-shadow: 2px 2px #e2f1af;
+    font-size: 25px;
+}
+
+#overlay-changeAdress input{
+    border: 3px solid #84714F;
+    height: 25px;
+    border-radius: 3px;
+    font-size: 18px;
+    padding-top: 2px;
+    margin: 0.2em;
+    margin-bottom: 0.8em;
+    display: block;
+    margin-left: 140px;
+}
+
+#overlay-changeAdress input[type=submit]{
+    border: 3px solid #5a3a31;
+    height: 50px;
+    width: 180px;
+    border-radius: 3px;
+    font-size: 25px;
+    padding-bottom: 4px;
+    margin: 0.2em;
+    margin-top: 2em;
+    display: block;
+    margin-left: 175px;
+    color: #e2f1af;
+    background-color: #5a3a31;
+    font-family: 'Lobster', sans-serif;
+}
+
+#overlay-changeAdress input[type=submit]:hover {
+    background-color: white;
+    color: #5a3a31;
+}
+
+#overlay-changeAdress #output-changeAdress {
+    display: flex;
+    justify-content: center;
+}
+
+.overlayChangeNumber{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+}
+
+#overlay-changeNumber{
+    width: 550px;
+    height: 500px;
+    line-height: 150px;
+    margin-top: 20%;
+    background-color: #E3D888;
+    border-radius: 5px;
+    z-index: 11;
+}
+
+#overlay-changeNumber #changeNumber{
+    text-align: center;
+    color: #5a3a31;
+    text-shadow: 2px 2px #e2f1af;
+    font-size: 25px;
+}
+
+#overlay-changeNumber input{
+    border: 3px solid #84714F;
+    height: 25px;
+    border-radius: 3px;
+    font-size: 18px;
+    padding-top: 2px;
+    margin: 0.2em;
+    margin-bottom: 0.8em;
+    display: block;
+    margin-left: 140px;
+}
+
+#overlay-changeNumber input[type=submit]{
+    border: 3px solid #5a3a31;
+    height: 50px;
+    width: 180px;
+    border-radius: 3px;
+    font-size: 25px;
+    padding-bottom: 4px;
+    margin: 0.2em;
+    margin-top: 2em;
+    display: block;
+    margin-left: 175px;
+    color: #e2f1af;
+    background-color: #5a3a31;
+    font-family: 'Lobster', sans-serif;
+}
+
+#overlay-changeNumber input[type=submit]:hover {
+    background-color: white;
+    color: #5a3a31;
+}
+
+#overlay-changeNumber #output-changeNumber {
+    display: flex;
+    justify-content: center;
+}
+
+.overlayChangeSchedule{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+}
+
+#overlay-changeSchedule{
+    width: 550px;
+    height: 550px;
+    line-height: 150px;
+    margin-top: 20%;
+    background-color: #E3D888;
+    border-radius: 5px;
+    z-index: 11;
+}
+
+#overlay-changeSchedule #changeSchedule{
+    text-align: center;
+    color: #5a3a31;
+    text-shadow: 2px 2px #e2f1af;
+    font-size: 25px;
+}
+
+#overlay-changeSchedule input{
+    border: 3px solid #84714F;
+    height: 25px;
+    border-radius: 3px;
+    font-size: 18px;
+    padding-top: 2px;
+    margin: 0.2em;
+    margin-bottom: 0.8em;
+    display: block;
+    margin-left: 140px;
+}
+
+#overlay-changeSchedule input[type=submit]{
+    border: 3px solid #5a3a31;
+    height: 50px;
+    width: 180px;
+    border-radius: 3px;
+    font-size: 25px;
+    padding-bottom: 4px;
+    margin: 0.2em;
+    margin-top: 2em;
+    display: block;
+    margin-left: 175px;
+    color: #e2f1af;
+    background-color: #5a3a31;
+    font-family: 'Lobster', sans-serif;
+}
+
+#overlay-changeSchedule input[type=submit]:hover {
+    background-color: white;
+    color: #5a3a31;
+}
+
+#overlay-changeSchedule #output-changeSchedule {
+    display: flex;
+    justify-content: center;
+}
+
+.overlayChangeType{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+}
+
+#overlay-changeType{
+    width: 550px;
+    height: 500px;
+    line-height: 150px;
+    margin-top: 20%;
+    background-color: #E3D888;
+    border-radius: 5px;
+    z-index: 11;
+}
+
+#overlay-changeType #changeType{
+    text-align: center;
+    color: #5a3a31;
+    text-shadow: 2px 2px #e2f1af;
+    font-size: 25px;
+}
+
+#overlay-changeType input{
+    border: 3px solid #84714F;
+    height: 25px;
+    border-radius: 3px;
+    font-size: 18px;
+    padding-top: 2px;
+    margin: 0.2em;
+    margin-bottom: 0.8em;
+    display: block;
+    margin-left: 140px;
+}
+
+#overlay-changeType input[type=submit]{
+    border: 3px solid #5a3a31;
+    height: 50px;
+    width: 180px;
+    border-radius: 3px;
+    font-size: 25px;
+    padding-bottom: 4px;
+    margin: 0.2em;
+    margin-top: 2em;
+    display: block;
+    margin-left: 175px;
+    color: #e2f1af;
+    background-color: #5a3a31;
+    font-family: 'Lobster', sans-serif;
+}
+
+#overlay-changeType input[type=submit]:hover {
+    background-color: white;
+    color: #5a3a31;
+}
+
+#overlay-changeType #output-changeType {
+    display: flex;
+    justify-content: center;
+}

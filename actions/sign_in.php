@@ -25,12 +25,14 @@ if($_SESSION['token-login']!=$_POST['token-login'])
         $_SESSION['name'] = $nomeCompleto;
         $_SESSION['id'] = $userInfo['id'];
 
-        header('Location: ../pages/principal_page.php');
+      echo json_encode(1);
+
+      //header('Location: ../pages/principal_page.php');
+
 
   }
   else{
-      header('Location: ' . $_SERVER['HTTP_REFERER']);
-      die();
+      echo json_encode(0);
   }
 
 

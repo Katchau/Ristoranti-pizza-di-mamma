@@ -3,6 +3,13 @@ include_once('header.php');
 include_once('../actions/uploadbar.php');
 include_once('../actions/profile_pics.php');
 
+$userId=htmlspecialchars($_GET['id']);
+
+if($userId!=$_SESSION['id'])
+{
+    header('Location: ../pages/error403.html');
+}
+
 ?>
 
 <script src="../scripts/profile_page.js"></script>

@@ -4,14 +4,14 @@ session_start();
 
 include_once('../database/actions/restaurant.php');
 
-$restaurantName=$_POST['restaurant-name'];
-$description=$_POST['restaurant-description'];
-$address=$_POST['restaurant-address'];
-$city=$_POST['restaurant-city'];
-$contacts=$_POST['restaurant-contacts'];
-$schedule=$_POST['restaurant-schedule'];
+$restaurantName=htmlspecialchars($_POST['restaurant-name']);
+$description=htmlspecialchars($_POST['restaurant-description']);
+$address=htmlspecialchars($_POST['restaurant-address']);
+$city=htmlspecialchars($_POST['restaurant-city']);
+$contacts=htmlspecialchars($_POST['restaurant-contacts']);
+$schedule=htmlspecialchars($_POST['restaurant-schedule']);
 $owner_id=$_SESSION['id'];
-$type=$_POST['restaurant-type'];
+$type=htmlspecialchars($_POST['restaurant-type']);
 
 
 if($restaurantName && $address && $contacts && $schedule && $owner_id && $type)

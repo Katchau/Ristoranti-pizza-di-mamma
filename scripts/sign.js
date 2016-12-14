@@ -26,3 +26,35 @@ function verifySignUp() {
     return true;
 
 }
+
+function verifySignIn() {
+
+    var email=$('#overlay-login #email').val();
+    var password=$('#overlay-login #password').val();
+    var validLogin=false;
+    var output = $('#output-login');
+
+    $.ajax({
+        type: "post",
+        url: "../actions/sign_in.php",
+        data: { Email : email, Password : password }
+    }).done(function(data) {
+
+        var value=JSON.parse(data);
+
+        if(value==1) {
+            $('#overlay-login form').removeAttr('onsubmit');
+            $('#overlay-login form').submit();
+        }
+
+        if(value==0)
+        {
+            output.html('Email ou password errado.');
+            validLogin=false;
+        }
+
+    });
+
+    return false;
+
+}

@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="../scripts/header.js"></script>
-    <script src="../scripts/sign_up.js"></script>
+    <script src="../scripts/sign.js"></script>
 	<script src="../scripts/script1.js"></script>
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -21,7 +21,7 @@
             $_SESSION['token-login']= generateSessionToken();
             ?>
             <div id="register-box"><h1>Iniciar Sessão</h1></div>
-            <form id="form" method="post" action="../actions/sign_in.php" onsubmit="">
+            <form id="form" method="post" onsubmit="return verifySignIn();">
                 <input id="email" type="email" name="Email" placeholder="Email" required/>
                 <input id="password" type="password" name="Password" placeholder="Password" required/>
                 <input type="hidden" name="token-logon" value="<?php echo $_SESSION['token-login']; ?>">

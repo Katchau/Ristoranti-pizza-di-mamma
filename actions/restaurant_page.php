@@ -5,10 +5,11 @@
   include_once("../actions/make_review.php");
   include_once("../actions/uploadbar.php");
   include_once("../pages/header.php");
- ?>
- <script src="../scripts/restaurant_page.js"></script>
+?>
+<script src="../scripts/restaurant_page.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
 <link rel="stylesheet" href="../css/restaurant_page.css">
+
 
 
 <div class="overlayEditRestaurant" hidden="hidden">
@@ -36,11 +37,32 @@
     </div>
 </div>
 
+<div class="overlayDeleteRestaurant" hidden="hidden">
+    <div id="overlay-deleteRestaurant">
+        <div id="deleteRestaurant"><h1>Pretende eliminar o seu restaurante?</h1>
+          <div id="confirm">
+            <?php
+            echo '<form id="form" method="post" action="change_restaurant/delete_restaurant.php?id=' . $_GET['id'] . '" onsubmit="">';
+              ?>
+              <input type="submit" value="Sim">
+            </form>
+          </div>
+          <div id="cancel">
+            <?php
+            echo '<form id="form" method="post"  action="restaurant_page.php?id=' . $_GET['id'] . '"  onsubmit="">';
+              ?>
+              <input type="submit" value="Não">
+            </form>
+          </div>
+        </div>
+    </div>
+</div>
+
 <div class="overlayChangeName" hidden="hidden">
     <div id="overlay-changeName">
         <div id="changeName"><h1>Mudar Nome</h1></div>
         <?php
-        echo '<form id="form" method="post" action="../actions/change_restaurant/change_name.php?id=' . $_GET['id'] . '" onsubmit="return changePassword();">';
+        echo '<form  method="post" action="../actions/change_restaurant/change_name.php?id=' . $_GET['id'] . '" onsubmit="return changePassword();">';
         ?>
            <input id="restaurantName" type="text" name="restaurantName" placeholder="Nome Restaurante" required/>
            <input type="submit" value="Confirmar"/>
@@ -152,8 +174,13 @@
 					//upload_bar($restaurant_id,true);
 
           if (isRestaurantOwner($_SESSION['email'])){
+            echo '<div id="buttons">';
             echo '<div id="edit">';
             echo '<input type="button" value="Editar Restaurante">';
+            echo '</div>';
+            echo '<div id="delete">';
+            echo '<input type="button" value="Apagar Restaurante">';
+            echo '</div>';
             echo '</div>';
           }
 

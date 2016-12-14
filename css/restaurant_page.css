@@ -136,12 +136,12 @@
 	color: #E3D888;
 }
 
-#main #edit{
+#main #buttons{
 	display: flex;
 	justify-content: center;
 }
 
-#main #edit input[type=button]{
+#main #buttons input[type=button]{
 	border: 3px solid #5a3a31;
 	height: 50px;
 	width: 180px;
@@ -157,7 +157,7 @@
 }
 
 
-#main #edit input[type=button]:hover{
+#main #buttons input[type=button]:hover{
     background-color: white;
     color: #5a3a31;
 }
@@ -208,6 +208,56 @@
 }
 
 #overlay-EditRestaurant input[type=button]:hover {
+    background-color: white;
+    color: #5a3a31;
+}
+
+.overlayDeleteRestaurant{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+}
+
+#overlay-deleteRestaurant{
+    width: 550px;
+    height: 500px;
+    line-height: 150px;
+    margin-top: 20%;
+    background-color: #E3D888;
+    border-radius: 5px;
+    z-index: 11;
+}
+
+#overlay-deleteRestaurant #deleteRestaurant{
+    text-align: center;
+    color: #5a3a31;
+    text-shadow: 2px 2px #e2f1af;
+    font-size: 15px;
+}
+
+#overlay-deleteRestaurant input[type=submit]{
+    border: 3px solid #5a3a31;
+    height: 50px;
+    width: 180px;
+    border-radius: 3px;
+    font-size: 25px;
+    padding-bottom: 4px;
+    margin: 0.2em;
+    margin-top: 2em;
+    display: block;
+    margin-left: 175px;
+    color: #e2f1af;
+    background-color: #5a3a31;
+    font-family: 'Lobster', sans-serif;
+}
+
+#overlay-deleteRestaurant input[type=submit]:hover {
     background-color: white;
     color: #5a3a31;
 }

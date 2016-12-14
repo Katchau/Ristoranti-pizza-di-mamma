@@ -16,7 +16,7 @@ function getRestaurants(value){
 			$("li").remove();
 			span.before('<p>');
 			for(var i = 0; i < unparsed.length; i+=2){
-				$url = "../actions/restaurant_page.php?id=" + unparsed[i+1];
+				$url = "../pages/restaurant_page.php?id=" + unparsed[i+1];
 				if((i+1) % 4 == 0 && i >= 3) span.before('<p>');
 				span.before('<li><button type="submit" formaction="'+ $url + '">'
 				+ unparsed[i] +'</li>');

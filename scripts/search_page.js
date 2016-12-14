@@ -38,7 +38,7 @@ function getRestaurants(value){
 		if(typeof unparsed === "string") return;
 		for(var i = 0; i < unparsed.length; i+=6){
 			if(checkValue(unparsed[i+2]) && (type == "" || type == checkValue(unparsed[i+5]))){
-				$url = "../actions/restaurant_page.php?id=" + unparsed[i+1];
+				$url = "../pages/restaurant_page.php?id=" + unparsed[i+1];
 			
 				span.append('<div class="restaurants" id =' + unparsed[i+1] + ' >');
 				span.append('</div>');

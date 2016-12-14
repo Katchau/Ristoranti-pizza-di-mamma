@@ -13,6 +13,7 @@ if($userId!=$_SESSION['id'])
 ?>
 
 <script src="../scripts/profile_page.js"></script>
+<script src="../scripts/user.js"></script>
 <link rel="stylesheet" href="../css/user_profile_page.css">
 <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 <link rel="stylesheet" href="../css/header.css">
@@ -32,6 +33,9 @@ if($userId!=$_SESSION['id'])
           <div id="changeUserPassword">
               <input type="button" value="Mudar Password">
           </div>
+          <div id="changeUserPhoto">
+              <input type="button" value="Mudar Imagem">
+          </div>
         </div>
     </div>
 </div>
@@ -39,7 +43,7 @@ if($userId!=$_SESSION['id'])
 <div class="overlayChangePassword" hidden="hidden">
     <div id="overlay-changePassword">
         <div id="changePassword"><h1>Mudar Password</h1></div>
-        <form id="form" method="post" action="../actions/change_password.php" onsubmit="return changePassword();">
+        <form id="form" method="post" onsubmit="return verifyRedifinePass();">
            <input id="password" type="password" name="password" placeholder="Actual Password" required/>
            <input id="new_password" type="password" name="new_password" placeholder="New Password" required/>
            <input id="new_password_confirm" type="password" name="new_password_confirm" placeholder="Repeat your new Password" required/>
@@ -64,8 +68,8 @@ if($userId!=$_SESSION['id'])
 <div class="overlayChangeEmail" hidden="hidden">
     <div id="overlay-changeEmail">
         <div id="changeEmail"><h1>Mudar E-mail</h1></div>
-        <form id="form" method="post" action="../actions/change_email.php" onsubmit="return changeEmail();">
-           <input id="novo_email" type="text" name="novo_email" placeholder="Email" required/>
+        <form id="form" method="post" onsubmit="return verifyRedifineMail();">
+           <input id="novo_email" type="email" name="novo_email" placeholder="Email" required/>
            <input type="submit" value="Confirmar"/>
            <span id="output-changeEmail"></span>
         </form>

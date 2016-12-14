@@ -32,6 +32,9 @@
           <div id="changeRestaurantType">
               <input type="button" value="Mudar Tipo">
           </div>
+          <div id="addRestaurantImage">
+              <input type="button" value="Adicionar Imagem">
+          </div>
         </div>
     </div>
 </div>
@@ -161,8 +164,8 @@
 					echo '</div>';
 				    echo '<button id="nextButton" onClick="getDesiredPicture(this.id)">+</button>';
 					echo '</div>';
-					
-					
+
+
 					if(isset($_SESSION['email'])){
 						if (isRestaurantOwner($_SESSION['email'])){
 							echo '<div id="buttons">';
@@ -245,7 +248,7 @@
 							echo '<h4>' . $comment['text'] . '</h4>';
 						}
 
-						if(isset($_SESSION['name'])){ 
+						if(isset($_SESSION['name'])){
                             echo '<div id="comment-critic">';
 							echo '<form id="form" method="post" action="../actions/reviews_comments.php?rest_id=' . $restaurant_id . '">';
 							echo '<input type="text" name="commentText" placeholder="Comment" height="100px" width="100px" required/>';

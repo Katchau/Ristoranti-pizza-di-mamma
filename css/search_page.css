@@ -19,6 +19,9 @@ body{
 #side_bar #types button{
 	display: block;
 	margin-left: 5px;
+	border-radius: 50%;
+	background-color: #E3D888;
+	border: none;
 }
 
 #side_bar #types button img{

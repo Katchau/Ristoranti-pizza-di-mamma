@@ -1,8 +1,7 @@
 <?php
   include_once("../database/actions/restaurant.php");
-  include_once("../database/actions/comment.php");
-  include_once("../actions/reviews_comments.php");
-  include_once("../actions/make_review.php");
+  include("../database/actions/review.php");
+  include("../database/actions/comment.php");
   include_once("../actions/uploadbar.php");
   include_once("../pages/header.php");
 ?>
@@ -139,15 +138,6 @@
 
 					$restaurant_id=$_GET['id'];
 
-					if(isset($_POST['score'])){ // por o echo como pop up apenas ;)
-						$review = makeReview();
-						echo '<p>' . $review . '</p>';
-					}
-
-					if(isset($_POST['commentSubmission'])){
-					$comment = make_comment();
-					}
-
 					$result = getRestaurant();
 					echo '<div id="space">';
 					echo '</div>';
@@ -214,7 +204,7 @@
 
                 if(isset($_SESSION['name'])){
                     echo '<div id="make-review">';
-                    echo '<form id="form" method="post" action="restaurant_page.php?id=' . $restaurant_id . '">';
+                    echo '<form id="form" method="post" action="../actions/make_review.php?id=' . $restaurant_id . '">';
                     echo '<div id="text-review">';
                     echo '<input type="text" name="criticReview" placeholder="Critics" height="100px" width="100px" required/>';
                     echo '</div>';
@@ -251,13 +241,14 @@
 						echo '</form>';
                         echo '</div>';
 
-						/*foreach ($comments as $comment) {
+						foreach ($comments as $comment) {
 							echo '<h4>' . $comment['text'] . '</h4>';
-						}*/
+						}
 
-						if(isset($_SESSION['name'])){ //Jonas corrigir para pop-up os comentarios
+						if(isset($_SESSION['name'])){ 
                             echo '<div id="comment-critic">';
-							echo '<form id="form" method="post" action="restaurant_page.php?id=' . $restaurant_id . '">';
+							echo '<form id="form" method="post" action="../actions/reviews_comments.php?rest_id=' . $restaurant_id . '">';
+							echo '<input type="text" name="commentText" placeholder="Comment" height="100px" width="100px" required/>';
 							echo '<button type="submit" value="'.$rev['id'].'" name="commentSubmission">Comment</button>';
 							echo '</form>';
                             echo '</div>';

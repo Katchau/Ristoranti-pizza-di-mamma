@@ -1,30 +1,32 @@
 <?php
 
     include_once('../database/actions/review.php');
-
-    function make_comment(){
+    include_once('../database/actions/comment.php');
+	session_start();
+	
       $comment=htmlspecialchars($_POST['commentText']);
       $id_user=$_SESSION['id'];
       $id_rev=htmlspecialchars($_POST['commentSubmission']);
+	  $id_restaurant = $_GET['rest_id'];
 
       if(!isset($_SESSION)){
-        return 'Must be logged in to comment.';
+        echo 'Must be logged in to comment.';
       }
 
       if($comment)
       {
-        if(strlen($comment)<20)
+        if(strlen($comment)<5)
         {
-          return 'Too short. Please give a bigger comment.';
+          echo 'Too short. Please give a bigger comment.';
         }
 
         if(insert_comment($comment,$id_user,$id_rev)==0)
         {
-          return 'Comment made.';
+          echo 'Comment made.';
         }
         else{
-          return 'Error in comment.';
+          echo 'Error in comment.';
         }
-      }
-    }
+	  }
+	header('Location: ../pages/restaurant_page.php?id=' . $id_restaurant .'');
 ?>

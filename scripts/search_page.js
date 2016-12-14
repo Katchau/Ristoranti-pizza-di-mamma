@@ -1,7 +1,7 @@
 
 var type = "";
 
-function getImage(span4, id_r, address, schedule, score){
+function getImage(span4, id_r){
 	$.ajax({
 		type: "get",
 		url: "../actions/echo_picture.php?id=" + id_r
@@ -9,9 +9,7 @@ function getImage(span4, id_r, address, schedule, score){
 		var pic = JSON.parse(data2);
 		var image_path= "../database/images/" + id_r + "/";
 		span4.append('<img src="' + image_path + pic +'" alt="restaurant_pics">');
-		span4.append('<p> Morada: ' + address + '</p>');
-		span4.append('<p> Horario: ' + schedule + '</p>');
-		span4.append('<p> Nº de Estrelas ' + score +  '</p>');
+
 	}).fail(function(){
 		console.log("No such file echo_picture.php");
 	});
@@ -44,7 +42,9 @@ function getRestaurants(value){
 			
 				span.append('<div class="restaurants" id =' + unparsed[i+1] + ' >');
 				span.append('</div>');
+				
 				var span2 = $("#down-part #restaurants #" + unparsed[i+1] );
+				
 				span2.append('<form method="get" >');
 				span2.append('</form>');
 				var span3 = $("#down-part #restaurants #" + unparsed[i+1] + " form");
@@ -52,10 +52,16 @@ function getRestaurants(value){
 				span3.append('</button>');
 				
 				var span4 = $("#down-part #restaurants #" + unparsed[i+1] + " form button");
-				span4.append('<h1>' + unparsed[i] + '</h1>');
 				var id_r = unparsed[i + 1];
 			
-				getImage(span4, id_r, unparsed[i + 3], unparsed[i + 4], unparsed[i + 2]);
+				getImage(span4, id_r);
+				
+				span2.append('<h1>' + unparsed[i] + '</h1>');
+				span2.append('<p> Morada: ' + unparsed[i + 3] + '</p>');
+				span2.append('<p> Horario: ' + unparsed[i + 4] + '</p>');
+				span2.append('<p> Nº de Estrelas ' + unparsed[i + 2] +  '</p>');
+				
+				span.append('<br>');
 			}
 		}
 		
@@ -73,6 +79,7 @@ function searchRestaurant(evento){
 	var nextValue = currValue + "" + pressedKey;
 	if(nextValue == null) nextValue = "";
 	$("#down-part #restaurants div").remove();
+	$("#down-part #restaurants br").remove();
 	getRestaurants(nextValue);
 }
 

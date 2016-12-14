@@ -22,15 +22,16 @@
 		echo '<div class="restaurants">';
 		echo '<form method="get">';
 		echo '<button type="submit" value="'. $id .'" name="id" formaction="'. $url . '">' ;
-		echo '<h1>' . $rest . '</h1>';
 		$pic = getRestaurantPicture($id);
 		$image_path = "../database/images/" . $id . "/";
 		echo '<img src="' . $image_path . $pic['name'] . '" alt="restaurant_pics">';
+		echo '</button></form>';
+				echo '<h1>' . $rest . '</h1>';
 		echo '<p> Morada: ' . $morada .  '</p>';
 		echo '<p> Horario: ' . $horario . '</p>';
 		echo '<p> Nº de Estrelas '. $score .  '</p>';
-		echo '</button></form>';
 		echo '</div>';
+		echo '<br>';
 	}
 	
 	function displaySearch($rests){

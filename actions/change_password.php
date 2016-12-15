@@ -9,28 +9,28 @@
 
 
     if(password_verify($actual_password, $correctPass)){
-      $newPassword = $_POST['new_password'];
-      $confNewPassword = $_POST['new_password_confirm'];
+      $newPassword = htmlspecialchars($_POST['new_password']);
+      $confNewPassword = htmlspecialchars($_POST['new_password_confirm']);
 
       if(strlen($newPassword)<8){
-          echo 'Password is too short. Please choose a new one.';
+          echo json_encode(1);
       }
 
       else if($newPassword == $confNewPassword){
         $newPass = password_hash($newPassword, PASSWORD_DEFAULT);
         if (changeUserPassword($_SESSION['email'],$newPass) == 1){
-          header('Location: ../pages/user_profile_page.php');
+          echo json_encode(0);
         }
         else{
-          echo 'Something went wrong trying to change your passsword';
+          echo json_encode(2);
         }
       }
       else{
-        echo 'New Passwords don´t match';
+        echo json_encode(3);
       }
     }
     else{
-      echo 'Actual password is incorrect.';
+      echo json_encode(4);
     }
 
  ?>

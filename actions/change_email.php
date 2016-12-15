@@ -8,10 +8,10 @@
 
     if (changeUserEmail($_SESSION['email'],$newEmail) == 1){
       $_SESSION['email'] = $newEmail;
-      header('Location: ../pages/user_profile_page.php');
+        echo json_encode(0);
     }
     else{
-      echo 'Something went wrong trying to change your email';
+      echo json_encode(1);
     }
 
  ?>

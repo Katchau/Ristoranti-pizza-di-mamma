@@ -83,6 +83,16 @@ function searchRestaurant(evento){
 	getRestaurants(nextValue);
 }
 
+function searchRestaurant2(evento){
+	var search = evento.data.x;
+	var currValue = search.val();
+	var nextValue = currValue;
+	if(nextValue == null) nextValue = "";
+	$("#down-part #restaurants div").remove();
+	$("#down-part #restaurants br").remove();
+	getRestaurants(nextValue);
+}
+
 function changeType(botao){
 	type = (botao.name == type) ? "" : botao.name;
 }
@@ -92,6 +102,7 @@ function loadDocument(){
 	sBar.keypress({x: sBar}, searchRestaurant);
 	$("#side_bar #checkbox_filter #rating input").click({x: sBar}, searchRestaurant);
 	$("#side_bar #types button").click({x: sBar}, searchRestaurant);
+	$("#top-bar #top-bar-elements #search #searchLocal").keypress({x: sBar}, searchRestaurant2);
 }
 
 $(document).ready(loadDocument);

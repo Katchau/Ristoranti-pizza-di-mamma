@@ -25,18 +25,6 @@ CREATE TABLE Restaurant(
         type VARCHAR
 );
 
-INSERT INTO Restaurant VALUES(NULL,'Zé do Pipo',"description",'Puorto','Rua do FCP','123456789','10h-00h',0,0,0,1,'cafe');
-INSERT INTO Restaurant VALUES(NULL,'Café Piolho',"description",'Porto','Rua do Piolho','9124192412','12h-02h',0,0,0,1,'cafe');
-INSERT INTO Restaurant VALUES(NULL,'Zé do Manuel','BOoOooOooAS','Puorto','Rua do FCP','123456789','10h-00h',0,0,0,1,'cafe');
--- so pus isto assim que é para as linhas de cima não ficarem enormes
-UPDATE Restaurant
-SET description = 'An entire fraternity of strapping Wall-Street-bound youth. Hell - this is going to be a blood bath!'
-WHERE name = 'Zé do Pipo';
-
-UPDATE Restaurant
-SET description = 'How to make a million dollars: First, get a million dollars.'
-WHERE name = 'Café Piolho';
-
 DROP TABLE IF EXISTS Review;
 CREATE TABLE Review(
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -53,11 +41,6 @@ CREATE TABLE Picture(
 		name VARCHAR,
 		id_restaurant INTEGER REFERENCES Restaurant
 );
-
-
-INSERT INTO Picture VALUES(NULL,'zedopipo.jpg',1);
-INSERT INTO Picture VALUES(NULL,'cafepiolho.jpg',1);
-INSERT INTO Picture VALUES(NULL,'cafepiolho.jpg',2);
 
 DROP TABLE IF EXISTS Replie;
 CREATE TABLE Replie(

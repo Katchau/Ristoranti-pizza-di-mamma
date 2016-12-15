@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0befb14-7e67-4aaa-a168-91e5522e51f4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/database.db" afterPath="$PROJECT_DIR$/database/database.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/database.sql" afterPath="$PROJECT_DIR$/database/database.sql" />
     </list>
     <ignored path="Ristoranti-pizza-di-mamma.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,7 +31,18 @@
     <favorites_list name="Ristoranti-pizza-di-mamma" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="database.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/database.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="774">
+              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -58,7 +70,6 @@
         <option value="$PROJECT_DIR$/actions/create_restaurant1.php" />
         <option value="$PROJECT_DIR$/scripts/sign_up.js" />
         <option value="$PROJECT_DIR$/scripts/date.js" />
-        <option value="$PROJECT_DIR$/database/database.sql" />
         <option value="$PROJECT_DIR$/database/actions/restaurant.php" />
         <option value="$PROJECT_DIR$/css/user_profile_page.css" />
         <option value="$PROJECT_DIR$/pages/footer.php" />
@@ -89,6 +100,7 @@
         <option value="$PROJECT_DIR$/database/actions/review.php" />
         <option value="$PROJECT_DIR$/pages/restaurant_page.php" />
         <option value="$PROJECT_DIR$/actions/make_review.php" />
+        <option value="$PROJECT_DIR$/database/database.sql" />
       </list>
     </option>
   </component>
@@ -130,7 +142,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -150,8 +161,23 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Ristoranti-pizza-di-mamma" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Ristoranti-pizza-di-mamma" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -272,17 +298,18 @@
       <workItem from="1481763977587" duration="1236000" />
       <workItem from="1481771926034" duration="7000" />
       <workItem from="1481771965281" duration="4081000" />
+      <workItem from="1481777014633" duration="90000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168322000" />
+    <option name="totallyTimeSpent" value="168412000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="961" y="52" width="958" height="1027" extended-state="4" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22129436" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21816283" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31906217" sideWeight="0.50417536" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -591,7 +618,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="409">
           <caret line="796" column="26" selection-start-line="796" selection-start-column="26" selection-end-line="796" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -599,32 +625,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="708">
           <caret line="83" column="30" selection-start-line="83" selection-start-column="30" selection-end-line="83" selection-end-column="30" />
-          <folding>
-            <marker date="1481775938583" expanded="true" signature="131:155" ph="SELECT * FRO... Restaurant" />
-            <marker date="1481775938583" expanded="true" signature="349:388" ph="SELECT * FRO... Restaurant" />
-            <marker date="1481775938583" expanded="true" signature="593:632" ph="SELECT * FRO... Restaurant" />
-            <marker date="1481775938583" expanded="true" signature="844:891" ph="SELECT * FRO... Picture" />
-            <marker date="1481775938583" expanded="true" signature="1096:1143" ph="SELECT * FRO... Picture" />
-            <marker date="1481775938583" expanded="true" signature="1425:1482" ph="INSERT INTO Restaurant... " />
-            <marker date="1481775938583" expanded="true" signature="1719:1765" ph="SELECT owner... Restaurant" />
-            <marker date="1481775938583" expanded="true" signature="1943:1978" ph="SELECT id FR... User" />
-            <marker date="1481775938583" expanded="true" signature="2220:2263" ph="UPDATE resta... " />
-            <marker date="1481775938583" expanded="true" signature="2430:2480" ph="UPDATE resta... " />
-            <marker date="1481775938583" expanded="true" signature="2652:2698" ph="UPDATE resta... " />
-            <marker date="1481775938583" expanded="true" signature="2787:2830" ph="UPDATE resta... " />
-            <marker date="1481775938583" expanded="true" signature="3036:3083" ph="UPDATE resta... " />
-            <marker date="1481775938583" expanded="true" signature="3246:3293" ph="UPDATE resta... " />
-            <marker date="1481775938583" expanded="true" signature="3450:3493" ph="UPDATE resta... " />
-            <marker date="1481775938583" expanded="true" signature="3634:3669" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/database.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-36">
-          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -632,20 +632,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-167">
           <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
-          <folding>
-            <marker date="1481755957636" expanded="true" signature="103:121" ph="SELECT * FRO... User" />
-            <marker date="1481755957636" expanded="true" signature="315:359" ph="INSERT INTO User... " />
-            <marker date="1481755957636" expanded="true" signature="550:591" ph="SELECT passw... User" />
-            <marker date="1481755957636" expanded="true" signature="748:788" ph="SELECT pictu... User" />
-            <marker date="1481755957636" expanded="true" signature="946:980" ph="SELECT * FRO... User" />
-            <marker date="1481755957636" expanded="true" signature="1119:1150" ph="SELECT * FRO... User" />
-            <marker date="1481755957636" expanded="true" signature="1287:1330" ph="SELECT * FRO... Restaurant" />
-            <marker date="1481755957636" expanded="true" signature="1508:1552" ph="UPDATE user " />
-            <marker date="1481755957636" expanded="true" signature="1708:1753" ph="UPDATE user " />
-            <marker date="1481755957636" expanded="true" signature="1839:1883" ph="UPDATE user " />
-            <marker date="1481755957636" expanded="true" signature="2056:2097" ph="UPDATE user " />
-            <marker date="1481755957636" expanded="true" signature="2240:2284" ph="UPDATE user " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -653,12 +639,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="701">
           <caret line="48" column="20" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
-          <folding>
-            <marker date="1481775197176" expanded="true" signature="103:149" ph="SELECT * FRO... Review" />
-            <marker date="1481775197176" expanded="true" signature="355:401" ph="SELECT * FRO... Review" />
-            <marker date="1481775197176" expanded="true" signature="661:702" ph="INSERT INTO Review... " />
-            <marker date="1481775197176" expanded="true" signature="925:986" ph="SELECT * FRO... User" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -674,12 +654,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="472">
           <caret line="219" column="34" selection-start-line="219" selection-start-column="34" selection-end-line="219" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/database.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="774">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
   </component>
   <component name="webServersAuthStorage">
-    <data>AAAAsGZVXttEhAThP9k4atrMUliVIkjYoqTLhMoY1ASPbBjwm6cNf/FIh1JWLKIDk95oeAiEB+KC7OXncCot7nZFrIQnx2EBs2zaQy1vMwVNIOd/axhrdcv8Ma/nHNctdjFgds9RaAKtUdlNBYaZKByif7/Tu5jvHrxbWPoZr4tOgSsqOqdi3yMpku1d5TFlo9im0ul69HeA4LRtwamaNjn8fGEPk1i3Q3brKsItS1/xAHTYK73Hs6uy52hLDqJjmnNbQQ==</data>
+    <data>AAAAsDOcx5SXMXuMVPp77obX0ak/HZpZownXjyMP737i/9FU2r0MaP49I76hmbpo9mBc51RtJynXVr0hljG8q6ROf8gmADRnhK9UTaS9nYnhntlL35c7WwtSNbF/luKhbrQWghGtkjJECYMEa0nV4uJVPdHWsEK4LJfODiz/61kwScUt7i4iafGA1RnLoxV+BFHgp+RIeo2nWBfypeVHgtB53ECNrCM8gQeYwYthtvKGfrOu07CcJ1RbZsmgyZ0G1OIMzA==</data>
   </component>
 </project>

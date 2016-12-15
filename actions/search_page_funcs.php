@@ -23,8 +23,15 @@
 		echo '<form method="get">';
 		echo '<button type="submit" value="'. $id .'" name="id" formaction="'. $url . '">' ;
 		$pic = getRestaurantPicture($id);
-		$image_path = "../database/images/" . $id . "/";
-		echo '<img src="' . $image_path . $pic['name'] . '" alt="restaurant_pics">';
+		if($pic==null)
+		{
+			$image_path = "../res/defaultRestaurantPhoto.png";
+			echo '<img src="' . $image_path . '" alt="restaurant_pics">';
+		}
+		else {
+			$image_path = "../database/images/" . $id . "/";
+			echo '<img src="' . $image_path . $pic['name'] . '" alt="restaurant_pics">';
+		}
 		echo '</button></form>';
 				echo '<h1>' . $rest . '</h1>';
 		echo '<p> Morada: ' . $morada .  '</p>';

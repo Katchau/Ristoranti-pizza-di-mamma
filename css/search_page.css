@@ -1,7 +1,7 @@
-body{
-	/* display: inline; */
+#middle {
+	display: flex;
+	justify-content: space-between;
 }
-
 
 #side_bar{
 	margin-right: 100px;
@@ -31,6 +31,8 @@ body{
 
 #down_part{
 	width: 100px;
+	display: flex;
+	justify-content: center;
 }
 
 #down-part #restaurants{

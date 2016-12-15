@@ -151,12 +151,18 @@
 					echo '<div id="images-space">';
 				    echo '<button id="b4Button" onClick="getDesiredPicture(this.id)">-</button>';
 					echo '<div id="images">';
-					foreach($pictures as $pic){
-						echo '<div id="img_' . $n_pic . '">';
-							echo '<img src="' . $image_path . $pic['name'] . '" alt="restaurant_pics">';
-						echo '</div>';
-						$n_pic ++;
-					}
+
+                    if(sizeof($pictures)==0){
+                        echo '<img src="../res/defaultRestaurantPhoto.png" alt="restaurant_pics">';
+                    }
+                    else {
+                        foreach($pictures as $pic){
+                            echo '<div id="img_' . $n_pic . '">';
+                            echo '<img src="' . $image_path . $pic['name'] . '" alt="restaurant_pics">';
+                            echo '</div>';
+                            $n_pic ++;
+                        }
+                    }
 
 					echo '</div>';
 				    echo '<button id="nextButton" onClick="getDesiredPicture(this.id)">+</button>';

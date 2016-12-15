@@ -12,6 +12,9 @@ include_once('../database/actions/restaurant.php');
 <link rel="stylesheet" href="../css/header.css">
 
 <body>
+<div id="middle">
+
+</div>
 	<div id="side_bar">
 		<div id="checkbox_filter">
 			<p> Filtros de Estrela </p>
@@ -27,28 +30,28 @@ include_once('../database/actions/restaurant.php');
 			<p> Filtros de Tipo </p>
 			<form action="">
 				<button type="button" name="cafe" onclick="changeType(cafe)">
-					<?php echo '<img src="'. getRestaurantFilters("cafe") . '">'; ?> 
+					<?php echo '<img src="'. getRestaurantFilters("cafe") . '">'; ?>
 				</button>
 				<br>
 				<button type="button" name="pastelaria" onclick="changeType(pastelaria)">
-					<?php echo '<img src="'. getRestaurantFilters("pastelaria") . '">'; ?> 
+					<?php echo '<img src="'. getRestaurantFilters("pastelaria") . '">'; ?>
 				</button>
 				<br>
 				<button type="button" name="drinks" onclick="changeType(drinks)">
-					<?php echo '<img src="'. getRestaurantFilters("drinks") . '">'; ?> 
+					<?php echo '<img src="'. getRestaurantFilters("drinks") . '">'; ?>
 				</button>
 				<br>
 				<button type="button" name="fastfood" onclick="changeType(fastfood)">
-					<?php echo '<img src="'. getRestaurantFilters("fastfood") . '">'; ?> 
+					<?php echo '<img src="'. getRestaurantFilters("fastfood") . '">'; ?>
 				</button>
 				<br>
 				<button type="button" name="gourmet" onclick="changeType(gourmet)">
-					<?php echo '<img src="'. getRestaurantFilters("gourmet") . '">'; ?> 
+					<?php echo '<img src="'. getRestaurantFilters("gourmet") . '">'; ?>
 				</button>
 			</form>
  		</div>
 	</div>
-	
+
 	<div id="down-part">
 		<div id="restaurants">
 			<?php

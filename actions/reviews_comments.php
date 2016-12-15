@@ -1,7 +1,7 @@
 <?php
 
-    include_once('../database/actions/review.php');
-    include_once('../database/actions/comment.php');
+    include_once('../database/review.php');
+    include_once('../database/comment.php');
 	session_start();
 	
       $comment=htmlspecialchars($_POST['commentText']);

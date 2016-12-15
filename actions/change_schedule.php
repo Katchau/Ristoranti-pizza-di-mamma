@@ -1,6 +1,6 @@
 <?php
-include_once('../../database/actions/connection.php');
-include_once('../../database/actions/restaurant.php');
+include_once('../database/connection.php');
+include_once('../database/restaurant.php');
 
   $id = $_GET['id'];
   $schedule = htmlspecialchars(trim($_POST['restaurantOpen']));
@@ -8,7 +8,7 @@ include_once('../../database/actions/restaurant.php');
   $schedule .= htmlspecialchars(($_POST['restaurantClose']));
 
   if (changeRestaurantSchedule($schedule, $id) == 1){
-    header('Location: ../../pages/restaurant_page.php?id=' . $_GET['id'] . '');
+    header('Location: ../pages/restaurant_page.php?id=' . $_GET['id'] . '');
   }
   else{
     echo'Error changing the schedule of the restaurant';

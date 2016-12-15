@@ -15,7 +15,7 @@
 		return $insertReview->errorCode();
 	}
 
-    $uploaddir = '../images/';
+    $uploaddir = 'images/';
 	if(isset($_POST['rest_id']))
 		$uploaddir .= $_POST['rest_id'] . '/';
 	else 
@@ -39,5 +39,5 @@
 	
 	echo "</p>";
 	
-	header('Location: ../../pages/principal_page.php?' . '');
+	header('Location: ../pages/principal_page.php?' . '');
 ?>

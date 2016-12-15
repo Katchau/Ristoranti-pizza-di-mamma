@@ -2,7 +2,7 @@
 
 session_start();
 
-include_once('../database/actions/restaurant.php');
+include_once('../database/restaurant.php');
 
 $restaurantName=htmlspecialchars(trim($_POST['restaurant-name']));
 $description=htmlspecialchars($_POST['restaurant-description']);

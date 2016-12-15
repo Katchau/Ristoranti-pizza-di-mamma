@@ -1,6 +1,6 @@
 <?php
 
-	include_once('../database/actions/review.php');
+	include_once('../database/review.php');
 	session_start();
 	
 	$review_critic=htmlspecialchars($_POST['criticReview']);

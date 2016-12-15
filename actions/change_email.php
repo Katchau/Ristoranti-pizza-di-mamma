@@ -1,8 +1,7 @@
 <?php
     session_start();
 
-    include_once('../database/actions/connection.php');
-    include_once('../database/actions/user.php');
+    include_once('../database/user.php');
 
     $newEmail=htmlspecialchars($_POST['novo_email']);
 

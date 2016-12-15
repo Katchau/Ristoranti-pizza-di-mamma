@@ -17,7 +17,7 @@
     <div class="overlayLogin" hidden="hidden">
         <div id="overlay-login">
             <?php
-            include_once('../database/actions/user.php');
+            include_once('../database/user.php');
             $_SESSION['token-login']= generateSessionToken();
             ?>
             <div id="register-box"><h1>Iniciar Sessão</h1></div>
@@ -33,7 +33,7 @@
     <div class="overlayLogon" hidden="hidden">
         <div id="overlay-logon">
             <?php
-            include_once('../database/actions/user.php');
+            include_once('../database/user.php');
             $_SESSION['token-login']= generateSessionToken();
             ?>
             <div id="register-box"><h1>Registar</h1></div>

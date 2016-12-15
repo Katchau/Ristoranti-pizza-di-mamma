@@ -1,7 +1,7 @@
 
 <?php
-include_once('../database/actions/user.php');
-include_once('../database/actions/restaurant.php');
+include_once('../database/user.php');
+include_once('../database/restaurant.php');
 
 function get_profile_pic(){
 	$picture = getPicture($_SESSION['email']);

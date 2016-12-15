@@ -1,7 +1,7 @@
 <?php
-  include_once("../database/actions/restaurant.php");
-  include_once("../database/actions/review.php");
-  include_once("../database/actions/comment.php");
+  include_once("../database/restaurant.php");
+  include_once("../database/review.php");
+  include_once("../database/comment.php");
   include_once("../actions/uploadbar.php");
   include_once("../pages/header.php");
 ?>
@@ -53,7 +53,7 @@
         <div id="deleteRestaurant"><h1>Pretende eliminar o seu restaurante?</h1>
           <div id="confirm">
             <?php
-            echo '<form id="form" method="post" action="../actions/change_restaurant/delete_restaurant.php?id=' . $_GET['id'] . '" onsubmit="">';
+            echo '<form id="form" method="post" action="../actions/delete_restaurant.php?id=' . $_GET['id'] . '" onsubmit="">';
               ?>
               <input type="submit" value="Sim">
             </form>
@@ -73,7 +73,7 @@
     <div id="overlay-changeName">
         <div id="changeName"><h1>Mudar Nome</h1></div>
         <?php
-        echo '<form  method="post" action="../actions/change_restaurant/change_name.php?id=' . $_GET['id'] . '" onsubmit="return changePassword();">';
+        echo '<form  method="post" action="../actions/change_name_restaurant.php?id=' . $_GET['id'] . '" onsubmit="return changePassword();">';
         ?>
            <input id="restaurantName" type="text" name="restaurantName" placeholder="Nome Restaurante" required/>
            <input type="submit" value="Confirmar"/>
@@ -85,7 +85,7 @@
     <div id="overlay-changeDescription">
         <div id="changeDescription"><h1>Mudar Descrição</h1></div>
         <?php
-        echo '<form id="form" method="post" action="../actions/change_restaurant/change_description.php?id=' . $_GET['id'] . '" onsubmit="return changePassword();">';
+        echo '<form id="form" method="post" action="../actions/change_description.php?id=' . $_GET['id'] . '" onsubmit="return changePassword();">';
         ?>
            <input id="restaurantDescritpion" type="text" name="restaurantDescritpion" placeholder="Descrição" required/>
            <input type="submit" value="Confirmar"/>
@@ -97,7 +97,7 @@
     <div id="overlay-changeAdress">
         <div id="changeAdress"><h1>Mudar Morada</h1></div>
         <?php
-        echo '<form id="form" method="post" action="../actions/change_restaurant/change_address.php?id=' . $_GET['id'] . '" onsubmit="return changePassword();">';
+        echo '<form id="form" method="post" action="../actions/change_address.php?id=' . $_GET['id'] . '" onsubmit="return changePassword();">';
         ?>
            <input id="restaurantAdress" type="text" name="restaurantAdress" placeholder="Morada" required/>
            <input id="restaurantCity" type="text" name="restaurantCity" placeholder="Cidade" required/>
@@ -110,7 +110,7 @@
     <div id="overlay-changeNumber">
         <div id="changeNumber"><h1>Mudar Contacto</h1></div>
         <?php
-        echo '<form id="form" method="post" action="../actions/change_restaurant/change_number.php?id=' . $_GET['id'] . '" onsubmit="return changePassword();">';
+        echo '<form id="form" method="post" action="../actions/change_number.php?id=' . $_GET['id'] . '" onsubmit="return changePassword();">';
         ?>
            <input id="restaurantNumber" type="text" name="restaurantNumber" placeholder="Contacto" required/>
            <input type="submit" value="Confirmar"/>
@@ -122,7 +122,7 @@
     <div id="overlay-changeSchedule">
         <div id="changeSchedule"><h1>Mudar Horário</h1></div>
         <?php
-        echo '<form id="form" method="post" action="../actions/change_restaurant/change_schedule.php?id=' . $_GET['id'] . '" onsubmit="return changePassword();">';
+        echo '<form id="form" method="post" action="../actions/change_schedule.php?id=' . $_GET['id'] . '" onsubmit="return changePassword();">';
         ?>
            <input id="restaurantOpen" type="text" name="restaurantOpen" placeholder="Abertura" required/>
            <input id="restaurantClose" type="text" name="restaurantClose" placeholder="Fecho" required/>
@@ -135,7 +135,7 @@
     <div id="overlay-changeType">
         <div id="changeType"><h1>Mudar Tipo</h1></div>
         <?php
-        echo '<form id="form" method="post" action="../actions/change_restaurant/change_type.php?id=' . $_GET['id'] . '" onsubmit="return changePassword();">';
+        echo '<form id="form" method="post" action="../actions/change_type.php?id=' . $_GET['id'] . '" onsubmit="return changePassword();">';
         ?>
            <label>
             <select name="restaurant-type">
@@ -270,7 +270,7 @@
                         echo '</div>';
 
 						echo '<button id="'. $rev['id'] .'" onClick="hideComments(this.id)">' . "Ver comentários(" . sizeof($comments) . ")" . '</button>';
-						echo '<div id="rev'. $rev['id'] .'"class="comments">';
+						echo '<div id="rev'. $rev['id'] .'"class="hidden">';
 						foreach ($comments as $comment) {
 
                             $commentUser=getUserInfoById($comment['id_user']);

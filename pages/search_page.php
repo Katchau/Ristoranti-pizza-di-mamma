@@ -2,7 +2,7 @@
 include_once('header.php');
 include_once('../pages/header.php');
 include_once('../actions/search_page_funcs.php');
-include_once('../database/actions/restaurant.php');
+include_once('../database/restaurant.php');
 ?>
 
 <script src="../scripts/profile_page.js"></script>

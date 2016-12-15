@@ -1,6 +1,6 @@
 <?php
 
-	include("../database/actions/restaurant.php");
+	include("../database/restaurant.php");
 	include("similarRestaurants.php");
 	
 	$curName = htmlspecialchars($_GET['nameR']);

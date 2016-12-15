@@ -1,6 +1,5 @@
 <?php
-  include_once('../database/actions/connection.php');
-  include_once('../database/actions/user.php');
+  include_once('../database/user.php');
 
 if($_SESSION['token-login']!=$_POST['token-login'])
 {

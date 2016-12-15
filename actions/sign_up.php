@@ -4,7 +4,7 @@ include_once('../database/user.php');
 
 if($_SESSION['token-login']!=$_POST['token-login'])
 {
-    echo "ERROR PAGE.";
+    echo json_encode(1);
 }
 
 $firstName=htmlspecialchars(trim($_POST['firstName']));

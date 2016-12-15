@@ -8,6 +8,11 @@ function get_profile_pic(){
 	return $picture;
 }
 
+function getUserPicture($email){
+    $picture = getPicture($email);
+    return $picture;
+}
+
 function display_restaurants(){
 	$restaurants = getOwnedRestaurants($_SESSION['id']);
 	$ref = "../pages/restaurant_page.php?id=";

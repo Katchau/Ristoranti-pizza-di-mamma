@@ -3,7 +3,7 @@
 include_once('../database/connection.php');
 include_once('../database/restaurant.php');
 
-  $id = $_GET['id'];
+  $id = htmlspecialchars($_GET['id']);
   $name = htmlspecialchars(trim($_POST['restaurantName']));
 
   if (changeRestaurantName($name, $id) == 1){

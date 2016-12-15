@@ -67,4 +67,3 @@ include_once('../database/restaurant.php');
 			?>
 		</div>
 	</div>
-</body>

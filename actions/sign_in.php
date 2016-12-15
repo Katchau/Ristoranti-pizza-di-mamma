@@ -3,7 +3,7 @@
 
 if($_SESSION['token-login']!=$_POST['token-login'])
 {
-    echo "ERROR PAGE.";
+    echo json_encode(1);
 }
 
   $email=htmlspecialchars(trim($_POST['Email']));

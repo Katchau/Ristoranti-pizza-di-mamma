@@ -253,7 +253,7 @@
                         echo '<div id="review">';
 
                         echo '<div id="user-review">';
-                        $pic = get_profile_pic();
+                        $pic = getUserPicture($reviewerInfo['email']);
                         echo '<div id="img-reviewer">';
                         if($pic == null || !$pic)
                             echo '<img src="../res/defaultProfilePicture.png">';

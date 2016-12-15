@@ -33,9 +33,6 @@ if($userId!=$_SESSION['id'])
           <div id="changeUserPassword">
               <input type="button" value="Mudar Password">
           </div>
-          <div id="changeUserPhoto">
-              <input type="button" value="Mudar Imagem">
-          </div>
         </div>
     </div>
 </div>

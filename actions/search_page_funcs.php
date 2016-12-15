@@ -17,7 +17,7 @@
 		return "../res/" . $type . ".png"; //tem de ser png para manter transparencia (eu gosto de transparencia)
 	}
 	
-	function displayImage($rest,$id,$morada,$horario,$score){
+	function displayImage($rest,$id,$morada,$horario,$score,$type){
 		$url = "../pages/restaurant_page.php?id=" . $id;
 		echo '<div class="restaurants">';
 		echo '<form method="get">';
@@ -36,7 +36,8 @@
 				echo '<h1>' . $rest . '</h1>';
 		echo '<p> Morada: ' . $morada .  '</p>';
 		echo '<p> Horario: ' . $horario . '</p>';
-		echo '<p> Nº de Estrelas '. $score .  '</p>';
+		echo '<p> Cotação: '. $score .  '</p>';
+		echo '<p> Tipo: ' . $type . '</p>';
 		echo '</div>';
 		echo '<br>';
 	}
@@ -44,7 +45,7 @@
 	function displaySearch($rests){
 		$size = sizeof($rests);
 		for($i = 0; $i < $size; $i+=6 ){
-			displayImage($rests[$i],$rests[$i+1],$rests[$i+3],$rests[$i+4],$rests[$i+2]);
+			displayImage($rests[$i],$rests[$i+1],$rests[$i+3],$rests[$i+4],$rests[$i+2],$rests[$i+5]);
 		}
 	}
 	
@@ -52,7 +53,7 @@
 		$rests = getRestaurants();
 		foreach($rests as $rest){
 			if($local == null || $local == "" || $local == $rest['city'] || strtolower($rest['city']) == $local){
-				displayImage($rest['name'],$rest['id'],$rest['address'],$rest['schedule'],$rest['score']);
+				displayImage($rest['name'],$rest['id'],$rest['address'],$rest['schedule'],$rest['score'],$rest['type']);
 			}
 		}
 	}

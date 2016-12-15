@@ -5,7 +5,7 @@
 	
 	$review_critic=htmlspecialchars($_POST['criticReview']);
 	$score=htmlspecialchars($_POST['score']);
-	$id_restaurant=$_GET['id'];
+	$id_restaurant=htmlspecialchars($_GET['id']);
 	$id_user=$_SESSION['id'];
 
 	if($review_critic && $score)

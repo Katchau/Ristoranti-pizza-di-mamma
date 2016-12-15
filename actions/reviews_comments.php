@@ -7,7 +7,7 @@
       $comment=htmlspecialchars($_POST['commentText']);
       $id_user=$_SESSION['id'];
       $id_rev=htmlspecialchars($_POST['commentSubmission']);
-	  $id_restaurant = $_GET['rest_id'];
+	  $id_restaurant = htmlspecialchars($_GET['rest_id']);
 
       if(!isset($_SESSION)){
         echo 'Must be logged in to comment.';

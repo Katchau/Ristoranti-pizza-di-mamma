@@ -24,7 +24,7 @@
             <form id="form" method="post" onsubmit="return verifySignIn();">
                 <input id="email" type="email" name="Email" placeholder="Email" required/>
                 <input id="password" type="password" name="Password" placeholder="Password" required/>
-                <input type="hidden" name="token-logon" value="<?php echo $_SESSION['token-login']; ?>">
+                <input type="hidden" name="token-login" value="<?php echo $_SESSION['token-login']; ?>">
                 <input type="submit" value="Iniciar sessão"/>
                 <span id="output-login"></span>
             </form>
@@ -44,7 +44,7 @@
                 <input id="password-logon" type="password" name="password" placeholder="Password" required/>
                 <input id="passwordConfirm-logon" type="password" name="passwordConfirm" placeholder="Repeat your Password" required/>
                 <input id="email-logon" type="email" name="email" placeholder="Email" required/>
-                <input type="hidden" name="token-logon" value="<?php echo $_SESSION['token-login']; ?>">
+                <input type="hidden" name="token-login" value="<?php echo $_SESSION['token-login']; ?>">
                 <input type="submit" value="Registar"/>
                 <span id="output-logon"></span>
             </form>
@@ -72,9 +72,7 @@
                         //echo '<a href="../pages/user_profile_page.php?id="'. $_SESSION['id'] .'">'. $_SESSION['name'] .'</a>';
 						echo '<form method="get">';
 						echo '<button type="submit" value="' . $_SESSION['id'] . '" name="id" formaction="../pages/user_profile_page.php">';
-						$pic = get_profile_pic();
-						if($pic == null || !$pic) echo $_SESSION['name'] . '</button>';
-						else echo $_SESSION['name'] . '<img src="' . '../database/images/users/' . $_SESSION['id'] . '/' . $pic . '"> </button>';
+                        echo $_SESSION['name'] . '</button>';
 						echo '</form>';
                         echo '</div>';
                     }

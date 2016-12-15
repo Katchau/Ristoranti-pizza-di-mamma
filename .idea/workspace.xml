@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0befb14-7e67-4aaa-a168-91e5522e51f4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/database.db" afterPath="$PROJECT_DIR$/database/database.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/actions/make_review.php" afterPath="$PROJECT_DIR$/actions/make_review.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/restaurant_page.css" afterPath="$PROJECT_DIR$/css/restaurant_page.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/actions/review.php" afterPath="$PROJECT_DIR$/database/actions/review.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/restaurant_page.php" afterPath="$PROJECT_DIR$/pages/restaurant_page.php" />
     </list>
     <ignored path="Ristoranti-pizza-di-mamma.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -276,12 +271,12 @@
       <workItem from="1481758824845" duration="2868000" />
       <workItem from="1481763977587" duration="1236000" />
       <workItem from="1481771926034" duration="7000" />
-      <workItem from="1481771965281" duration="3824000" />
+      <workItem from="1481771965281" duration="4081000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168065000" />
+    <option name="totallyTimeSpent" value="168322000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="961" y="52" width="958" height="1027" extended-state="4" />
@@ -605,22 +600,22 @@
         <state relative-caret-position="708">
           <caret line="83" column="30" selection-start-line="83" selection-start-column="30" selection-end-line="83" selection-end-column="30" />
           <folding>
-            <marker date="1481755957636" expanded="true" signature="131:155" ph="SELECT * FRO... Restaurant" />
-            <marker date="1481755957636" expanded="true" signature="349:388" ph="SELECT * FRO... Restaurant" />
-            <marker date="1481755957636" expanded="true" signature="593:632" ph="SELECT * FRO... Restaurant" />
-            <marker date="1481755957636" expanded="true" signature="844:891" ph="SELECT * FRO... Picture" />
-            <marker date="1481755957636" expanded="true" signature="1096:1143" ph="SELECT * FRO... Picture" />
-            <marker date="1481755957636" expanded="true" signature="1425:1482" ph="INSERT INTO Restaurant... " />
-            <marker date="1481755957636" expanded="true" signature="1719:1765" ph="SELECT owner... Restaurant" />
-            <marker date="1481755957636" expanded="true" signature="1943:1978" ph="SELECT id FR... User" />
-            <marker date="1481755957636" expanded="true" signature="2220:2263" ph="UPDATE resta... " />
-            <marker date="1481755957636" expanded="true" signature="2430:2480" ph="UPDATE resta... " />
-            <marker date="1481755957636" expanded="true" signature="2652:2698" ph="UPDATE resta... " />
-            <marker date="1481755957636" expanded="true" signature="2787:2830" ph="UPDATE resta... " />
-            <marker date="1481755957636" expanded="true" signature="3036:3083" ph="UPDATE resta... " />
-            <marker date="1481755957636" expanded="true" signature="3246:3293" ph="UPDATE resta... " />
-            <marker date="1481755957636" expanded="true" signature="3450:3493" ph="UPDATE resta... " />
-            <marker date="1481755957636" expanded="true" signature="3634:3669" ph="DELETE FROM " />
+            <marker date="1481775938583" expanded="true" signature="131:155" ph="SELECT * FRO... Restaurant" />
+            <marker date="1481775938583" expanded="true" signature="349:388" ph="SELECT * FRO... Restaurant" />
+            <marker date="1481775938583" expanded="true" signature="593:632" ph="SELECT * FRO... Restaurant" />
+            <marker date="1481775938583" expanded="true" signature="844:891" ph="SELECT * FRO... Picture" />
+            <marker date="1481775938583" expanded="true" signature="1096:1143" ph="SELECT * FRO... Picture" />
+            <marker date="1481775938583" expanded="true" signature="1425:1482" ph="INSERT INTO Restaurant... " />
+            <marker date="1481775938583" expanded="true" signature="1719:1765" ph="SELECT owner... Restaurant" />
+            <marker date="1481775938583" expanded="true" signature="1943:1978" ph="SELECT id FR... User" />
+            <marker date="1481775938583" expanded="true" signature="2220:2263" ph="UPDATE resta... " />
+            <marker date="1481775938583" expanded="true" signature="2430:2480" ph="UPDATE resta... " />
+            <marker date="1481775938583" expanded="true" signature="2652:2698" ph="UPDATE resta... " />
+            <marker date="1481775938583" expanded="true" signature="2787:2830" ph="UPDATE resta... " />
+            <marker date="1481775938583" expanded="true" signature="3036:3083" ph="UPDATE resta... " />
+            <marker date="1481775938583" expanded="true" signature="3246:3293" ph="UPDATE resta... " />
+            <marker date="1481775938583" expanded="true" signature="3450:3493" ph="UPDATE resta... " />
+            <marker date="1481775938583" expanded="true" signature="3634:3669" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>

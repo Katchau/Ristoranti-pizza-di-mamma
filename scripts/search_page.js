@@ -37,7 +37,8 @@ function getRestaurants(value){
 		var span = $("body #down-part #restaurants");
 		if(typeof unparsed === "string") return;
 		for(var i = 0; i < unparsed.length; i+=6){
-			if(checkValue(unparsed[i+2]) && (type == "" || type == checkValue(unparsed[i+5]))){
+			console.log(type);
+			if(checkValue(unparsed[i+2]) && (type == "" || type == unparsed[i+5])){
 				$url = "../pages/restaurant_page.php?id=" + unparsed[i+1];
 			
 				span.append('<div class="restaurants" id =' + unparsed[i+1] + ' >');
@@ -84,7 +85,7 @@ function searchRestaurant(evento){
 }
 
 function changeType(botao){
-	type = (botao == type) ? "" : botao;
+	type = (botao.name == type) ? "" : botao.name;
 }
 
 function loadDocument(){

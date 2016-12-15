@@ -8,7 +8,6 @@ function verifySignUp() {
     var Email=$('#overlay-logon #email-logon').val();
     var output = $('#overlay-logon #output-logon');
 
-    window.alert(FirstName+LastName+Birthday+Password+PasswordConfirm+Email);
 
     if (FirstName.length==0 || LastName.length==0) {
         output.html('Primeiro e último nome necessários.');

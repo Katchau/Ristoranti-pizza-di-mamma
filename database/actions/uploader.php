@@ -38,4 +38,6 @@
 	}
 	
 	echo "</p>";
+	
+	header('Location: ../../pages/principal_page.php?' . '');
 ?>

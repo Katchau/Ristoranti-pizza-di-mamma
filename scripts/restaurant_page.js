@@ -87,6 +87,17 @@ function overlayPage(){
       }
   });
 
+  $("#addRestaurantImage").click(showOverlayAddImage);
+
+  $('.overlayAddRestaurantPic').hide();
+
+  $('.overlayAddRestaurantPic').click(function (event) {
+      if (event.target === event.delegateTarget) {
+          $('.overlayAddRestaurantPic').hide();
+          event.stopPropagation();
+      }
+  });
+
 }
 
 function showOverlayChangeName(){
@@ -117,6 +128,11 @@ function showOverlayChangeType(){
 function showOverlayChangeSchedule(){
     $('.overlayEditRestaurant').hide();
     $('.overlayChangeSchedule').show();
+}
+
+function showOverlayAddImage(){
+    $('.overlayEditRestaurant').hide();
+    $('.overlayAddRestaurantPic').show();
 }
 
 function showOverlayDeleteRestaurant(){

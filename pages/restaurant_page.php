@@ -39,6 +39,15 @@
     </div>
 </div>
 
+<div class="overlayAddRestaurantPic" hidden="hidden">
+    <div id="overlay-addRestaurantPic">
+        <div id="addRestaurantPic">Adicionar Imagens ao Restaurante</div>
+        <?php
+		upload_bar($_GET['id'], true);
+		?>
+    </div>
+</div>
+
 <div class="overlayDeleteRestaurant" hidden="hidden">
     <div id="overlay-deleteRestaurant">
         <div id="deleteRestaurant"><h1>Pretende eliminar o seu restaurante?</h1>

@@ -21,7 +21,7 @@ function display_restaurants(){
 
         if($pic==null)
         {
-            echo '<img src="../res/defaultProfilePicture.png" alt="restaurant_pics">';
+            echo '<img src="../res/defaultRestaurantPhoto.png" alt="restaurant_pics">';
         }
         else {
             $image_path = "../database/images/" . $rest['id'] . "/";

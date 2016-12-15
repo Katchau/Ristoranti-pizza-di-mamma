@@ -58,7 +58,7 @@ include_once('connection.php');
 			return $result;
 		}
 
-		function insertRestaurant($name,$description,$address,$city,$contacts,$schedule,$owner_id,$type){
+		function insertRestaurant($name,$description,$city,$address,$contacts,$schedule,$owner_id,$type){
 
 			global $db;
 

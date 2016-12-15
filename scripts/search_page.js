@@ -7,8 +7,11 @@ function getImage(span4, id_r){
 		url: "../actions/echo_picture.php?id=" + id_r
 	}).done(function(data2){
 		var pic = JSON.parse(data2);
-		var image_path= "../database/images/" + id_r + "/";
-		span4.append('<img src="' + image_path + pic +'" alt="restaurant_pics">');
+		if(pic == null) span4.append('<img src="../res/defaultRestaurantPhoto.png" alt="restaurant_pics">');
+		else{
+			var image_path= "../database/images/" + id_r + "/";
+			span4.append('<img src="' + image_path + pic +'" alt="restaurant_pics">');
+		}
 
 	}).fail(function(){
 		console.log("No such file echo_picture.php");

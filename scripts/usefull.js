@@ -53,6 +53,20 @@ function swap_ids(pic, b4, id_button){
 	return;
 }
 
+function hideComments(id_button){
+	var div = document.getElementById("rev" + id_button);
+	var display = window.getComputedStyle(div).display;
+	var query = $("#rev" + id_button);
+	if(display == 'block'){
+		query.removeClass("comments");
+		query.addClass("hidden");
+	}
+	else{
+		query.removeClass("hidden");
+		query.addClass("comments");
+	}
+}
+
 function getDesiredPicture(id_button){
 	var div_pics = document.getElementById("images");
 	var pic = div_pics.firstChild;

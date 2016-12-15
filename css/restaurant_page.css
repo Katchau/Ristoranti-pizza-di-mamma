@@ -752,3 +752,10 @@
     height: 40px;
     padding-bottom: 2%;
 }
+
+#reviews #review .comments{
+	display: block;
+}
+#reviews #review .hidden{
+	display: none;
+}

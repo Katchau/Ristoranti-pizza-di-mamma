@@ -816,3 +816,73 @@
 #review #comment-critic form button[type=submit] {
     margin-top: 15px;
 }
+
+.overlayAddRestaurantPic{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+}
+
+#overlay-addRestaurantPic{
+    width: 550px;
+    height: 400px;
+    line-height: 150px;
+    margin-top: 20%;
+    background-color: #E3D888;
+    border-radius: 5px;
+    z-index: 11;
+}
+
+#overlay-addRestaurantPic #addRestaurantPic{
+    display: flex;
+    justify-content: center;
+    font-size: 180%;
+    color: #5A3A31;
+}
+
+#overlay-addRestaurantPic input{
+    border: 3px solid #84714F;
+    height: 25px;
+    border-radius: 3px;
+    font-size: 18px;
+    padding-top: 2px;
+    margin: 0.2em;
+    margin-bottom: 0.8em;
+    display: block;
+    margin-left: 10%;
+}
+
+#overlay-addRestaurantPic button[type=submit]{
+    font-family: 'Lobster', sans-serif;
+    background-color: #84714F;
+    border: 3px solid #5A3A31;
+    color: white;
+    height: 40px;
+    border-radius: 3px;
+    font-size: 18px;
+    padding-top: 2px;
+    margin: 0.2em;
+    margin-top: 2em;
+    display: block;
+    margin-left: 35%;
+}
+
+#overlay-addRestaurantPic select{
+    border: 3px solid #84714F;
+    height: 40px;
+	width: 80%;
+    border-radius: 3px;
+    font-size: 18px;
+    padding-top: 2px;
+    margin: 0.2em;
+    margin-bottom: 0.8em;
+    display: block;
+    margin-left: 10%;
+	margin-right: 10%;
+}

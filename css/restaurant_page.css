@@ -609,16 +609,18 @@
     font-size: 25px;
 }
 
-#overlay-changeType input{
+#overlay-changeType select{
     border: 3px solid #84714F;
-    height: 25px;
+    height: 40px;
+	width: 80%;
     border-radius: 3px;
     font-size: 18px;
     padding-top: 2px;
     margin: 0.2em;
     margin-bottom: 0.8em;
     display: block;
-    margin-left: 140px;
+    margin-left: 10%;
+	margin-right: 10%;
 }
 
 #overlay-changeType input[type=submit]{

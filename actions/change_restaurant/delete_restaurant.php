@@ -1,5 +1,7 @@
 <?php
-
+	
+	session_start();
+	
   include_once('../../database/actions/connection.php');
   include_once('../../database/actions/restaurant.php');
 
@@ -11,7 +13,7 @@
     header('Location: ../../pages/user_profile_page.php?id=' . $_SESSION['id'] .'');
   }
   else{
-    header('Location: ../restaurant_page.php?id=' . $_GET['id'] . '');
+    header('Location: ../../pages/restaurant_page.php?id=' . $_GET['id'] . '');
     echo 'Error deleting restaurant';
   }
 

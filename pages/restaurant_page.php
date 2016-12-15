@@ -44,7 +44,7 @@
         <div id="deleteRestaurant"><h1>Pretende eliminar o seu restaurante?</h1>
           <div id="confirm">
             <?php
-            echo '<form id="form" method="post" action="change_restaurant/delete_restaurant.php?id=' . $_GET['id'] . '" onsubmit="">';
+            echo '<form id="form" method="post" action="../actions/change_restaurant/delete_restaurant.php?id=' . $_GET['id'] . '" onsubmit="">';
               ?>
               <input type="submit" value="Sim">
             </form>
@@ -128,7 +128,15 @@
         <?php
         echo '<form id="form" method="post" action="../actions/change_restaurant/change_type.php?id=' . $_GET['id'] . '" onsubmit="return changePassword();">';
         ?>
-           <input id="restaurantType" type="text" name="restaurantType" placeholder="Tipo Restaurante" required/>
+           <label>
+            <select name="restaurant-type">
+              <option value="cafe">Café</option>
+              <option value="drinks">Bar</option>
+              <option value="fastFood">FastFood</option>
+              <option value="gourmet">Gourmet</option>
+              <option value="pastelaria">Pastelaria</option>
+            </select>
+          </label>
            <input type="submit" value="Confirmar"/>
            <span id="output-changeType"></span>
         </form>

@@ -7,7 +7,7 @@ include_once('../../database/actions/restaurant.php');
   $type = $_POST['restaurantType'];
 
   if (changeRestaurantType($type, $id) == 1){
-    header('Location: ../restaurant_page.php?id=' . $_GET['id'] . '');
+    header('Location: ../../pages/restaurant_page.php?id=' . $_GET['id'] . '');
   }
   else{
     echo'Error changing the type of the restaurant';

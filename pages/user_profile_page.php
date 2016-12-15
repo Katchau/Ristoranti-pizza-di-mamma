@@ -106,7 +106,15 @@ if($userId!=$_SESSION['id'])
             <input id="restaurant-city" type="text" name="restaurant-city" placeholder="Cidade" required/>
             <input id="restaurant-contacts" type="text" name="restaurant-contacts" placeholder="Contacto" required/>
             <input id="restaurant-schedule" type="text" name="restaurant-schedule" placeholder="Horário" required/>
-            <input id="restaurant-type" type="text" name="restaurant-type" placeholder="Tipo de restaurante" required/>
+            <label>
+              <select name="restaurant-type">
+                <option value="cafe">Café</option>
+                <option value="drinks">Bar</option>
+                <option value="fastFood">FastFood</option>
+                <option value="gourmet">Gourmet</option>
+                <option value="pastelaria">Pastelaria</option>
+              </select>
+				    </label>
             <input type="submit" value="Confirmar"/>
             <span id="output-creatRestaurant"></span>
         </form>

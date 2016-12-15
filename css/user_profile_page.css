@@ -386,7 +386,7 @@
     height: 50px;
     width: 180px;
     border-radius: 3px;
-    font-size: 10px;
+    font-size: 20px;
     padding-bottom: 4px;
     margin: 0.2em;
     margin-top: 2em;
@@ -595,6 +595,26 @@
     color: #e2f1af;
     background-color: #5a3a31;
     font-family: 'Lobster', sans-serif;
+}
+
+#overlay-createRestaurant label{
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+}
+
+#overlay-createRestaurant select {
+  border: 3px solid #84714F;
+  height: 30px;
+  width: 80%;
+  border-radius: 3px;
+  font-size: 18px;
+  padding-top: 2px;
+  margin: 0.2em;
+  margin-bottom: 0.8em;
+  display: block;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 #overlay-createRestaurant input[type=submit]:hover {

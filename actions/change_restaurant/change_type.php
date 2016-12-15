@@ -4,8 +4,8 @@ include_once('../../database/actions/connection.php');
 include_once('../../database/actions/restaurant.php');
 
   $id = $_GET['id'];
-  $type = $_POST['restaurantType'];
-
+  $type = $_POST['restaurant-type'];
+  
   if (changeRestaurantType($type, $id) == 1){
     header('Location: ../../pages/restaurant_page.php?id=' . $_GET['id'] . '');
   }

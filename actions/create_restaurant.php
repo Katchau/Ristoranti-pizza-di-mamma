@@ -19,7 +19,7 @@ if($restaurantName && $address && $contacts && $schedule && $owner_id && $type)
 
     if(insertRestaurant($restaurantName,$description,$city,$address,$contacts,$schedule,$owner_id,$type)==0)
     {
-        header('Location: ../pages/user_profile_page.php?id=' . $_SESSION['id']; . '');
+        header('Location: ../pages/user_profile_page.php?id=' . $_SESSION['id'] . '');
     }
     else {
         echo 'falhou insert';

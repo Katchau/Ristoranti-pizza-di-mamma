@@ -110,7 +110,7 @@ if($userId!=$_SESSION['id'])
               <select name="restaurant-type">
                 <option value="cafe">Café</option>
                 <option value="drinks">Bar</option>
-                <option value="fastFood">FastFood</option>
+                <option value="fastfood">FastFood</option>
                 <option value="gourmet">Gourmet</option>
                 <option value="pastelaria">Pastelaria</option>
               </select>

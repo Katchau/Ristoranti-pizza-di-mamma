@@ -37,35 +37,34 @@ function getRestaurants(value){
 		var span = $("body #down-part #restaurants");
 		if(typeof unparsed === "string") return;
 		for(var i = 0; i < unparsed.length; i+=6){
-			console.log(type);
 			if(checkValue(unparsed[i+2]) && (type == "" || type == unparsed[i+5])){
 				$url = "../pages/restaurant_page.php?id=" + unparsed[i+1];
-			
+
 				span.append('<div class="restaurants" id =' + unparsed[i+1] + ' >');
 				span.append('</div>');
-				
+
 				var span2 = $("#down-part #restaurants #" + unparsed[i+1] );
-				
+
 				span2.append('<form method="get" >');
 				span2.append('</form>');
 				var span3 = $("#down-part #restaurants #" + unparsed[i+1] + " form");
 				span3.append('<button type="submit" value="' + unparsed[i+1] +'" name="id" formaction="'+ $url + '">')
 				span3.append('</button>');
-				
+
 				var span4 = $("#down-part #restaurants #" + unparsed[i+1] + " form button");
 				var id_r = unparsed[i + 1];
-			
+
 				getImage(span4, id_r);
-				
+
 				span2.append('<h1>' + unparsed[i] + '</h1>');
 				span2.append('<p> Morada: ' + unparsed[i + 3] + '</p>');
 				span2.append('<p> Horario: ' + unparsed[i + 4] + '</p>');
 				span2.append('<p> Nº de Estrelas ' + unparsed[i + 2] +  '</p>');
-				
+
 				span.append('<br>');
 			}
 		}
-		
+
     }).fail(function() {
         window.alert("Couldn't reach Server :(");
     });

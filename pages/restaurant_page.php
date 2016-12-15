@@ -132,7 +132,7 @@
             <select name="restaurant-type">
               <option value="cafe">Café</option>
               <option value="drinks">Bar</option>
-              <option value="fastFood">FastFood</option>
+              <option value="fastfood">FastFood</option>
               <option value="gourmet">Gourmet</option>
               <option value="pastelaria">Pastelaria</option>
             </select>
@@ -257,14 +257,14 @@
 						echo '<div id="critic-text">' . $rev['text'] . '</div> <div id="critic-value"> Cotação: ' . $rev['score'] . '</div>';
 						echo '</form>';
                         echo '</div>';
-						
+
 						echo '<button id="'. $rev['id'] .'" onClick="hideComments(this.id)">+</button>';
 						echo '<div id="rev'. $rev['id'] .'"class="comments">';
 						foreach ($comments as $comment) {
 							echo '<h4>' . $comment['text'] . '</h4>';
 						}
 						echo '</div>';
-						
+
 						if(isset($_SESSION['name'])){
                             echo '<div id="comment-critic">';
 							echo '<form id="form" method="post" action="../actions/reviews_comments.php?rest_id=' . $restaurant_id . '">';

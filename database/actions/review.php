@@ -37,4 +37,16 @@ function insertReview($critic_review,$score,$id_restaurant,$id_user){
 
 }
 
+function verifyUserReview($id_user,$id_restaurant)
+{
+    global $db;
+
+    $rdb=$db->prepare('SELECT id FROM Review WHERE id_user = ? AND id_restaurant = ?');
+    $rdb->execute([$id_user,$id_restaurant]);
+
+    $reviews=$rdb->fetch();
+
+    return $reviews;
+}
+
 ?>

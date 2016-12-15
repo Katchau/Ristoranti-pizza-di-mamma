@@ -219,7 +219,9 @@
 					echo '<p>Críticas</p>';
 					echo '</div>';
 
-                if(isset($_SESSION['name'])){
+                    $userReviewRestaurant=verifyUserReview($_SESSION['id'],$restaurant_id);
+
+                if(isset($_SESSION['name']) && sizeof($userReviewRestaurant)<=1){
                     echo '<div id="make-review">';
                     echo '<form id="form" method="post" action="../actions/make_review.php?id=' . $restaurant_id . '">';
                     echo '<div id="text-review">';
@@ -258,17 +260,26 @@
 						echo '</form>';
                         echo '</div>';
 
-						echo '<button id="'. $rev['id'] .'" onClick="hideComments(this.id)">+</button>';
+						echo '<button id="'. $rev['id'] .'" onClick="hideComments(this.id)">' . "Ver comentários(" . sizeof($comments) . ")" . '</button>';
 						echo '<div id="rev'. $rev['id'] .'"class="comments">';
 						foreach ($comments as $comment) {
-							echo '<h4>' . $comment['text'] . '</h4>';
+
+                            $commentUser=getUserInfoById($comment['id_user']);
+
+                            echo '<div id="user-comment">';
+                            echo $commentUser['firstName'] . " " . $commentUser['lastName'];
+                            echo '</div>';
+
+                            echo '<div id="comment-text">';
+                            echo '<p>' . $comment['text'] . '</p>';
+                            echo '</div>';
 						}
 						echo '</div>';
 
 						if(isset($_SESSION['name'])){
                             echo '<div id="comment-critic">';
 							echo '<form id="form" method="post" action="../actions/reviews_comments.php?rest_id=' . $restaurant_id . '">';
-							echo '<input type="text" name="commentText" placeholder="Comment" height="100px" width="100px" required/>';
+							echo '<input type="text" name="commentText" placeholder="Comment" required/>';
 							echo '<button type="submit" value="'.$rev['id'].'" name="commentSubmission">Comment</button>';
 							echo '</form>';
                             echo '</div>';

@@ -736,10 +736,12 @@
 }
 
 #reviews #critic #critic-value {
+    padding-right: 2%;
     padding-left: 2%;
     font-size: 25px;
     margin-top: 2%;
     color: #5a3a31;
+    border-bottom: 4px solid #5a3a31;
 }
 
 #reviews #comment-critic {
@@ -760,4 +762,57 @@
 }
 #reviews #review .hidden{
 	display: none;
+}
+
+#review button {
+    margin-top: 20px;
+    font-family: 'Lobster', sans-serif;
+    font-size: 20px;
+    height: 30px;
+    width: 200px;
+    margin-left: 2%;
+}
+
+#review .comments {
+    margin-top: 10px;
+    min-height: 100px;
+    background-color: white;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 4px;
+
+}
+
+#review .comments #user-comment {
+    padding-top: 10px;
+    font-size: 20px;
+    border-bottom: 2px dotted #5a3a31;
+    color: #5a3a31;
+    border-top: 3px solid #5a3a31;
+}
+
+#review .comments #comment-text {
+    font-family: 'Bree Serif', serif;
+    padding-bottom: 0.8em;
+}
+
+#review #comment-critic {
+    min-height: 100px;
+}
+
+#review #comment-critic form {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-top: 10px;
+}
+
+#review #comment-critic form input[type=text]{
+    height: 50px;
+    width: 80%;
+}
+
+#review #comment-critic form button[type=submit] {
+    margin-top: 15px;
 }
